@@ -9,7 +9,7 @@ After MPS is activated, initialize the library and set **Input Media Bucket**and
 -   **Output Media Bucket**: This bucket stores videos output by the Media Files.
 
 
-1.  Log on to the[Media Processing console](https://mts.console.aliyun.com/?spm=5176.2020520001.0.0.6RsosT#/mts/oss).
+1.  Log on to the [Media Processing console](https://partners-intl.aliyun.com/login-required#/mts).
 
     The console checks the activation status of services the product depends on. Follow the operation instructions on this page.
 
@@ -19,33 +19,33 @@ After MPS is activated, initialize the library and set **Input Media Bucket**and
     1.  Set **Input Media Bucket**.
         1.  Click**Add** at the right side of **Input Media Bucket**.
 
-            ![](images/9910_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582139910_en-US.png)
 
             **Note:** If you have already created OSS buckets in the current OSS service region, these buckets are listed on the settings interface. In this case, select the appropriate bucket. You can also create a new bucket as the Input Media Bucket.
 
         2.  Click **Create**.
 
-            ![](images/9911_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582139911_en-US.png)
 
         3.  Enter the **Bucket Name**, and click **OK**.
 
-            ![](images/9912_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582139912_en-US.png)
 
         4.  The **Input Media Bucket**name is shown in the **Input Media Bucket** list. Select the created bucket name and click**OK**.
     2.  Set **Output Media Bucket**.
         1.  Click **Add** at the right side of **Output Media Bucket**.
 
-            ![](images/9913_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582149913_en-US.png)
 
             **Note:** If you have already created OSS buckets in the current OSS service region, these buckets are listed on the settings interface. In this case, select the appropriate bucket. You can also create a new bucket as the Input Media Bucket.
 
         2.  Click **Create**.
 
-            ![](images/9914_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582149914_en-US.png)
 
         3.  Enter the **Bucket Name**, and click**OK**.
 
-            ![](images/9915_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582149915_en-US.png)
 
         4.  The **Output Media Bucket** name is shown in the **Output Media Bucket**list. Select the created bucket name and click**OK**.
     As shown in the following figure, the**Input Media Bucket** and **Output Media Bucket** are added.
@@ -54,35 +54,35 @@ After MPS is activated, initialize the library and set **Input Media Bucket**and
 
     You can select a workflow from**Preset**and edit it as needed to quickly create a workflow. You can also customize a workflow.
 
-    ![](images/9920_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582149920_en-US.png)
 
-    1.  At the right side of **Input**node, click the![](images/9922_en-US.png)icon to set the following information.
+    1.  At the right side of **Input**node, click the![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582149922_en-US.png)icon to set the following information.
         1.  On the**Input** page, click **select** at the right side of **Input Path**.
 
-            ![](images/9924_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582149924_en-US.png)
 
             **Note:** **Input path**is a storage location in OSS. The Input path must exist in OSS.
 
         2.  In**OSS File Manager**, select the bucket name, and click**OK**.
 
-            ![](images/9925_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582149925_en-US.png)
 
         3.  **Message Type** is optional. You can select MNS Queue or Notification and set the relevant instance.
 
-            ![](images/9926_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582149926_en-US.png)
 
-    2.  At the right side of **Input**node, click the![](images/9927_en-US.png)icon to add the **Transcode** node.
+    2.  At the right side of **Input**node, click the![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582149927_en-US.png)icon to add the **Transcode** node.
 
-        ![](images/9928_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582149928_en-US.png)
 
-        1.  At the right side of the **Transcode** node, click the ![](images/9922_en-US.png)icon to configure.
+        1.  At the right side of the **Transcode** node, click the ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582149922_en-US.png)icon to configure.
         2.  In **Transcode** \> **Basic Settings** , click **Select** at the right side of **Template**.
 
-            ![](images/9929_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582159929_en-US.png)
 
         3.  Select the **Transcode template** and click**OK**.
 
-            ![](images/9930_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582159930_en-US.png)
 
         4.  In **Transcode** \> **Basic Settings**, click **Select** at the right side of **Output Location**.
 
@@ -100,7 +100,7 @@ After MPS is activated, initialize the library and set **Input Media Bucket**and
 
         5.  In **OSS File Manager**, select the bucket name and click **OK**.
 
-            ![](images/9931_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582159931_en-US.png)
 
             **Note:** The Input Bucket and the Output Bucket cannot be the same.
 
@@ -108,18 +108,18 @@ After MPS is activated, initialize the library and set **Input Media Bucket**and
 
             The **Transcode**node cofiguration is completed.
 
-            ![](images/9932_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582159932_en-US.png)
 
-    3.  At the right side of the **Input**node or**Transcode**node, click the ![](images/9927_en-US.png)icon to add the**Screenshot** node.
-        1.  At the right side of the **Screenshot** node, click the![](images/9922_en-US.png)icon to configure.
+    3.  At the right side of the **Input**node or**Transcode**node, click the ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582149927_en-US.png)icon to add the**Screenshot** node.
+        1.  At the right side of the **Screenshot** node, click the![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582149922_en-US.png)icon to configure.
         2.  Select **Sreenshot Type**.
         3.  Click **Select**at the right side of **Output Location**.
 
-            ![](images/9933_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582159933_en-US.png)
 
         4.  In **OSS File Manager**, select the bucket name and click**OK**.
 
-            ![](images/9934_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582159934_en-US.png)
 
         5.  Enabe the**Set As Thumbnail** function.
 
@@ -127,26 +127,26 @@ After MPS is activated, initialize the library and set **Input Media Bucket**and
 
     4.  After setting the nodes, click**Next**.
 
-        ![](images/9944_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582159944_en-US.png)
 
     5.  You can bind a CDN domain name to the**Output Bucket**\(Optional\).
 
-        ![](images/9945_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582159945_en-US.png)
 
         **Note:** The added domain name must already be filed.
 
-        ![](images/9946_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582159946_en-US.png)
 
 5.  Upload a file.
 
     1.  Click **Library** \> **Media Files** \> **Upload Media**.
     2.  On the Uploadpage, select the workflow, and click **Select File**.
 
-        ![](images/9949_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582159949_en-US.png)
 
         After the file is uploaded, you can click**Upload More**.
 
-        ![](images/9952_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582159952_en-US.png)
 
     After the file is uploaded, this workflow is automatically triggered.
 
@@ -155,6 +155,6 @@ After MPS is activated, initialize the library and set **Input Media Bucket**and
     -   Click**Details** in the **Task Status**column, you can view the Workflow Instance Status, source file, transcoding output, screenshot output, and other information.
     -   Click the **Task ID**, you can also obtain the address of the transcoding output file and preview video playback.
 
-        ![](images/9955_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11351/15391582159955_en-US.png)
 
 
