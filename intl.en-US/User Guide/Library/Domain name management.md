@@ -4,7 +4,7 @@
 2.  Click **Domain Names**.
 3.  Click **Add Domain Name**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11359/15391666949992_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11359/15392613809992_en-US.png)
 
 4.  Enter domain name information and click **Next**.
 
@@ -20,17 +20,17 @@
 
     If your domain name has been filed, the review is quickly completed. Click **Domain name configuration** to go to the configuration page.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11359/15391666949994_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11359/15392613809994_en-US.png)
 
     1.  Configure DNS resolution for the on-demand CDN domain**CNAME**.
 
-        Configure the CNAME at the location of your DNS service provider. For more information, see[Use HiChina CNAME to access CDN](https://help.aliyun.com/document_detail/29725.html?spm=a2c4g.11186623.2.10.1782416e7b8XSf), [Use DNSPod CNAME to access CDN](https://support.dnspod.cn/Kb/showarticle/tsid/32/?spm=a2c4g.11186623.2.11.1782416e7b8XSf), and [Use Xinnet CNAME to access CDN](http://www.xinnet.com/service/cjwt/domain/guanli/1164.html?spm=a2c4g.11186623.2.12.1782416e7b8XSf).
+        Configure the CNAME at the location of your DNS service provider. For more information, seeUse HiChina CNAME to access CDN, Use DNSPod CNAME to access CDN, and Use Xinnet CNAME to access CDN.
 
     2.  Configure **Back-to-source Host**.
 
         Configure the **Back-to-source Host**to**Origin Site Domain Name**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11359/15391666949995_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11359/15392613809995_en-US.png)
 
     3.  Enable **Enable Drag/Drop Playback**.
 
@@ -38,6 +38,6 @@
 
         Drag/drop playback is supported for M3U8 files even if this function is not enabled.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11359/15391666959996_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11359/15392613809996_en-US.png)
 
 
