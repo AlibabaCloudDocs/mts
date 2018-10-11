@@ -4,7 +4,7 @@
 |:----|:--------|:------|:----------|
 |OSS|Object Storage Service|Alibaba Cloud Object Storage Service|MPS transcodes the media files stored in OSS and stores the output files in the media bucket or output bucket.|
 |Bucket|OSS Bucket|OSS Bucket|The bucket name can only contain lower-case letters, numbers, and hyphens \(-\). It must be a string of 3 to 255 bytes which starts with a lower-case letter or number.|
-|Location|OSS Location|The OSS data center|Follow the OSS location definition.|
+|Location|OSS Location|The OSS data center|See the OSS location definition.|
 |Object|OSS Object|OSS object|See OSS documentation for the definition. The object name can contain a UTF-8 encoded string of 1 to 1,023 bytes. A leading forward slash \(/\) or backward slash \(\\\) is not supported.|
 |LocalFile|Local file|Local media files|Media file that is stored locally and has not yet been uploaded to OSS.|
 |Input|Task input|Task input|Task input includes an input file and the input parameters for transcoding.|
@@ -29,7 +29,4 @@
 |MediaBucket|Media bucket|Media bucket|The media repository is associated with multiple media buckets that store media files. Media buckets are classified into input media bucket and output media bucket, which must be non-overlapping OSS buckets and independent of each other.|
 |InputMediaBucket|Input media bucket|Input media bucket|After a multimedia file is added to an input media bucket, the file is automatically added to the media repository; if the file matches the input conditions of a media workflow, the media workflow is automatically executed.|
 |OutputMediaBucket|Output media bucket|Output media bucket|The output media bucket stores the output file that is generated after a media workflow is executed.|
-| | | | |
-| | | | |
-| | | | |
 
