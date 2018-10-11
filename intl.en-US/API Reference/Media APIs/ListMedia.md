@@ -70,6 +70,30 @@ XML
 JSON
 
 ```
-
+{
+    "NextPageToken":"8c6ca184c0e47098a5b665e2a126797",
+    "RequestId":"06CB45EF-903C-4464-A812-AD276948D5BB",
+    "MediaList":{
+          "Media": [
+                {
+                    "CreationTime": "2016-09-20T05:26:48Z", 
+                    "CoverURL": "http://zzzinput-test.oss-cn-hangzhou.aliyuncs.com/tail_comm-33.jpg", 
+                    "RunIdList": {
+                        "RunId": [
+                            "2490402d4a204f899a64473844e50a24"
+                        ]
+                    }, 
+                    "CateId": 0, 
+                    "Description": "tag1,tag2", 
+                    "PublishState": "UnPublish", 
+                    "File": {
+                        "State": "Normal", 
+                        "URL": "http://zzzinput-test.oss-cn-hangzhou.aliyuncs.com/tail_comm-493.mp4"
+                    }, 
+                    "MediaId": "b2cb1183559e49ad81e767045624b9b8", 
+                    "Title": "10"
+                }
+            ]
+    }
 ```
 
