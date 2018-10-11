@@ -2,9 +2,9 @@
 
 This section briefly introduces the requirements and installation instructions of MNS.
 
-For more information, see the MNS documentation [SDK download](https://help.aliyun.com/document_detail/32381.html) and [Queue user manual](https://help.aliyun.com/document_detail/32398.html).
+For more information, see the MNS documentation SDK download and Queue user manual.
 
-The example language is PHP. For more information about the usage instructions of other languages, see the MNS documentation[SDK user manual](https://help.aliyun.com/document_detail/27508.html).
+The example language is PHP. For more information about the usage instructions of other languages, see the MNS SDK user manual.
 
 ## Environment requirements {#section_u2x_x2v_1fb .section}
 
@@ -12,7 +12,7 @@ PHP 5.5+
 
 ## Installation {#section_ibq_y2v_1fb .section}
 
-Download the [MNS SDK for PHP](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/32381/cn_zh/1466061136857/aliyun-mns-php-sdk-1.3.1.zip) from Alibaba Cloud.
+Download the MNS SDK for PHP from Alibaba Cloud.
 
 Decompress the file to the project directory. The decompressed directory is `php_sdk`.
 
@@ -43,7 +43,7 @@ Decompress the file to the project directory. The decompressed directory is `php
 
     Each message received by MNS corresponds to a handle, which can be used later to operate the message \(for example, delete the message\).
 
-    In addition, MNS supports receiving messages in batches to improve the performance. For more information, see the MNS documentation [BatchReceiveMessage](https://help.aliyun.com/document_detail/35137.html).
+    In addition, MNS supports receiving messages in batches to improve the performance. For more information, see the MNS BatchReceiveMessage.
 
     A timeout time can be specified when a message is received. \(The timeout time is set to 3s in the following example.\) If no message exists in the queue, timeout occurs and an exception is returned.
 
@@ -65,7 +65,7 @@ Decompress the file to the project directory. The decompressed directory is `php
 
 -   Delete a message
 
-    A message is not actively deleted from a queue. You must call DeleteMessage to delete the message. Otherwise, the message is always in the queue, and you will receive the same message next time. In addition, DeleteMessage can be called successfully only within the specified time after the message is received. For more information, see [MNS - DeleteMessage](https://help.aliyun.com/document_detail/35138.html).
+    A message is not actively deleted from a queue. You must call DeleteMessage to delete the message. Otherwise, the message is always in the queue, and you will receive the same message next time. In addition, DeleteMessage can be called successfully only within the specified time after the message is received. For more information, see MNS - DeleteMessage.
 
     ```
     try
