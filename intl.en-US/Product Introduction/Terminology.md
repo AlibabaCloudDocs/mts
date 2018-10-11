@@ -46,7 +46,7 @@ A custom template \(Template for short\) is a set of custom transcoding paramete
 
 Preset template
 
-A preset template is an intelligent transcoding template inherent in MPS. The template can be used to dynamically adjust the transcoding settings based on the features of an input file, to provide users with the optimal output file under specific bandwidth conditions. For a list of preset templates supported by MPS, see [Preset templates](https://help.aliyun.com/document_detail/29256.html?spm=a2c4g.11186623.2.4.yKDnwn).
+A preset template is an intelligent transcoding template inherent in MPS. The template can be used to dynamically adjust the transcoding settings based on the features of an input file, to provide users with the optimal output file under specific bandwidth conditions. For a list of preset templates supported by MPS, see [Preset templates](../../../../reseller.en-US/API Reference/Appendix/Preset template details.md#).
 
 Analysis task
 
@@ -70,5 +70,5 @@ A MediaInfoJob retrieves media information.
 
 ## Transcoding process {#section_s2y_yvp_w2b .section}
 
-![](images/9828_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11339/15392586779828_en-US.png)
 
