@@ -95,7 +95,7 @@ Decompress the file to the project directory. The decompressed directory is `php
 
     After obtaining details of a message, you can use the media library API to obtain details of a video executed by a workflow. The output URL of the transcoding and screenshot tasks is printed in the following example.
 
-    For more information about how to install and configure the SDK for PHP of the media library, see [Media Library SDK-PHP](https://help.aliyun.com/document_detail/44592.html).
+    For more information about how to install and configure the SDK for PHP of the media library, see [Media Library SDK-PHP](../../../../reseller.en-US//PHP SDK/Overview.md#).
 
     ```
     include_once 'aliyun-php-sdk-core/Config.php';
