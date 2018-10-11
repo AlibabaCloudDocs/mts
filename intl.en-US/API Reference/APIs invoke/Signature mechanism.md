@@ -75,5 +75,5 @@ The signed request URL is \(with the Signature parameter added\):
 http://mts.cn-hangzhou.aliyuncs.com/?Signature=kmDv4mWo806GWPjQMy2z4VhBBDQ%3D&SignatureVersion=1.0&Action=SearchTemplate&Format=XML&SignatureNonce=4902260a-516a-4b6a-a455-45b653cf6150&PageSize=2&Version=2014-06-18&AccessKeyId=testId&SignatureMethod=HMAC-SHA1&Timestamp=2015-05-14T09%3A03%3A45Z
 ```
 
-For more information about code, see [Invoke examples](https://help.aliyun.com/document_detail/29218.html).
+For more information about code, see [Invoke examples](reseller.en-US/API Reference/APIs invoke/Invoke example.md#).
 
