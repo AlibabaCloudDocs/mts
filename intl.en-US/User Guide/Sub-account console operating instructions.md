@@ -20,17 +20,17 @@ The following variables are used in the resource authorization policies of each 
 
 Log on to the **RAM console** \> **Policies**, and create the following example custom authorization policies for the specified resource instance and grant them to the specified sub-account.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153917258610077_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153926176410077_en-US.png)
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153917258610078_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153926176410078_en-US.png)
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153917258610080_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153926176410080_en-US.png)
 
 **Note:** Copy the authorization policies of each service of the examples in this document, and replace the variables with the corresponding service instance name.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153917258610081_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153926176410081_en-US.png)
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153917258610082_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153926176410082_en-US.png)
 
 **Note:** After the authorization policies are created for various service resource objects, you can grant the permissions to corresponding sub-accounts. See the permission granting instructions of MPS.
 
@@ -46,9 +46,9 @@ Permission granted to a sub-account to use MTS
 
 Log on to the **RAM console** \> **Users**, and grant the `AliyunMTSFullAccess` permission to the specified sub-account.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153917258610083_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153926176410083_en-US.png)
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153917258610084_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153926176410084_en-US.png)
 
 ## OSS authorization policy {#section_zp4_52f_x2b .section}
 
