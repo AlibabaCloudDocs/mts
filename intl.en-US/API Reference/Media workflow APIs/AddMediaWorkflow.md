@@ -2,7 +2,7 @@
 
 The AddMediaWorkflow API adds a media workflow and defines the topology of the media workflow, and Activity and dependencies.
 
-**Note:** For more information, see [Activity](https://help.aliyun.com/document_detail/68494.html).
+**Note:** For more information, see [Activity](reseller.en-US/API Reference/Appendix/Workflow activity introduction.md#).
 
 ## Request parameters {#section_iqn_qbt_x2b .section}
 
