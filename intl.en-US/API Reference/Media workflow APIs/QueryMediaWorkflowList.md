@@ -15,7 +15,7 @@ The QueryMediaWorkflowList API queries registered media workflows.
 
 |Parameter|Type|Description|
 |:--------|:---|:----------|
-|MediaWorkflowList|[MediaWorkflow](https://help.aliyun.com/document_detail/29251.html#MediaWorkflow)\[\]|Media workflow list.|
+|MediaWorkflowList|[MediaWorkflow](reseller.en-US/API Reference/Data types.md#)\[\]|Media workflow list.|
 |NonExistMediaWorkflowIdList|String\[\]|List of non-existing media workflow IDs.|
 
 ## Examples {#section_gpq_zbt_x2b .section}
