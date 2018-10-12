@@ -209,7 +209,7 @@ JSON
                              "Code": "",
                              "Message": "",
                              "PipelineId": "88c6ca184c0e47098a5b665e2a126797",
-                             "CreationTime”:”2014-01-10T12:00:00Z"
+                             "CreationTime":"2014-01-10T12:00:00Z"
                         }
                 }    
             }]
