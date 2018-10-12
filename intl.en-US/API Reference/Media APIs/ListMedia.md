@@ -27,7 +27,7 @@ The ListMedia API lists all media resources, which are sorted by creation time i
 
 |Parameter|Type|Description|
 |:--------|:---|:----------|
-|MediaList|[Media](https://help.aliyun.com/document_detail/29251.html?spm=5176.doc44462.2.2.l7l7TP#Media)\[\]|Media list|
+|MediaList|[Media](reseller.en-US/API Reference/Data types.md#)\[\]|Media list|
 |NextPageToken|String|Identifier of the next page, which is a 32-bit UUID|
 
 ## Examples {#section_gpq_zbt_x2b .section}
