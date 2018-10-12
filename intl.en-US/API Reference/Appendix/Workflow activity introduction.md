@@ -28,7 +28,7 @@ You can set the trigger conditions and overall configurations of the Media workf
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
-|Outputs|String|No|Optional while extracting subtitles.-   For more information, see [Output](https://help.aliyun.com/document_detail/29253.html?#h2-2-output-2).
+|Outputs|String|No|Optional while extracting subtitles.-   For more information, see [Output](reseller.en-US/API Reference/Appendix/Parameter details.md#).
 -   Example: \[\{“OutputObject”:”transcode%2F%7BObjectPrefix%7D%2F%7BFileName%7D. %7BExtName%7D”,”TemplateId”: “S00000001-000070”\}\]。
 
 |
@@ -38,24 +38,24 @@ You can set the trigger conditions and overall configurations of the Media workf
 |OutputLocation|String|No|Output region.During HLS package, it is overwritten by the Location in PackageConfig.
 
 |
-|MultiBitrateVideoStream|String|No|During HLS package, this parameter is required while extracting video streams.-   For more information about this parameter, see [MultiBitrateVideoStream](https://help.aliyun.com/document_detail/29253.html).
+|MultiBitrateVideoStream|String|No|During HLS package, this parameter is required while extracting video streams.-   For more information about this parameter, see [MultiBitrateVideoStream](reseller.en-US/API Reference/Appendix/Parameter details.md#).
 -   Example: \{“URI”: “c/d/video1.m3u8”\}.
 
 |
-|ExtXMedia|String|No|During HLS package, this parameter is requried while extracting audio streams or subtitle streams.-   For more information about this parameter, see [ExtXMedia](https://help.aliyun.com/document_detail/29253.html?#h2-41-extxmedia-37).
+|ExtXMedia|String|No|During HLS package, this parameter is requried while extracting audio streams or subtitle streams.-   For more information about this parameter, see [ExtXMedia](reseller.en-US/API Reference/Appendix/Parameter details.md#).
 -   Example: \{“Name”: “english”,”Language”: “en-US”,”URI”:”c/d/audio-1.m3u8”\}.
 
 |
 |WebVTTSubtitleURL|String|No|HLS package exclusive parameter, subtitle address,-   which currently only supports WebVTT subtitle file, must comply with URL standard, and can overwrite subtitle address while calling AddMedia.
--   Example: [http://test.oss-cn-hangzhou.aliyuncs.com/subtitles-en.vtt.](http://test.oss-cn-hangzhou.aliyuncs.com/subtitles-en.vtt%E3%80%82)
+-   Example: http://test.oss-cn-hangzhou.aliyuncs.com/subtitles-en.vtt.
 
 |
-|Representation|String|No|During DASH package, it is required to be set when extract audio stream, video stream, or subtitle stream.-   For more information, see [Representation](https://help.aliyun.com/document_detail/29253.html?spm=a2c4g.11186623.2.9.VYtiOD#h2-48-representation-44).
+|Representation|String|No|During DASH package, it is required to be set when extract audio stream, video stream, or subtitle stream.-   For more information, see [Representation](reseller.en-US/API Reference/Appendix/Parameter details.md#).
 -   Example: \{\\”Id\\”:\\”480p\\”, \\”URI\\”:\\”videoSD/xx.mpd\\”\}.
 
 |
-|InputConfig|String|No|Dash package exclusive parameter, and is required to be set when extract sutitle streams.-   For more information, see [InputConfig](https://help.aliyun.com/document_detail/29253.html?spm=a2c4g.11186623.2.9.VYtiOD#h2-49-inputconfig-45).
--   Example: ”\{\\”Format\\”:\\”vtt\\”,\\”InputFile\\”:\{\\”URL\\”:\\”[http://subtitlebucket.oss-cn-hangzhou.aliyuncs.com/subtitle/subtitle-en.vtt\\"\}\}](http://subtitlebucket.oss-cn-hangzhou.aliyuncs.com/subtitle/subtitle-en.vtt/%22%7D%7D)"
+|InputConfig|String|No|Dash package exclusive parameter, and is required to be set when extract sutitle streams.-   For more information, see I[nputConfig](reseller.en-US/API Reference/Appendix/Parameter details.md#).
+-   Example: ”\{\\”Format\\”:\\”vtt\\”,\\”InputFile\\”:\{\\”URL\\”:\\”http://subtitlebucket.oss-cn-hangzhou.aliyuncs.com/subtitle/subtitle-en.vtt\\"\}\}"
 
 |
 
@@ -63,7 +63,7 @@ You can set the trigger conditions and overall configurations of the Media workf
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
-|SnapshotConfig|String|Yes| -   For more information, see [SnapshotConfig](https://help.aliyun.com/document_detail/29253.html?#h2-11-snapshotconfig-10).
+|SnapshotConfig|String|Yes| -   For more information, see [SnapshotConfig](reseller.en-US/API Reference/Appendix/Parameter details.md#).
 -   Example: \{“OutputFile”: \{“Bucket”: “example-001”, “Location”: “oss-cn-hangzhou”, “Object”:”snapshot%2F%7BObjectPrefix%7D%2F%7BFileName%7D. %7BExtName%7D%2F1.jpg”\},”Time”: “5”\}。
 
  |
@@ -125,7 +125,7 @@ All these placeholders can be dynamically replaced.
 -   The length cannot exceed 32 characters.
 
 |
-|AdaptationSet|String|No| -   DASH packages exclusive parameters, required. For more information, see [AdaptationSet](https://help.aliyun.com/document_detail/29253.html?#h2-47-adaptationset-43)
+|AdaptationSet|String|No| -   DASH packages exclusive parameters, required. For more information, see [AdaptationSet](reseller.en-US/API Reference/Appendix/Parameter details.md#)
 -   Example: ”\{\\”Lang\\”:\\”english\\”, \\”Group\\”:\\”SubtitleENGroup\\”\}”
 
  |
@@ -138,7 +138,7 @@ All these placeholders can be dynamically replaced.
 -   The length cannot exceed 32 characters;
 
 |
-|AdaptationSet|String|No| -   DASH package exclusive parameters, required. For more information, see [AdaptationSet](https://help.aliyun.com/document_detail/29253.html?#h2-47-adaptationset-43).
+|AdaptationSet|String|No| -   DASH package exclusive parameters, required. For more information, see [AdaptationSet](reseller.en-US/API Reference/Appendix/Parameter details.md#).
 -   Example: ”\{\\”Lang\\”:\\”english\\”, \\”Group\\”:\\”AudioGroupEnglish\\”\}”, one language one subtitle group.
 
  |
@@ -147,7 +147,7 @@ All these placeholders can be dynamically replaced.
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
-|AdaptationSet|String|No| -   DASH package exclusive parameters, required. For more information, see [AdaptationSet](https://help.aliyun.com/document_detail/29253.html?#h2-47-adaptationset-43).
+|AdaptationSet|String|No| -   DASH package exclusive parameters, required. For more information, see [AdaptationSet](reseller.en-US/API Reference/Appendix/Parameter details.md#).
 -   Example: ”AdaptationSet”: “\{\\”Group\\”:\\”VideoGroup\\”\}”
 
  |
@@ -156,7 +156,7 @@ All these placeholders can be dynamically replaced.
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
-|MasterPlayList|String|No| -   HLS exclusive parameters, required. Multi-bitstream list. For more information, see [MasterPlayList](https://help.aliyun.com/document_detail/29253.html?#h2-42-masterplaylist-38).
+|MasterPlayList|String|No| -   HLS exclusive parameters, required. Multi-bitstream list. For more information, see [MasterPlayList](reseller.en-US/API Reference/Appendix/Parameter details.md#) .
 -   Example: \{“MultiBitrateVideoStreams”: \[\{“RefActivityName”: “video-1”,”ExtXStreamInf”: \{“BandWidth”: “111110”,”Audio”: “auds”,”Subtitles”: “subs” \}\}\]\}.
 
  |
