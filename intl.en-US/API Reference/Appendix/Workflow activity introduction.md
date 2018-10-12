@@ -8,7 +8,7 @@ You can set the trigger conditions and overall configurations of the Media workf
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
-|InputFile|String|Yes|Input position. For more information, see [Matching rule for workflow file triggering](https://help.aliyun.com/document_detail/68574.html).Example: \{“Bucket”: “example-001”,”Location”: “oss-cn-hangzhou”, “ObjectPrefix”: “test/“\}.
+|InputFile|String|Yes|Input position. For more information, see [Matching rule for workflow file](reseller.en-US/API Reference/Appendix/Matching rule for workflow file triggering.md#).Example: \{“Bucket”: “example-001”,”Location”: “oss-cn-hangzhou”, “ObjectPrefix”: “test/“\}.
 
 |
 |PipelineId|String|Yes|ID of the MPS queue, which is global.In the workflow scenario, the message configuration for the MPS queue is invalid, but the message configuration of the QueueName/TopicName is valid.
