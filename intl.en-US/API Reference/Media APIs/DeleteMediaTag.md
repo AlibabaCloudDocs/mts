@@ -8,9 +8,7 @@ The DeleteMediaTag API deletes a media tag.
 |:---------|:---|:--------------|:----------|
 |Action|String|Yes|API of the action, system required parameter. Value: DeleteMediaTag|
 |MediaId|String|Yes|Media ID.|
-|Tag|String|Yes|Media tags,, which consists of up to 32 UTF-8 encoded bytes.
-
-|
+|Tag|String|Yes|Media tags, which consists of up to 32 UTF-8 encoded bytes.|
 
 ## Response parameters {#section_ogh_wbt_x2b .section}
 
