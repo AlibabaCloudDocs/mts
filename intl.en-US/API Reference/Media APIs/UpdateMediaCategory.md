@@ -14,7 +14,7 @@ The UpdateMediaCategory API updates media categories.
 
 |Parameter|Type|Description|
 |:--------|:---|:----------|
-|Media|[Media](https://help.aliyun.com/document_detail/29251.html#Media)|Media|
+|Media|[Media](reseller.en-US/API Reference/Data types.md#)|Media|
 
 ## Examples {#section_gpq_zbt_x2b .section}
 
