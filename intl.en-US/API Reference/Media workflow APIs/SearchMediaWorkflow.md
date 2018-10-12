@@ -25,7 +25,7 @@ Default value: “Inactive, Active, Deleted”
 
 |Parameter|Type|Description|
 |:--------|:---|:----------|
-|MediaWorkflowList|[MediaWorkflow](https://help.aliyun.com/document_detail/29251.html#MediaWorkflow)\[\]|List of media workflows.|
+|MediaWorkflowList|[MediaWorkflow](reseller.en-US/API Reference/Data types.md#)\[\]|List of media workflows.|
 |TotalCount|Long|Total number.|
 |PageSize|Long|The page size.|
 |PageNumber|Long|Page number.|
