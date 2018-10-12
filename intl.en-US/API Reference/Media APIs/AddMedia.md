@@ -61,7 +61,7 @@ The AddMedia API adds media.
       8. http://bucket.oss-cn-hangzhou.aliyuncs.com/A2/B/C/         Not matched
     ```
 
-    **Note:** Do not configure the input path of a workflow as the prefix of the input path of another workflow; otherwise, two workflow execution instances are triggered for the same incremental file. For example, the input path of a workflow is “test” and that of another workflow is “test1”. After an input file is uploaded to the test1 folder, two workflow execution instances are triggered because the test1 folder also matches the “test” prefix.\*
+    **Note:** Do not configure the input path of a workflow as the prefix of the input path of another workflow; otherwise, two workflow execution instances are triggered for the same incremental file. For example, the input path of a workflow is “test” and that of another workflow is “test1”. After an input file is uploaded to the test1 folder, two workflow execution instances are triggered because the test1 folder also matches the “test” prefix.
 
 -   File name extension matching
 
@@ -76,7 +76,7 @@ The AddMedia API adds media.
 
 -   Media workflow message
 
-    Media workflows use [Alibaba Cloud Message Service](https://www.aliyun.com/product/mns) to send messages to users that access video cloud services after the Start and Report activities are completed. If you want to receive messages, set the MNS queue name and notification name on the Start node and use the [Message Service SDK](https://help.aliyun.com/document_detail/27508.html) to obtain the messages that are stored in the MNS queue or notification. The message format is as follows:
+    Media workflows use Alibaba Cloud Message Service to send messages to users that access video cloud services after the Start and Report activities are completed. If you want to receive messages, set the MNS queue name and notification name on the Start node and use the Message Service SDK to obtain the messages that are stored in the MNS queue or notification. The message format is as follows:
 
     |Name|Type|Description|
     |:---|:---|:----------|
@@ -94,7 +94,7 @@ The AddMedia API adds media.
     |Message|String|Error message.An error message is returned if the activity status is Fail.
 
 |
-    |MediaWorkflowExecution|[MediaWorkflowExecution](https://help.aliyun.com/document_detail/29251.html#MediaWorkflowExecution)|Information of media workflow execution.|
+    |MediaWorkflowExecution|[MediaWorkflowExecution](reseller.en-US/API Reference/Data types.md#)|Information of media workflow execution.|
 
 -   Sample JSON message body:
 
@@ -181,7 +181,7 @@ The AddMedia API adds media.
 
 |Parameter|Type|Description|
 |:--------|:---|:----------|
-|Media|[Media](https://help.aliyun.com/document_detail/29251.html#Media)|Media|
+|Media|[Media](reseller.en-US/API Reference/Data types.md#)|Media|
 
 ## Examples {#section_gpq_zbt_x2b .section}
 
