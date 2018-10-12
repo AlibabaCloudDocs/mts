@@ -15,7 +15,7 @@ The QueryMediaWorkflowExecutionList API queries media workflow execution instanc
 
 |Parameter|Type|Description|
 |:--------|:---|:----------|
-|MediaWorkflowExecutionList|[MediaWorkflowExecution](https://help.aliyun.com/document_detail/29251.html#MediaWorkflowExcution)\[\]|A list of media workflow execution instances.|
+|MediaWorkflowExecutionList|[MediaWorkflowExecution](reseller.en-US/API Reference/Data types.md#)\[\]|A list of media workflow execution instances.|
 |NonExistRunIds|String\[\]|A list of nonexistent media workflow execution instance IDs.|
 
 ## Examples {#section_gpq_zbt_x2b .section}
@@ -179,6 +179,5 @@ JSON
         ]
     }
 }
-related articles
 ```
 
