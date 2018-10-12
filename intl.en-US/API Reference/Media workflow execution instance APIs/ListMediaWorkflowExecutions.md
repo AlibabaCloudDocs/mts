@@ -23,7 +23,7 @@ The ListMediaWorkflowExecutions API lists all media workflow execution instances
 
 |Parameter|Type|Description|
 |:--------|:---|:----------|
-|MediaWorkflowExecutionList|[MediaWorkflowExecution](https://help.aliyun.com/document_detail/29251.html#MediaWorkflowExecution)\[\]|Media workflow list.|
+|MediaWorkflowExecutionList|[MediaWorkflowExecution](reseller.en-US/API Reference/Data types.md#)\[\]|Media workflow list.|
 |NextPageToken|String|Identifier of the next page, which is a 32-bit UUID.|
 
 ## Examples {#section_gpq_zbt_x2b .section}
