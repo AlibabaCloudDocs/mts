@@ -28,7 +28,7 @@ The QueryMediaListByURL API queries media sets by OSS file URLs.
 
 |Name|Type|Description|
 |:---|:---|:----------|
-|MediaList|[Media](https://help.aliyun.com/document_detail/29251.html#Media)\[\]|Media list|
+|MediaList|[Media](reseller.en-US/API Reference/Data types.md#)\[\]|Media list|
 |NonExistFileURLs|String\[\]|A list of nonexistent media resources|
 
 ## Examples {#section_gpq_zbt_x2b .section}
