@@ -6,7 +6,7 @@ The UpdateMedia API updates media set basic information, such as the title, desc
 
 |Parameters|Type|Required or not|Description|
 |:---------|:---|:--------------|:----------|
-|Action|String|Yes|操作接口名，系统规定参数，API API of the action, system required parameter. Value: UpdateMedia|
+|Action|String|Yes|API of the action, system required parameter. Value: UpdateMedia|
 |MediaId|String|Yes|Media ID.|
 |Title|String|No|Media title.-   If not set, this parameter is cleared.
 -   The parameter value consists of up to 128 UTF-8 encoded bytes.
@@ -34,7 +34,7 @@ The UpdateMedia API updates media set basic information, such as the title, desc
 
 |Parameter|Type|Description|
 |:--------|:---|:----------|
-|Media|[Media](https://help.aliyun.com/document_detail/29251.html#Media)|Media|
+|Media|[Media](reseller.en-US/API Reference/Data types.md#)|Media|
 
 ## Examples {#section_gpq_zbt_x2b .section}
 
