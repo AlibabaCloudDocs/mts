@@ -1,41 +1,41 @@
-# QueryMediaList {#reference_try_ymh_y2b .reference}
+# 查询媒体-使用媒体ID {#reference_try_ymh_y2b .reference}
 
-The QueryMediaList API queries media sets by media IDs.
+查询媒体列表。
 
-## Request parameters {#section_iqn_qbt_x2b .section}
+## 请求参数 {#section_iqn_qbt_x2b .section}
 
-|Parameters|Type|Required or not|Description|
-|:---------|:---|:--------------|:----------|
-|Action|String|Yes|API of the action, system required parameter. Value: QueryMediaList|
-|MediaIds|String|Yes|A list of file names,separated by commas \(,\). A maximum of 10 file names can be entered.
-
-|
-|IncludePlayList|Boolean|No|Whether the results contain a playlist.-   Optional values: true or false.
--   Default value: false.
+|名称|类型|是否必须|描述|
+|:-|:-|:---|:-|
+|Action|String|是|操作接口名，系统规定参数，取值：QueryMediaList|
+|MediaIds|String|是|文件列表。用逗号分隔，最多10个
 
 |
-|IncludeSnapshotList|Boolean|No|Whether the results contain a screenshot list.-   Optional values: true or false.
--   Default value: false.
+|IncludePlayList|Boolean|否|结果是否包含播放信息。-   范围：true、false。
+-   默认值：false
 
 |
-|IncludeMediaInfo|Boolean|No|Whether the results contain media information. Optional values: True/False; default value: False.|
+|IncludeSnapshotList|Boolean|否|结果是否包含截图信息。-   范围：true、false。
+-   默认值：false
 
-## Response parameters {#section_ogh_wbt_x2b .section}
+|
+|IncludeMediaInfo|Boolean|否|结果是否包含媒体信息，范围：true、false，默认值：false|
 
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|MediaList|[Media](reseller.en-US/API Reference/Data types.md#)\[\]|Media list|
-|NonExistMediaIds|String\[\]|A list of nonexistent media IDs|
+## 返回参数 {#section_ogh_wbt_x2b .section}
 
-## Examples {#section_gpq_zbt_x2b .section}
+|名称|类型|描述|
+|:-|:-|:-|
+|MediaList|[Media](intl.zh-CN/API参考/数据类型.md#)\[\]|媒体列表|
+|NonExistMediaIds|String\[\]|不存在的MediaId列表|
 
-Request example
+## 示例 {#section_gpq_zbt_x2b .section}
+
+请求示例
 
 ```
-http://mts.cn-hangzhou.aliyuncs.com?MediaIds=3e1cd21131a94525be55acf65888bf46&<public parameter>
+http://mts.cn-hangzhou.aliyuncs.com?MediaIds=3e1cd21131a94525be55acf65888bf46&<公共参数>
 ```
 
-Response example
+返回示例
 
 XML
 
