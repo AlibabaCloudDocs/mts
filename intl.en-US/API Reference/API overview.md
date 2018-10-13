@@ -98,7 +98,7 @@
 
 |API|Description|
 |:--|:----------|
-|[AddCategory](reseller.en-US/API Reference/Media category APIs/The AddCategory API adds a category..md#)|Adds a category.|
+|[AddCategory](reseller.en-US/API Reference/Media category APIs/AddCategory.md#)|Adds a category.|
 |[DeleteCategory](reseller.en-US/API Reference/Media category APIs/DeleteCategory.md#)|Deletes a category.|
 |[UpdateCategoryName](reseller.en-US/API Reference/Media category APIs/UpdateCategoryName.md#)|Update a category name.|
 |[CategoryTree](reseller.en-US/API Reference/Media category APIs/CategoryTree.md#)|Retrieves a category tree.|
