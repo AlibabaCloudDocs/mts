@@ -20,7 +20,7 @@ Due to the many parameters of transcoding job, it is difficult to fill in the tr
 
         The preset smart template automatically adjusts the transcoding parameters according to the characteristics of the input file, resulting in lower bit rate at the same resolution, thus reducing more cost.
 
-        **Note:** When using the preset smart template, you first need to callSubmitAnalysisJob interface \(SubmitAnalysisJob\). After the analysis task successfully completes, you can call the Query Template Analysis Job interface \(QueryAnalysisJobList\) to obtain a valid preset smart template corresponding to the input file list. If the preset smart template specified in the submitted transcoding task is in an invalid list, the transcoding jtask is invalid and will return a failure.
+        **Note:** When using the preset smart template, you first need to callSubmitAnalysisJob interface \(SubmitAnalysisJob\). After the analysis task successfully completes, you can call the Query Template Analysis Job interface \(QueryAnalysisJobList\) to obtain a valid preset smart template corresponding to the input file list. If the preset smart template specified in the submitted transcoding task is in an invalid list, the transcoding task is invalid and will return a failure.
 
 
 -   Custom templates
