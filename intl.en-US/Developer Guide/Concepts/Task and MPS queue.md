@@ -2,6 +2,8 @@
 
 This article introduces several basic concepts and relationships in MPS to help developers better understand and use MPS.
 
+Concept description:
+
 -   Task
 
     A task in the MPS is an abstract concept which contains a variety of types of tasks: transcoding tasks, screenshot tasks, and media information tasks.
