@@ -48,7 +48,7 @@ When media workflow execution starts or completes, a message is sent to the queu
 
     “Activity type” in `activity basic attribute` is “Report”.
 
--   Example
+-   Example:
 
     ```
     {
