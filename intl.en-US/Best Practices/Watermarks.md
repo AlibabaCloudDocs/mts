@@ -13,7 +13,7 @@ Watermarks refer to the process of adding related information \(such as a corpor
 
 ## Parameter description {#section_rzd_2ql_x2b .section}
 
-When submitting transcoding tasks \(see [Simple transcoding](https://help.aliyun.com/document_detail/67661.html?spm=a2c4g.11186623.2.3.70b26a43Zaunu2)\), you can specify a watermark template and material to add watermark information for the output video.
+When submitting transcoding tasks \(see [Simple transcoding](reseller.en-US/Best Practices/Transcoding/Simple transcoding.md#)\), you can specify a watermark template and material to add watermark information for the output video.
 
 You can specify several [WaterMark](https://help.aliyun.com/document_detail/29253.html?spm=a2c4g.11186623.2.4.70b26a43Zaunu2#h2-5-5) objects for each transcoding task. A WaterMark object contains the following parameters:
 
@@ -92,7 +92,7 @@ Example:
 
 ![](images/10137_en-US.png)
 
-## Code example {#section_xbk_grl_x2b .section}
+## Code examples {#section_xbk_grl_x2b .section}
 
 When transcoding to a `720P (1280 x 720)` in MP4 format, you can add three watermarks at the same time and specify parameters for all three.
 
@@ -111,7 +111,7 @@ When transcoding to a `720P (1280 x 720)` in MP4 format, you can add three water
 
 Code examples:
 
--   [Watermarks-Java SDK](../../../../reseller.en-US//Watermarks.md#)
+-   [Watermarks-Java SDK](../../../../reseller.en-US//Java SDK/Watermarks.md#)
 
 -   [Watermarks-Python SDK](../../../../reseller.en-US//Python SDK/Watermarks.md#)
 
