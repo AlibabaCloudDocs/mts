@@ -2,19 +2,15 @@
 
 This section briefly introduces the requirements and installation instructions of MNS.
 
-For more information, see the MNS documentation SDK download and Queue user manual.
-
-The example language is PHP. For more information about the usage instructions of other languages, see the MNS SDK user manual.
-
 ## Environment requirements {#section_u2x_x2v_1fb .section}
 
 PHP 5.5+
 
 ## Installation {#section_ibq_y2v_1fb .section}
 
-Download the MNS SDK for PHP from Alibaba Cloud.
+Download the MNS SDK for PHP SDK from Alibaba Cloud.
 
-Decompress the file to the project directory. The decompressed directory is `php_sdk`.
+Decompress the file to the project directory. The decompressed directory is `php_sdk`。
 
 ## Sample code {#section_tsj_z2v_1fb .section}
 
@@ -43,8 +39,6 @@ Decompress the file to the project directory. The decompressed directory is `php
 
     Each message received by MNS corresponds to a handle, which can be used later to operate the message \(for example, delete the message\).
 
-    In addition, MNS supports receiving messages in batches to improve the performance. For more information, see the MNS BatchReceiveMessage.
-
     A timeout time can be specified when a message is received. \(The timeout time is set to 3s in the following example.\) If no message exists in the queue, timeout occurs and an exception is returned.
 
     ```
@@ -64,8 +58,6 @@ Decompress the file to the project directory. The decompressed directory is `php
     ```
 
 -   Delete a message
-
-    A message is not actively deleted from a queue. You must call DeleteMessage to delete the message. Otherwise, the message is always in the queue, and you will receive the same message next time. In addition, DeleteMessage can be called successfully only within the specified time after the message is received. For more information, see MNS - DeleteMessage.
 
     ```
     try
@@ -117,7 +109,7 @@ Decompress the file to the project directory. The decompressed directory is `php
     If (strbmp ($ json_message-> {'type'}, 'report ') = 0 ){
           $activities = $json_message->{'MediaWorkflowExecution'}->{'ActivityList'};
           $transcode_job_ids = Array();
-          for ($i=0; $i < count($activities); $i++) {
+          for ($i = 0; $i < count($audioStreams); $i++) {
             if (strcmp($activities[$i]->{'Type'}, 'Transcode') == 0) {
               $transcode_job_ids[] = $activities[$i]->{'JobId'};
             }
@@ -145,7 +137,7 @@ Decompress the file to the project directory. The decompressed directory is `php
     if (strcmp($json_message->{'Type'}, 'Report') == 0) {
           $activities = $json_message->{'MediaWorkflowExecution'}->{'ActivityList'};
           $snapshot_job_ids = Array();
-          for ($i=0; $i < count($activities); $i++) {
+          for ($i = 0; $i < count($audioStreams); $i++) {
             if (strcmp($activities[$i]->{'Type'}, 'Snapshot') == 0) {
               $snapshot_job_ids[] = $activities[$i]->{'JobId'};
             }
