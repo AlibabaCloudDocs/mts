@@ -4,11 +4,11 @@
 
 1.  打开输入bucket对应的CORS设置页面。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11387/153922755211340_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11387/153993568111340_zh-CN.png)
 
 2.  添加规则。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11387/153922755211341_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11387/153993568111341_zh-CN.png)
 
     -   **来源**
 
