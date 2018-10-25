@@ -264,7 +264,7 @@ DASH打包是指将多字幕、多音轨、多码率视频流生成一个Master 
 
 拓扑图示意：
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18607/153993778310186_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18607/154045690210186_zh-CN.png)
 
 完整的场景示例用拓扑结构表示：
 
