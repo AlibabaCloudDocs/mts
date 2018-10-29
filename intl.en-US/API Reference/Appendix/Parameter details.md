@@ -463,6 +463,22 @@ The following table lists the supported combinations of audio transcoding codec 
 -   VTT can be specified to represent output webvtt.
 
 |
+|BlackLevel|String|No|This parameter specifies the black pixel threshold that is used to detect black frames in the first screenshot for multi-screenshot capture.
+
+-   No default value is available.
+-   Value range: \[30,100\]
+
+The smaller the value, the fewer black pixels in a frame.
+
+-   If the screenshot capture time specified by the Time parameter is greater than 0, the BlackLevel setting does not take effect and black frame filtering is not performed.
+-   If the screenshot capture time is 0 and the number of screenshots specified by the Num parameter is greater than 1, the BlackLevel setting takes effect. If theblack pixel proportion of the captured frame is lower than the threshold, the frame is used directly. If the black pixel proportion of the captured frame is greater than or equal to the threshold, the frame is filtered out. Black frame filtering continues to check the first five seconds to locate a frame with a black pixel proportion lower than the threshold.
+-   If the screenshot capture time is 0 and the number of screenshots is 1, the BlackLevel setting does not take effect but black frame filtering will still be performed.
+
+To filter frames that contain only black pixels, set the BlackLevel parameter to 100.
+
+Example:
+
+ When the screenshot capture time is 0 and the number of screenshots is 10, set the BlackLevel parameter to 100 to filter out frames that contain only black pixels in the first screenshot.|
 |OutputFile|String|Yes|Output file, which is a JSON object.For more information, see “38. Screenshot OutputFile.”
 
 |
