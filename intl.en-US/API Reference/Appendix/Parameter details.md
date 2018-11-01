@@ -531,7 +531,7 @@ Default value: intra|
 Default value: 10 seconds
 
 |
-|ForceSegTime|String|No|A list of up to 10 segment time points, separated by commas \(,\).-   Integer
+|ForceSegTime|String|No|A list of up to 10 segment time points, separated by commas \(,\).-   Decimal, support three decimal digits
 -   Unit: seconds
 -   For example, 23,55,60 indicates processing segments at the 23th, 55th, and 60th seconds.
 
@@ -1132,4 +1132,27 @@ In the previous demo, the corresponding descriptions of the pts（0, 128000, 250
 ```
 
  |
+
+## Volume {#section_hv4_k3t_qfb .section}
+
+|Parameters|Type|Required or not|Description|
+|:---------|:---|:--------------|:----------|
+|Method|String|No|Volume regulation mode.Optional value: auto, dynamic, linear.
+
+|
+|IntegratedLoudnessTarget|String|No|Target volume, number.-   Value range: \[-70, -5\]
+-   You must specify Method as dynamic.
+-   Default value: -6
+
+|
+|TruePeak|String|No|Maximum peak value, number.-   Value range: \[-9, 0\]
+-   You must specify Method as dynamic.
+-   Default value: -1
+
+|
+|LoudnessRangeTarget|String|No|Volume range, number.-   Value range: \[1, 20\]
+-   You must specify Method as dynamic.
+-   Default value: 8
+
+|
 
