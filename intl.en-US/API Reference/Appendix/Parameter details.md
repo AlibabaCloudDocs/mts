@@ -1163,8 +1163,8 @@ In the previous demo, the corresponding descriptions of the pts（0, 128000, 250
 
 ## Amix {#section_wwh_nps_sfb .section}
 
-|Parameters|Type|Required or not|Description|
-|:---------|:---|:--------------|:----------|
+|Parameters|Type|Required|Description|
+|:---------|:---|:-------|:----------|
 |AmixURL|String|Yes|Background audio track media that needs audio mixing. Value: OSS URL or character string "input".
 
 input scenario: to mix two audio tracks of a video stream.
