@@ -92,15 +92,20 @@ This article introduces the details of the parameters.
 
 |
 |DeWatermark|String|No|Blurring watermark, JSON object. For more information, see DeWatermark.|
+|Amix|String|否|Audio mixing. Scenarios: for example, to add background music; and to mix two audio tracks of a video.
+
+Use the AudioStreamMap parameter to select the audio track of the input video for audio mixing.
+
+JSON list format, example: \[\{“AmixURL”:“http://test-bucket.oss-cn-hangzhou.aliyuncs.com/audio.mp3",“Map”:“0:a:0”,“MixDurMode”:"longest”\}\]|
 
 ## Clip {#section_b5z_h24_y2b .section}
 
 |Parameter|Type|Required|Description|
 |:--------|:---|--------|:----------|
-|TimeSpan|String|No|Time span of a clip.See timespan for details.
+|TimeSpan|String|No|Time span of a clip.For more information, see TimeSpan.
 
 |
-|For more information, see “TimeSpan.”|Boolean|No|Whether to clip the first part.-   false: \(Default\) Clip after merging
+|ConfigToClipFirstPart|Boolean|No|Whether to clip the first part.-   false: \(Default\) Clip after merging
 -   true: Merge after clipping the first part|
 
 |
@@ -171,7 +176,7 @@ Example: 01:00:59.999 or 32000.23
 |
 |Height|String|No|If this parameter is set, it overwrites the watermark height setting of the watermark template. The parameter value can be an integer or a decimal number.-   In integer form, this parameter indicates the watermark image height in pixels.
     -   Value range is \[8, 4096\].
-    -   Unit: Px;
+    -   Unit: Px.
 -   In decimal number form, this parameter indicates a ratio relative to the resolution height of the output video.
     -   Value range: \(0, 1\).
     -   Up to four digits are allowed after the decimal point, for example, 0.9999, and excessive digits are automatically dropped.
@@ -1153,6 +1158,22 @@ In the previous demo, the corresponding descriptions of the pts（0, 128000, 250
 |LoudnessRangeTarget|String|No|Volume range, number.-   Value range: \[1, 20\]
 -   You must specify Method as dynamic.
 -   Default value: 8
+
+|
+
+## Amix {#section_wwh_nps_sfb .section}
+
+|Parameters|Type|Required or not|Description|
+|:---------|:---|:--------------|:----------|
+|AmixURL|String|Yes|Background audio track media that needs audio mixing. Value: OSS URL or character string "input".
+
+input scenario: to mix two audio tracks of a video stream.
+
+|
+|Map|String|Yes|Select target audio tracks from AmixURL. The value is : 0:a:\{audio\_index\}. Example: 0:a:0.|
+|MixDurMode|String|No|Value: first, long.-   first: indicates the time duration of the output media is subject to the time duration of the input media.
+-   long: indicates that the time duration of the output media is subject to the media which has longer time duration.
+-   Default value: long
 
 |
 
