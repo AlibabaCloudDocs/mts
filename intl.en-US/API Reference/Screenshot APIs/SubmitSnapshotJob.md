@@ -54,7 +54,7 @@ The SubmitSnapshotJob API submits screenshot tasks.
 
 |Parameter|Type|Description|
 |:--------|:---|:----------|
-|SnapshotJob|[AliyunSnapshotJob](https://help.aliyun.com/document_detail/29251.html?spm=a2c4g.11186623.6.676.oyhBPl#AliyunSnapshotJob)|Screenshot task|
+|SnapshotJob|[AliyunSnapshotJob](reseller.en-US/API Reference/Data types.md#)|Screenshot task|
 
 ## Examples {#section_gpq_zbt_x2b .section}
 
