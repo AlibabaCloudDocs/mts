@@ -2,7 +2,7 @@
 
 ## Installation {#section_fws_sv5_y2b .section}
 
-[Download the upload SDK](https://help.aliyun.com/document_detail/48501.html)
+[Download the upload SDK](reseller.en-US/SDK Reference/Upload SDK/Upload SDK.md#)
 
 Introduce the following two JavaScript scripts on the page:
 
