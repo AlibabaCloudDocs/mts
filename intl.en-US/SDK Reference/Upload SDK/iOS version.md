@@ -8,7 +8,7 @@ iOS 7.0 or a later version
 
 [OSS iOS SDK](https://github.com/aliyun/aliyun-oss-ios-sdk/)
 
-[Download the upload SDK](https://help.aliyun.com/document_detail/48501.html)
+[Download the upload SDK](reseller.en-US/SDK Reference/Upload SDK/Upload SDK.md#)
 
 -   Directly introduce the frameworks
 
