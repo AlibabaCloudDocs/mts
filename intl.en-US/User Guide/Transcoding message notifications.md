@@ -12,16 +12,16 @@ MPS fully supports message queue and message notification functions of MNS. The 
         3.  Click **Create Topic**.
         4.  Enter the **Topic Name** on the **Create Topic** page.
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11355/15392600079970_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11355/15434760699970_en-US.png)
 
     2.  Create a subscription.
         1.  Click **Subscribe**.
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11355/15392600079971_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11355/15434760699971_en-US.png)
 
         2.  On the **Subscribe**page, enter the **Subscription Name**and the **Endpoint**.
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11355/15392600079976_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11355/15434760699976_en-US.png)
 
 2.  Set the binding relationship between the MPS queue and notification.
     1.  Log on to the [Media Processing console](https://partners-intl.aliyun.com/login-required#/mts).
@@ -31,7 +31,7 @@ MPS fully supports message queue and message notification functions of MNS. The 
     5.  Click **Message Notification**.
     6.  Select the **Message Type** and **Message Name**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11355/15392600079974_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11355/15434760699974_en-US.png)
 
         The relationship between the MPS queue and notification is binded successfully.
 
