@@ -46,9 +46,9 @@ This article introduces the details of the parameters.
 
 |
 |Container|String|No|If this parameter is set, it overwrites the Container parameter in the specified transcoding template. For more information, see “7. Container.”|
-|Video|String|No|If this parameter is set, it overwrites the Video parameter in the specified transcoding template. For more information, see [Video](https://help.aliyun.com/document_detail/29253.html?#h2-8-video-8).|
-|Audio|String|No|If this parameter is set, it overwrites the Audio parameter in the specified transcoding template. For more information, see [Audio](https://help.aliyun.com/document_detail/29253.html?#h2-10-audio-9).|
-|Audiostreammap|String|No|Audio stream sequence number.-   ormat: 0:a:\{sequence number\}.
+|Video|String|No|If this parameter is set, it overwrites the Video parameter in the specified transcoding template. For more information, see [Video](reseller.en-US/API Reference/Appendix/Parameter details.md#) .|
+|Audio|String|No|If this parameter is set, it overwrites the Audio parameter in the specified transcoding template. For more information, see [Audio](reseller.en-US/API Reference/Appendix/Parameter details.md#) .|
+|Audiostreammap|String|No|Audio stream sequence number.-   Format: 0:a:\{sequence number\}.
 -   The sequence starts with zero.
 -   The sequence number indicates the subscript of the audio streams list.
 -   Example: 0:a:0.
@@ -608,13 +608,13 @@ Position of the AdjDarMethod parameter:
 |Parameter|Type|Required|Description|
 |:--------|:---|--------|:----------|
 |QueueName|String|No|MNS queue created in Alibaba Cloud Message Service.-   Media Processing allows you to bind an MNS queue to an MPS queue. After a task is executed in the MPS queue, the results are sent to the bound MNS queue.
--   For more information about how to acquire messages in the MNS queue, see [Queue message operation](https://help.aliyun.com/document_detail/44601.html?spm=a2c4g.11186623.2.8.452f40f7IEM1RZ).
--   Before you configure an MNS queue in the MPS queue, create the MNS queue in [Message Service](https://mns.console.aliyun.com/?spm=a2c4g.11186623.2.9.452f40f7IEM1RZ).
+-   For more information about how to acquire messages in the MNS queue, see [Queue message operation](../../../../reseller.en-US/Developer Guide/Receive message notifications/Receive notification through queues.md#).
+-   Before you configure an MNS queue in the MPS queue, create the MNS queue in [Message Service](https://partners-intl.aliyun.com/login-required#/mns).
 
 |
 |Topic|String|No|Topic created in Alibaba Cloud Message Service.-   Media Processing allows you to bind a topic to an MPS queue. After a task is executed in the MPS queue, the results are sent to the bound topic,
 -   and then the topic pushes the results in the form of a message to the subscribed address.
--   Before you configure a topic in a message queue, create a topic in [Message Service](https://mns.console.aliyun.com/?spm=a2c4g.11186623.2.10.452f40f7IEM1RZ).
+-   Before you configure a topic in a message queue, create a topic in Message Service.
 
 **Note:** This function is currently under a public beta test.
 
@@ -903,7 +903,7 @@ This parameter is required if the Crop parameter is set \(not a blank JOSN\{\}\)
 |Content|String|Yes|Text watermark content, which must be Base64 encoded.For example, if you want to add the text watermark “test text watermark”, set this parameter to 5rWL6K+V5paH5a2X5rC05Y2w.
 
 |
-|FontName|String|No|Default value: “SimSun”.For more information, see [Supported font](https://help.aliyun.com/document_detail/59950.html?spm=a2c4g.11186623.2.15.452f40f7IEM1RZ).
+|FontName|String|No|Default value: “SimSun”.For more information, see [Supported font](reseller.en-US/API Reference/Font name.md#).
 
 |
 |FontSize|Int|No|Font size.-   Default value: 16.
