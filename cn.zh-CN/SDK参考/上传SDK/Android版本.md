@@ -8,7 +8,7 @@ Android系统版本：2.3 及以上
 
 [OSS Android SDK](https://github.com/aliyun/aliyun-oss-android-sdk/)
 
-[上传SDK下载](https://help.aliyun.com/document_detail/48501.html)
+[上传SDK下载](intl.zh-CN/SDK参考/上传SDK/上传SDK下载.md#)
 
 -   直接引入jar包
 

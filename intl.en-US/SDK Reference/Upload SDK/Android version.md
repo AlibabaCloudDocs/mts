@@ -8,7 +8,7 @@ Android 2.3 or a later version
 
 [OSS Android SDK](https://github.com/aliyun/aliyun-oss-android-sdk/)
 
-[Upload SDK](https://help.aliyun.com/document_detail/48501.html)
+[Upload SDK](reseller.en-US/SDK Reference/Upload SDK/Upload SDK.md#)
 
 -   Directly introduce the JAR package
 
