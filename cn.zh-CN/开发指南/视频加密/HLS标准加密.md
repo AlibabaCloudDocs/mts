@@ -6,7 +6,7 @@
 
 ## 加密架构 {#section_ssn_2bw_1fb .section}
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11402/154019826611385_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11402/154357753411385_zh-CN.png)
 
 ## 术语介绍 {#section_c54_3bw_1fb .section}
 

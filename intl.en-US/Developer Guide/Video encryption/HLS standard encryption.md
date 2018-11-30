@@ -6,7 +6,7 @@ Video encryption is a measure to protect the video content. Encrypting the video
 
 ## Complete encryption architecture {#section_ssn_2bw_1fb .section}
 
-![](images/11385_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11402/154357754111385_en-US.png)
 
 ## Terms {#section_c54_3bw_1fb .section}
 
