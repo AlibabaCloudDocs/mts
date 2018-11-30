@@ -615,12 +615,6 @@ Media workflow activity
 
 |Name|Type|Description|
 |:---|:---|:----------|
-| | | |
-| | | |
-| | | |
-
-|Name|Type|Description|
-|:---|:---|:----------|
 |Name|String|Media workflow activity name,**Note:** which is unique in the same workflow.
 
 |
