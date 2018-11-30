@@ -183,7 +183,7 @@ For more information about the architecture of HLS standard encryption, see [HLS
 
 4.  Obtain playback addresses.
 
-    You can obtain playback address by multiple ways. For more information, see [Questions about MPS file output](https://help.aliyun.com/document_detail/50628.html).
+    You can obtain playback address by multiple ways. For more information, see [Questions about MPS file output](https://www.alibabacloud.com/help/faq-detail/50628.htm).
 
 5.  Play video.
 
