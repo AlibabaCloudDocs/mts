@@ -1,28 +1,28 @@
-# 如何进行HLS的加密与播放 {#concept_hsy_2kg_x2b .concept}
+# How do I perform HLS encryption and play? {#concept_hsy_2kg_x2b .concept}
 
-## 本文目的 {#section_i23_gkg_x2b .section}
+## Purpose {#section_i23_gkg_x2b .section}
 
-示例创建HLS标准加密工作流到播放加密视频的一个完整步骤。
+This document describes the complete procedure of creating HLS standard encryption workflow to play the encrypted video.
 
-HLS标准加密架构，参见 [HLS的加密与播放](../../../../intl.zh-CN/开发指南/视频加密/HLS标准加密.md#)。
+For more information about the architecture of HLS standard encryption, see [HLS standard encryption](../../../../reseller.en-US/Developer Guide/Video encryption/HLS standard encryption.md#).
 
-## 操作步骤 {#section_zcj_hkg_x2b .section}
+## Procedure {#section_zcj_hkg_x2b .section}
 
-1.  创建HLS加密工作流。
+1.  Create HLS encryption workflow.
 
-    创建HLS加密工作流，DEMO代码，参见 [创建HLS标准加密工作流](../../../../intl.zh-CN/SDK参考/媒体转码SDK/Python SDK/创建HLS标准加密工作流.md#)。
+    For more information about creating HLS encryption workflow and DEMO code, see [Create HLS standard encryption workflow](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Python SDK/Create HLS standard encryption workflow.md#).
 
-    **说明：** 创建HLS标准工作流时，为了测试，参数 HLS\_KEY\_URI 值填 http: //127.0.0.1:8888。播放时，播放器会到这个地址请求密钥，我们会在本地起一个服务，进行分发密钥。
+    **Note:** When creating HLS standard workfow, enter http: //127.0.0.1:8888 in the value of the HLS\_KEY\_URI parameter for a test. During playing, the player request the key to this address, and we create a service to distribute key.
 
-2.  上传及加密视频。
+2.  Upload and encrypt video.
 
-    在控制台的媒体库中，上传视频，选择工作流时，选择刚刚创建的HLS标准加密工作流，上传完成后，会自动触发加密转码。待状态为发布时，进行下一步。
+    Upload a video by using Media Files in the MPS console. When selecting workflow, select the newly created HLS standard encryption workflow. After uploading, the workflow automatically triggers encryption transcoding. When the video is in the published status, follow these steps.
 
-3.  开启本地鉴权服务。
+3.  Create local authentication service.
 
-    搭建一个本地HTTP服务，作为播放HLS标准加密视频的鉴权服务，颁发及验证MtsHlsUriToken令牌。
+    Create a local HTTP service, which serves as authentication service in playing HLS standard encryption video, to issue and verify MtsHlsUriToken token.
 
-    Java示例代码依赖：
+    Java code dependency example:
 
     [https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-core](https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-core)
 
@@ -34,8 +34,8 @@ HLS标准加密架构，参见 [HLS的加密与播放](../../../../intl.zh-CN/�
     import com.aliyuncs.DefaultAcsClient;
     import com.aliyuncs.exceptions.ClientException;
     import com.aliyuncs.http.ProtocolType;
-    import com.aliyuncs.kms.model.v20160120.DecryptRequest;
-    import com.aliyuncs.kms.model.v20160120.DecryptResponse;
+    import com.aliyuncs.kms.model.v20160120. DecryptRequest;
+    import com.aliyuncs.kms.model.v20160120. DecryptResponse;
     import com.aliyuncs.profile.DefaultProfile;
     import com.sun.net.httpserver.Headers;
     import com.sun.net.httpserver.HttpExchange;
@@ -54,23 +54,23 @@ HLS标准加密架构，参见 [HLS的加密与播放](../../../../intl.zh-CN/�
     private static DefaultAcsClient client;
     static {
     String region = "";
-    String accessKeyId = "";
-    String accessKeySecret = "";
+    String accessKeyId = "<your-access-key-id>"
+    String accessKeySecret = "<your-access-key-secret>";
     client = new DefaultAcsClient(DefaultProfile.getProfile(region, accessKeyId, accessKeySecret));
     }
     public class AuthorizationHandler implements HttpHandler {
     public void handle(HttpExchange httpExchange) throws IOException {
     String requestMethod = httpExchange.getRequestMethod();
     if(requestMethod.equalsIgnoreCase("GET")){
-    //从URL中取得密文密钥
+    //Get ciphertext and key from URL
     String ciphertext = getCiphertext(httpExchange);
     if (null == ciphertext)
     return;
-    //从KMS中解密出来，并Base64 decode
+    //decrypt ciphertext from KMS, and Base64 decode
     byte[] key = decrypt(ciphertext);
-    //设置header
+    //Set header
     setHeader(httpExchange, key);
-    //返回密钥
+    //Response key
     OutputStream responseBody = httpExchange.getResponseBody();
     responseBody.write(key);
     responseBody.close();
@@ -88,7 +88,7 @@ HLS标准加密架构，参见 [HLS的加密与播放](../../../../intl.zh-CN/�
     try {
     DecryptResponse response = client.getAcsResponse(request);
     String plaintext = response.getPlaintext();
-    //注意：需要base64 decode
+    //Note: require base64 decode
     return Base64.decodeBase64(plaintext);
     } catch (ClientException e) {
     e.printStackTrace();
@@ -111,7 +111,7 @@ HLS标准加密架构，参见 [HLS的加密与播放](../../../../intl.zh-CN/�
     }
     private void startService() throws IOException {
     HttpServerProvider provider = HttpServerProvider.provider();
-    //监听端口8888,能同时接受10个请求
+    //listening port 8888 can accept 10 request simultaneously
     HttpServer httpserver = provider.createHttpServer(new InetSocketAddress(8888), 10);
     httpserver.createContext("/", new AuthorizationHandler());
     httpserver.start();
@@ -124,7 +124,7 @@ HLS标准加密架构，参见 [HLS的加密与播放](../../../../intl.zh-CN/�
     }
     ```
 
-    Python示例代码依赖：
+    Python sample code:
 
     pip install aliyun-python-sdk-core
 
@@ -181,18 +181,18 @@ HLS标准加密架构，参见 [HLS的加密与播放](../../../../intl.zh-CN/�
     server.serve_forever()
     ```
 
-4.  获取播放地址。
+4.  Obtain playback addresses.
 
-    多种方式可获取。详情参见 [媒体转码输出文件相关问题](https://help.aliyun.com/document_detail/50628.html)。
+    You can obtain playback address by multiple ways. For more information, see [Questions about MPS file output](https://help.aliyun.com/document_detail/50628.html).
 
-5.  播放视频。
+5.  Play video.
 
-    借助一个在线播放器，测试HLS加密视频的播放。详情参见 [阿里云播放器用户诊断工具](http://player.alicdn.com/detection.html)。
+    By using an online player, test the playback of HLS encryption video. For more information, see [Alibaba Cloud player user diagnositc tool](http://player.alicdn.com/detection.html).
 
-    将第 **4**步中获取的播放地址，如图填入对话框中，单击 **视频播放** 即可。
+    Enter the playback address obtained from step **4** to the dialogue box as shown in the following figure, and click **Play**.
 
-    **说明：** 通过浏览器DEBUG，可以看到播放器自动请求了鉴权服务器，获取解密密钥，并进行解密播放。
+    **Note:** By using browser DEBUG, the player automatically request authentication server, obtain decryption key and do the playback operation after decryption.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11375/154356875210097_zh-CN.png)
+    ![](images/10097_en-US.png)
 
 
