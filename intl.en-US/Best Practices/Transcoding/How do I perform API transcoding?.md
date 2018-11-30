@@ -34,14 +34,10 @@ When workflows can not meet user requirements, users need to judge their busines
 ## Procedure {#section_ggb_thg_x2b .section}
 
 1.  [Upload input files to OSS](reseller.en-US/Best Practices/How do I upload a video?.md#) \(Multiple upload options: OSS console, OSS related uploading tools and upload SDK\).
-
 2.  [Set MPS Queue notification](../../../../reseller.en-US/User Guide/Transcoding message notifications.md#).
-
 3.  [Submit transcoding task](../../../../reseller.en-US/User Guide/Submit a transcoding task.md#).
-
 4.  After getting the message, call the “QueryTranscodingJob” interface to query the task execution result and get the output file URL.
 
-5.  6.  7.  
 ## Set up an application to add watermarks to the video {#section_evd_5hg_x2b .section}
 
 [Java source code download.](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/59368/cn_zh/1505138223690/mts-demo-java.tgz?spm=a2c4g.11186623.2.10.6f9251fbBWEbgK&file=mts-demo-java.tgz)
