@@ -17,7 +17,7 @@ Screenshots refer to the process where an image captured at a specified time in 
 
 You need to take note of the following parameters when you input a file:
 
-[Input](https://help.aliyun.com/document_detail/29253.html#h2-19-15)
+[Input](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#)
 
 Specifies the OSS input file of the video that you want to take a screenshot of.
 
