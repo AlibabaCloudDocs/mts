@@ -34,16 +34,11 @@
 ## 操作步骤 {#section_ggb_thg_x2b .section}
 
 1.  输入文件 [上传到OSS](intl.zh-CN/最佳实践/如何上传视频.md#)（多种上传方案：OSS控制台上传，使用OSS相关上传工具上传，上传SDK）。
-
 2.  [设置管道消息队列通知](../../../../intl.zh-CN/用户指南/转码消息通知.md#)。
-
 3.  [提交转码任务](../../../../intl.zh-CN/用户指南/提交转码作业.md#)。
-
 4.  在获取到消息后，调用“查询转码作业”接口查询作业执行结果，获取输出文件URL。
+5.  通过URL播放视频。
 
-5.  6.  通过URL播放视频。
-
-7.  
 ## 搭建一个给视频添加水印的应用服务 {#section_evd_5hg_x2b .section}
 
 [JAVA源代码下载](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/59368/cn_zh/1505138223690/mts-demo-java.tgz?spm=a2c4g.11186623.2.10.6f9251fbBWEbgK&file=mts-demo-java.tgz)
