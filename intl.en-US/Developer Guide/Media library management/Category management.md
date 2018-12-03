@@ -128,7 +128,20 @@ function deleteCategory($client, $categoryId)
     For more information about the parameters, see [API reference \> Media category APIs \> Retrieve a category list](../../../../reseller.en-US/API Reference/Media category APIs/ListAllCategory.md#).
 
     ```
-
+     function queryCategoryList($client)
+          {
+            $request = new Mts\ListAllCategoryRequest();
+            $request->setAcceptFormat('JSON');
+            $response = $client->getAcsResponse($request);
+            return $response  ;
+        }
+        $categoryList = queryCategoryList($client)->{'CategoryList'}->{'Category'};
+        for ($i = 0; $i < count($categoryList); $i++) {
+            print_r('Level: '.$categoryList[$i]->{'Level'}.
+                    "\tParentId: ".$categoryList[$i]->{'ParentId'}.
+                    "\tCateId: ".$categoryList[$i]->{'CateId'}.
+                    "\tCateName: ".$categoryList[$i]->{'CateName ' }."\n");
+        }
     ```
 
 
