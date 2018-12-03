@@ -55,7 +55,7 @@ Topology example
 
 |Parameter|Type|Description|
 |:--------|:---|:----------|
-|MediaWorkflow|[MediaWorkflow](https://help.aliyun.com/document_detail/29251.html#MediaWorkflow)|Media workflow|
+|MediaWorkflow|[MediaWorkflow](reseller.en-US/API Reference/Data types.md#)|Media workflow|
 
 ## Examples {#section_gpq_zbt_x2b .section}
 
