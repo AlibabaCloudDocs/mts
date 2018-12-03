@@ -98,14 +98,6 @@ Use the AudioStreamMap parameter to select the audio track of the input video fo
 
 JSON list format, example: \[\{“AmixURL”:“http://test-bucket.oss-cn-hangzhou.aliyuncs.com/audio.mp3",“Map”:“0:a:0”,“MixDurMode”:"longest”\}\]|
 
-|MergeConfigUrl是拼接配置文件URL地址。|
-
-|MergeConfigUrl是拼接配置文件URL地址。|
-
-|MergeConfigUrl是拼接配置文件URL地址。|
-
-|MergeConfigUrl是拼接配置文件URL地址。|
-
 ## Clip {#section_b5z_h24_y2b .section}
 
 |Parameter|Type|Required|Description|
