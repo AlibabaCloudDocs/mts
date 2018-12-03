@@ -12,7 +12,7 @@ The ListAllCategory API retrieves a category list.
 
 |Parameter|Type|Description|
 |:--------|:---|:----------|
-|Category|[Category](https://help.aliyun.com/document_detail/29251.html#Category)\[\]|Category information|
+|Category|[Category](reseller.en-US/API Reference/Data types.md#)\[\]|Category information|
 
 ## Examples {#section_gpq_zbt_x2b .section}
 
