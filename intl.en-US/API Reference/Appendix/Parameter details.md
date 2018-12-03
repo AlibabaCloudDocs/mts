@@ -60,8 +60,8 @@ This article introduces the details of the parameters.
 -   Example of two merged parts: `[{"MergeURL":"http://jvm.oss-cn-hangzhou.aliyuncs.com/tail_comm_01.mp4","Start":"1","Duration":"20"},{"MergeURL":"http://jvm.oss-cn-hangzhou.aliyuncs.com/tail_comm_02.mp4","Start":"5.4","Duration":"10.2"}]`
 
  |
-|MergeConfigUrl|String|No|MergeConfigUrl and MergeList are mutually exclusive.-   MergeConfigUrl indicates the URL of a merging configuration file, which supports up to 100 merged parts.
--   .
+|MergeConfigUrl|String|No|MergeConfigUrl and MergeList are mutually exclusive.-   MergeConfigUrl supports up to 100 merged parts.
+-   MergeConfigUrl indicates the URL of a merging configuration file.
 -   Example: `http://jvm.oss-cn-hangzhou.aliyuncs.com/mergeConfigfile`
 -   The merging configuration file must be stored in OSS and its access permission must be granted to Media Processing. For more information about the file content, see “27. Merging.”
 -   The following is the sample content of mergeConfigfile: `{``"MergeList":[{"MergeURL":"http://jvm.oss-cn-hangzhou.aliyuncs.com/tail_comm.mp4"}]``}`
@@ -97,6 +97,14 @@ This article introduces the details of the parameters.
 Use the AudioStreamMap parameter to select the audio track of the input video for audio mixing.
 
 JSON list format, example: \[\{“AmixURL”:“http://test-bucket.oss-cn-hangzhou.aliyuncs.com/audio.mp3",“Map”:“0:a:0”,“MixDurMode”:"longest”\}\]|
+
+|MergeConfigUrl是拼接配置文件URL地址。|
+
+|MergeConfigUrl是拼接配置文件URL地址。|
+
+|MergeConfigUrl是拼接配置文件URL地址。|
+
+|MergeConfigUrl是拼接配置文件URL地址。|
 
 ## Clip {#section_b5z_h24_y2b .section}
 
