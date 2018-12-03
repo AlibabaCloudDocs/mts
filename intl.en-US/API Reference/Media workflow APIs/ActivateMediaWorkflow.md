@@ -8,9 +8,6 @@ The ActivateMediaWorkflow API activates a media workflow. If a media workflow is
 |:---------|:---|:--------------|:----------|
 |Action|String|Yes|API of the action, system required parameter. Value: ActivateMediaWorkflow|
 |MediaWorkflowId|String|Yes|Media workflow ID|
-| | | | |
-| | | | |
-| | | | |
 
 ## Response parameters {#section_ogh_wbt_x2b .section}
 
