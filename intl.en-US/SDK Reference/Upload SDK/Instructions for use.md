@@ -8,7 +8,7 @@ The upload SDK provides the file list management and upload control functions. F
 
 -   Initialize the upload SDK
 
-    The AccessKey and token can be used to grant permissions during initialization. Considering the security of the AccessKey stored on the client, it is recommended that the AccessKey be used only for testing and the token be used in the production environment. For details, see [Developer guide \> Upload a video file \> Overview](https://help.aliyun.com/document_detail/42615.html).
+    The AccessKey and token can be used to grant permissions during initialization. Considering the security of the AccessKey stored on the client, it is recommended that the AccessKey be used only for testing and the token be used in the production environment. For more information, see [Developer guide \> Upload a video file \> Overview](../../../../reseller.en-US/Developer Guide/Upload videos/Overview.md#).
 
 -   Select a file
 
@@ -43,12 +43,9 @@ The upload SDK provides the file list management and upload control functions. F
 
 -   The SDKs of the following three types of terminals are provided:
 
-    -   [HTML5](https://help.aliyun.com/document_detail/48471.html): It can be integrated to PC browsers. The development language is JavaScript.
-
-    -   [iOS](https://help.aliyun.com/document_detail/48473.html): It can be integrated to iOS apps in the language of Object-C.
-
-    -   [Android](https://help.aliyun.com/document_detail/48474.html): It can be integrated to Android apps in the language of Java.
-
+    -   [HTML5](reseller.en-US/SDK Reference/Upload SDK/JavaScript version.md#): It can be integrated to PC browsers. The development language is JavaScript.
+    -   [iOS](reseller.en-US/SDK Reference/Upload SDK/iOS version.md#): It can be integrated to iOS apps in the language of Object-C.
+    -   [Android](reseller.en-US/SDK Reference/Upload SDK/Android version.md#): It can be integrated to Android apps in the language of Java.
 
 ## Features {#section_wvr_mdq_y2b .section}
 
