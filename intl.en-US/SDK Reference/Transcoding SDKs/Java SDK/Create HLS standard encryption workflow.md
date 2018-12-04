@@ -2,11 +2,11 @@
 
 ## Overview {#section_vjf_mfx_y2b .section}
 
-This document is an example of calling API to create HLS standard encryption workflow. For more information about creating workflow, see [AddMediaWorkflow](https://help.aliyun.com/document_detail/44437.html).
+This document is an example of calling API to create HLS standard encryption workflow. For more information about creating workflow, see [AddMediaWorkflow](../../../../reseller.en-US/API Reference/Media workflow APIs/AddMediaWorkflow.md#).
 
 ## Code dependency example {#section_q2v_mfx_y2b .section}
 
--   For more information about MPS SDK, see [Installation](https://help.aliyun.com/document_detail/55736.html).
+-   For more information about MPS SDK, see [Installation](reseller.en-US/SDK Reference/Transcoding SDKs/Java SDK/Installation.md#).
 -   Other dependency.
 
     ```
