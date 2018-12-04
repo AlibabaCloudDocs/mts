@@ -2,7 +2,7 @@
 
 ## Introduction {#section_dr1_hmd_z2b .section}
 
-This document is an example of calling API to create HLS standard encryption workflow. For more information about creating HLS standard encryption workflow and playing encryption videos, see [HLS encryption and play](https://help.aliyun.com/document_detail/68565.html). For more information about MPS SDK, see [Installation](https://help.aliyun.com/document_detail/55746.html).
+This document is an example of calling API to create HLS standard encryption workflow. For more information about creating HLS standard encryption workflow and playing encryption videos, see [HLS encryption and play](../../../../reseller.en-US/Best Practices/Encryption/How do I perform HLS encryption and play?.md#). For more information about MPS SDK, see [Installation](reseller.en-US/SDK Reference/Transcoding SDKs/Python SDK/Installation.md#).
 
 ## Example {#section_if1_jmd_z2b .section}
 
