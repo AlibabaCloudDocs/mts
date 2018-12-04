@@ -2,14 +2,12 @@
 
 ## Scenario {#section_pn1_q2x_y2b .section}
 
--   HLS standard sata encryption applies to "protect video protection", it can prevent illegal downloads and illegal dissemination.
-
--   If you have high security requirements, enable Data Encryption function in the workflow. For more information, see [data encryption](https://help.aliyun.com/document_detail/50114.html).
-
+-   HLS standard data encryption applies to "protect video protection", it can prevent illegal downloads and illegal dissemination.
 
 ## Limits {#section_g2p_52x_y2b .section}
 
-HLS标准数据加密需要使用SubmitJobs接口，工作流中不可使用。
+-   To use HLS standard data encryption, you must use SubmitJobs API.
+-   HLS standard data encryption function cannot be used in workflow.
 
 ## Code example {#section_avt_v2x_y2b .section}
 
@@ -20,7 +18,7 @@ HLS标准数据加密需要使用SubmitJobs接口，工作流中不可使用。
     <dependency>
         <groupId>com.alibaba</groupId>
         <artifactId>fastjson</artifactId>
-        <version>1.2.25</version
+        <version>1.2.25</version>
     </dependency>
     <dependency>
         <groupId>commons-codec</groupId>
