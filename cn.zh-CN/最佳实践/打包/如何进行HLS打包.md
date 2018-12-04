@@ -276,7 +276,7 @@ HLS打包是指将多字幕、多音轨、多码率视频流生成一个Master P
 
 拓扑示意图：
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11378/154382187910114_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11378/154388884210114_zh-CN.png)
 
 完整的场景示例用拓扑结构表示：
 
