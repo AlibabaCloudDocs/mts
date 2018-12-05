@@ -10,7 +10,7 @@ This User Guide \> Library is a reference for those who want to:
 
 -   Learn about library settings.
 
--   Bind a CDN domain name to the**Output Media Bucket**.
+-   Link a CDN domain name to the **Output Media Bucket**.
 
 -   Upload and manage video files.
 
