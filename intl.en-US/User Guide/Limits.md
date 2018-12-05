@@ -8,9 +8,9 @@ Each MPS queue contains a maximum of 10,000 tasks in queue.
 
 ## Custom template {#section_qqx_twx_w2b .section}
 
-Each user can create 10 custom transcoding templates in each service region.
+In each service region, each user can create 10 custom transcoding templates.
 
-Each user can create 10 custom watermark templates in each service region.
+In each service region, each user can create 10 custom watermark templates.
 
 ## Media workflow {#section_rqx_twx_w2b .section}
 
