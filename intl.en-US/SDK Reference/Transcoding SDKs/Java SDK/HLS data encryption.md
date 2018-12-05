@@ -11,7 +11,7 @@
 
 ## Code example {#section_avt_v2x_y2b .section}
 
--   For more information about MPS SDK, [Installation](https://help.aliyun.com/document_detail/55736.html).
+-   For more information about MPS SDK,[Installation](reseller.en-US/SDK Reference/Transcoding SDKs/Java SDK/Installation.md#).
 -   Other code examples
 
     ```
