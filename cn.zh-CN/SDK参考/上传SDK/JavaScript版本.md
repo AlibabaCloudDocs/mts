@@ -11,9 +11,9 @@
 <script src="vod-sdk-upload-1.0.6.min.js"></script>
 ```
 
-## 创建VODUpload实例 {#section_nfr_vv5_y2b .section}
+## 创建对象初始化：创建VODUpload实例 {#section_nfr_vv5_y2b .section}
 
-在这里需要设置回调函数
+在这里您需要设置回调函数。
 
 ```
 var uploader = new VODUpload({
@@ -68,7 +68,17 @@ var uploader = new VODUpload({
     uploader.addFile(event.target.files[i], endpoint, bucket, object, userData);
     ```
 
-    上传时，如何指定媒体的属性（标题、标签、描述、类目、用户自定义数据）呢？addFile函数最后的参数userData是一个json对象。第一级的Vod是必须的，Vod下面有5个属性，示例如下：
+    **说明：** 
+
+    |参数|描述|
+    |:-|:-|
+    |event.target.files\[i\]|用户选择的文件列表|
+    |endpoint|OSS的endpoint|
+    |bucket|OSS的bucket|
+    |object|OSS的object|
+    |userData|addFile函数最后的参数userData是一个json对象|
+
+    上传时，如何指定媒体的属性（标题、标签、描述、类目、用户自定义数据）？addFile函数最后的参数userData是一个json对象。第一级的Vod是为必须，Vod下有5个属性，示例如下：
 
     ```
     var userData = '{"Vod":{"Title":"我是标题",
