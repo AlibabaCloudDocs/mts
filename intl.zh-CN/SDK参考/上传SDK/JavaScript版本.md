@@ -70,14 +70,11 @@ var uploader = new VODUpload({
 
     **说明：** 
 
-    |参数|描述|
-    |:-|:-|
-    |event.target.files\[i\]|用户选择的文件列表|
-    |endpoint|OSS的endpoint|
-    |bucket|OSS的bucket|
-    |object|OSS的object|
-    |userData|addFile函数最后的参数userData是一个json对象|
-
+    -   event.target.files\[i\] ：用户选择的文件列表，
+    -   endpoint：OSS的endpoint，
+    -   bucket：OSS的bucket，
+    -   object：OSS的object，
+    -   userData：addFile函数最后的参数userData是一个json对象。
     上传时，如何指定媒体的属性（标题、标签、描述、类目、用户自定义数据）？addFile函数最后的参数userData是一个json对象。第一级的Vod是为必须，Vod下有5个属性，示例如下：
 
     ```

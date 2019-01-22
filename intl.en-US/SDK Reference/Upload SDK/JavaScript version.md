@@ -70,14 +70,11 @@ var uploader = new VODUpload({
 
     **Note:** 
 
-    |Parameters|Description|
-    |:---------|:----------|
-    |event.target.files\[i\]|file list that user select|
-    |endpoint|endpoint of OSS|
-    |bucket|bucket of OSS|
-    |object|object of OSS|
-    |userData|the last parameters of addFile, a json object|
-
+    -   event.target.files\[i\]: file list that user select,
+    -   endpoint: endpoint of OSS,
+    -   bucket: bucket of OSS,
+    -   object: object of OSS,
+    -   userData: the last parameter of addFile, a json object.
     During uploading, obtain the attributes \(the title, tag, description, category, and custom data\) of a media set in the following way: The last parameter userData of the addFile function is a JSON object. The first-level VOD is required, and VOD contains the five attributes. Example:
 
     ```
