@@ -51,15 +51,15 @@ Concept description:
 
     -   Extension matching rules
 
-        The automatic triggering mechanism during uploading checks the file extension to avoid generating ineffective data \(such as pdf, word files and other files\).
+        The automatic triggering system during uploading checks the file extension to avoid generating ineffective data \(such as pdf, word files and other files\).
 
-        **Note:** API manual triggering mechaism does not check the extension.
+        **Note:** API manual triggering system does not check the extension.
 
         The files does not have the extension \(file does not include extension separator “.”\), or the extension conforms to the following rules:
 
         -   Video
 
-            3gp, asf, avi, dat, dv, flv, f4v, gif, m2t, m3u8, m4v, mj2, mjpeg, mkv, mov, mp4, mpe, mpg, mpeg, mts, ogg, qt, rm, rmvb, swf, ts, vob, wmv, webm
+            3gp, asf, avi, dat, dv, flv, f4v, gif, m2t, m3u8, m4v, mj2, mjpeg, mkv, mov, mp4, mpe, mpg, mpeg, mts, ogg, qt, rm, rmvb, swf, ts, vob, wmv and webm.
 
         -   Audio
 
@@ -69,7 +69,7 @@ Concept description:
 
         Each time you upload a matching multi-media file, it is triggered once. If the same multi-media file is uploaded for multiple times, multiple runnings are triggered. Each running has a unique RunId identifier.
 
-        In addition to the automatic triggering mechanism when uploading, the workflow targets stored multi-media files in storage and also provides a manual API triggering mechanism. Each call to the API triggers a running.
+        In addition to the automatic triggering system when uploading, the workflow targets stored multi-media files in storage and also provides a manual API triggering system. Each call to the API triggers a running.
 
     -   User data
 
