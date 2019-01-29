@@ -1,5 +1,7 @@
 # Android版本 {#concept_vpn_yw5_y2b .concept}
 
+本节主要介绍Android版本的环境要求，安装、创建VODUpload实例、初始化、列表管理和上传控制。
+
 ## 环境要求 {#section_mks_1x5_y2b .section}
 
 Android系统版本：2.3 及以上
@@ -10,27 +12,27 @@ Android系统版本：2.3 及以上
 
 [上传SDK下载](intl.zh-CN/SDK参考/上传SDK/上传SDK下载.md#)
 
--   直接引入jar包
+**直接引入jar包**
 
-    当您下载了VODUpload Android SDK的zip包后，进行以下步骤（对Android studio或者Eclipse都适用）。
+当您下载了VODUpload Android SDK的zip包后，进行以下步骤（对Android studio或者Eclipse都适用）。
 
-    -   解压后在libs目录下得到jar包，目前包括aliyun-oss-sdk-android-xxx.jar、okhttp-2.7.0.jar、okio-2.6.0.jar、aliyun-vod-upload-android-sdk-xxx.jar
-    -   将以上4个jar包导入工程的libs目录
-    -   权限设置
+1.  解压后在libs目录下得到jar包，目前包括aliyun-oss-sdk-android-xxx.jar、okhttp-2.7.0.jar、okio-2.6.0.jar、aliyun-vod-upload-android-sdk-xxx.jar。
+2.  将以上4个jar包导入工程的libs目录。
+3.  设置权限。
 
-        以下是VODUpload Android SDK所需要的Android权限，请确保您的AndroidManifest.xml文件中已经配置了这些权限，否则，SDK将无法正常工作。
+    以下是VODUpload Android SDK所需要的Android权限，请确保您的AndroidManifest.xml文件中已经配置了这些权限，否则，SDK将无法正常工作。
 
-        ```
-        <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
-        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
-        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
-        ```
+    ```
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    ```
 
 
 ## 创建VODUpload实例 {#section_iyt_3x5_y2b .section}
 
-在这里需要设置回调函数
+您需要在这里设置回调函数：
 
 ```
 VODUploadCallback callback = new VODUploadCallback() {
