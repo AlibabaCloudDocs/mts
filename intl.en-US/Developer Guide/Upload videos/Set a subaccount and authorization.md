@@ -4,48 +4,50 @@ Perform the following steps to set sub-accounts and authorizations.
 
 1.  Create a subaccount.
     1.  Log on to the [RAM console](https://partners-intl.aliyun.com/login-required#/ram).
-    2.  Click **Users** in the left-side navigation pane.
-    3.  In **User Management**, click **Create User**.
-    4.  In **Create User**, enter user information.
+    2.  In the left-side navigation pane, click **Identities** \> **Users**.
+    3.  Click **Create User**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/153993566311318_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/154891404238142_en-US.png)
 
-        **Note:** Select **Automatically generate an Access key for this user**, and properly store the AccessKey. The AccessKey of the subaccount will be used to obtain the token of STS.
+    4.  In**Create user**, create a subaccount which has the same permissions as the primary account to access MPS.
+
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/154891404238144_en-US.png)
+
+        **Note:** Tick **Programmatic Access**.
+
+    5.  Generate AccessKey for this account, copy and save the AccessKey for subsequent access.
+
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/154891404238167_en-US.png)
 
 2.  Create a role.
-    1.  In the left-side navigation pane, click **Roles**.
-    2.  Click **Create Role**.
-    3.  In **Select Role**, select **User Role**.
+    1.  In the left-side navigation pane, click **RAM Roles**.
+    2.  Click **Create RAM Role**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/153993566311319_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/154891404238200_en-US.png)
 
-    4.  In **Enter Type**, select **Current Alibaba Cloud Account**.
+    3.  In **Select type of trusted entity**, select **Alibaba Cloud Account**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/153993566311320_en-US.png)
+        In **Select Trusted Alibaba Cloud Account**, select **Current Alibaba Cloud Account**, and click **OK**.
 
-        **Note:** **Trusted Alibaba Cloud Account ID**is set to your current Alibaba Cloud account ID by default, which does not need to be specified. Click **Next**.
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/154891404238201_en-US.png)
 
-    5.  In **Configure Basic Role Information**, enter **Role Name**, and click **Create**.
+    4.  In **RAM Roles**, click the created role.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/153993566311321_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/154891404238216_en-US.png)
 
-    6.  In **Roles**, click the created role.
-    7.  In **Role Details**, record **Arn** parameter **acs:ram::1351140512345678:role/teststs**.
+    5.  In **Basic Information**, copy **ARN** parameter **acs:ram::1612618906552077:role/mps**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/153993566311327_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/154891404238202_en-US.png)
 
 3.  Set the role authorization.
-    1.  Click **Role Authorization Policies**.
+    1.  On the page of the created role, click **Add Permissions**.
+    2.  Select policy.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/153993566311328_en-US.png)
-
-    2.  Click **Edit Role Authorization Policy**.
-
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/153993566311329_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/154891404338204_en-US.png)
 
         **Note:** To adjust the STS permissions of the subaccount \(for example, to modify, add, or delete a permission\), return to this step.
 
-        You can create an authorization policy in **Custom Authorization Policy** and add this policy in Edit Authorization Policy to grant the minimum permission required by the upload SDK. The full policy content is as follows:
+        You can create a policy in **Custom Policy** and add this policy in editing policy to grant the minimum permission required by the upload SDK. The full policy content is as follows:
 
         ```
         {
@@ -68,21 +70,19 @@ Perform the following steps to set sub-accounts and authorizations.
         ```
 
 4.  Associate the subaccount with the role.
-    1.  Log on to the RAM console, and click **Policies** in the left-side navigation pane.
-    2.  Select **Custom Policy**, and click **Create Authorization Policy**.
-    3.  In the text box of **Select an authorization policy template** \> **All templates**, enter the keyword **STS**. Sselect the template for `AliyunSTSAssumeRoleAccess` and go to the next step.
+    1.  Log on to the RAM console, and click **Permissions** \> **Policies** in the left-side navigation pane.
+    2.  Click **Create Policy**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/153993566411330_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/154891404338208_en-US.png)
 
-    4.  In **Edit permissions and submit**, enter **Authorization Policy Name**.
-    5.  In **Policy Content**, set the **Resource** field to the **Arn** parameter**acs:ram::1351140512345678:role/teststs**.
+    3.  In **Create Custom Policy**, set **Resource** field to **ARN** parameter **acs:ram::1612618906552077:role/mps**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/153993566411331_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/154891404338218_en-US.png)
 
-    6.  In the left-side navigation pane of the RAM console, click **Users**.
-    7.  Select the subaccount you have set and click **Authorize** to edit your authorization policy.
-    8.  Enter test, the created `teststspolice` is displayed.
+    4.  In the left-side navigation pane, click **Identities** \> **Users**.
+    5.  Select the subaccount you have set, and click **Add Permissions**.
+    6.  Enter the created test policy and `teststspolicy` is displayed.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/153993566411339_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11386/154891404338232_en-US.png)
 
 
