@@ -21,6 +21,8 @@ The SubmitSnapshotJob API submits screenshot tasks.
               "Object":"example.flv" }
     ```
 
+For more information, see example of using [Snapshot interface](../../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Java SDK/Screenshot.md#).
+
 -   The bucket permission must be granted to Media Transcoding in the console.
 
 |
