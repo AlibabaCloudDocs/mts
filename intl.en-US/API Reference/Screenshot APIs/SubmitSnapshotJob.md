@@ -21,8 +21,11 @@ The SubmitSnapshotJob API submits screenshot tasks.
               "Object":"example.flv" }
     ```
 
-For more information, see example of using [Snapshot interface](../../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Java SDK/Screenshot.md#).
+For more information about using snapshot interface, see:
 
+    -   [Java- Snapshot](../../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Java SDK/Screenshot.md#)
+    -   [Python-Snapshot](../../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Python SDK/Screenshot.md#)
+    -   [PHP-Snapshot](../../../../../reseller.en-US/SDK Reference/Transcoding SDKs/PHP SDK/Screenshot.md#)
 -   The bucket permission must be granted to Media Transcoding in the console.
 
 |
