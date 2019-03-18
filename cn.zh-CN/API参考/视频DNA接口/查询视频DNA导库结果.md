@@ -48,7 +48,7 @@ XML
     <LogCount>6</LogCount>
     <FpResultLogInfoList list="true">
         <FpResultLogInfo>
-            <LogPath>cdnlog-hz-public.oss-cn-hangzhou.aliyuncs.com/mts.fingerprint/helloworld/20180923/helloworld_2018_09_23.gz?Expires=1538836455\u0026OSSAccessKeyId=LTAIviCc6zy8x3xa\u0026Signature=QaxYPBk3PF546A8OSZS%2FxR0gVR8%3D</LogPath>
+            <LogPath>cdnlog-hz-public.oss-cn-hangzhou.aliyuncs.com/mts.fingerprint/helloworld/20180923/helloworld_2018_09_23.gz?Expires=1538836455\u0026OSSAccessKeyId=test\u0026Signature=QaxYPBk3PF546A8OSZS%2FxR0gVR8%3D</LogPath>
             <LogName>helloworld.gz</LogName>
             <LogStartTime>1537632000</LogStartTime>
             <LogEndTime>1537718400</LogEndTime>
@@ -72,7 +72,7 @@ JSON
   "LogCount": 6,
   "FpResultLogInfoList": [
     {
-      "LogPath": "cdnlog-hz-public.oss-cn-hangzhou.aliyuncs.com/mts.fingerprint/helloworld/20180923/helloworld_2018_09_2.gz?Expires=1538836455\u0026OSSAccessKeyId=LTAIviCc6zy8x3xa\u0026Signature=QaxYPBk3PF546A8OSZS%2FxR0gVR8%3D",
+      "LogPath": "cdnlog-hz-public.oss-cn-hangzhou.aliyuncs.com/mts.fingerprint/helloworld/20180923/helloworld_2018_09_2.gz?Expires=1538836455\u0026OSSAccessKeyId=test\u0026Signature=QaxYPBk3PF546A8OSZS%2FxR0gVR8%3D",
       "LogName": "helloworld.gz",
       "LogStartTime": 1537632000,
       "LogEndTime": 1537718400,
