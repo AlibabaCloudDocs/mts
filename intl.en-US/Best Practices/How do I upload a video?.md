@@ -27,24 +27,24 @@ Uploading audio and video files using MPS’s SDK offers the following advantage
 
 ## Server creation { .section}
 
-Consider mobile AK security issues, choose STS to upload files. To learn how using STS increases the security of the upload, see [RAM and STS User Guide](../../../../reseller.en-US/Best Practices/Access control/Overview.md#).
+Consider mobile AK security issues, choose STS to upload files. To learn how using STS increases the security of the upload, see [RAM and STS User Guide](../../../../../reseller.en-US/Developer Guide/Hide/Access control/Overview.md#).
 
 ## STS Activation Procedure {#section_azk_bfl_x2b .section}
 
 1.  Activate the OSS service, create a bucket, and log on to the [OSS console](https://partners-intl.aliyun.com/login-required#/oss).
 2.  Find the basic configuration area on the OSS overview page and click the **security token**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11376/154357086610124_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11376/155288169410124_en-US.png)
 
 3.  Go to the **Security Token Shortcut Configuration** page.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11376/154357086610125_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11376/155288169410125_en-US.png)
 
 4.  Authorize automatically and save parameters in the text boxes. Click **Save AK Info** to close the dialog and complete STS activation.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11376/154357086610126_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11376/155288169410126_en-US.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11376/154357086610127_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11376/155288169410127_en-US.png)
 
 
 ## Build an application server {#section_whc_51l_x2b .section}
@@ -65,8 +65,8 @@ The download for each language pack contains a configuration file: config.json:
 ```
 
 {
-"AccessKeyID" : "",
-"AccessKeySecret" : "",
+"AccessKeyID" :"",
+"AccessKeySecret" :"",
 "RoleArn" : "",
 "TokenExpireTime" : "900",
 "PolicyFile": "policy/all_policy.txt"
@@ -103,8 +103,8 @@ If you want to create a token to grant read and write permissions for the specif
     
     {
     "status":200,
-    "AccessKeyId":"STS. 3pYjsdgdgagdasdg",
-    "AccessKeySecret":"rpnwO9kvEgetGdrddgsR2YrTtI",
+    "AccessKeyId":"test",
+    "AccessKeySecret":"test",
     "Security":"CAES+wMIARKAAZhjH0EUOIhJMQBMjRywXq7MQ/cjLYg80Aho1ek0Jm63XMhr9Oc5s3qaPer8p1YaX1NTDiCFZWFkvlHf1pQhuxfKBc+mRR9KAbHUefqH+rdjZqjTF7p2m1wJXP8S6k+G2MpHrUe6TYBkJ43GhhTVFMuM3BZajY3VjZWOXBIODRIR1FKZjIiEjMzMzE0MjY0NzM5MTE4NjkxMSoLY2xpZGSSDgSDGAGESGTETqOio6c2RrLWRlbW8vKgoUYWNzOm9zczoqOio6c2RrLWRlbW9KEDExNDg5MzAxMDcyNDY4MThSBTI2ODQyWg9Bc3N1bWVkUm9sZVVzZXJgAGoSMzMzMTQyNjQ3MzkxMTg2OTExcglzZGstZGVtbzI=",
     "Expiration":"2015-12-12T07:49:09Z",
     }
@@ -148,7 +148,7 @@ If you want to create a token to grant read and write permissions for the specif
 
     JS side
 
-    Before using the JS SDK, first open [CORS Access](../../../../reseller.en-US/Developer Guide/Upload videos/Set CORS.md#) to the OSS Bucket where you want to upload the video. Download JS Demo, open in a browser, the parameters on the page configuration are:
+    Before using the JS SDK, first open [CORS Access](../../../../../reseller.en-US/Developer Guide/Upload videos/Set CORS.md#) to the OSS Bucket where you want to upload the video. Download JS Demo, open in a browser, the parameters on the page configuration are:
 
     -   Configure the “HTTP Address” as the application server address configured above, for example, [http://127.0.0.1:7080/](http://127.0.0.1:7080/%E3%80%82?spm=a2c4g.11186623.2.17.5e9e2059meVW7L).
     -   Configure user Bucket.
