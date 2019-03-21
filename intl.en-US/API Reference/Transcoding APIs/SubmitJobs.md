@@ -19,7 +19,7 @@ The SubmitJobs API submits transcoding tasks. A transcoding output generates a t
 -   For details about the Output parameter, see “2. Output” in “Parameters” of “Appendix.”
 
 Example: `[{``"OutputObject":"example-output.flv",``"TemplateId":"S00000000-000010",``"WaterMarks":[{``"InputFile":{``"Bucket":"example-bucket",``"Location":"oss-cn-hangzhou",``"Object":"example-logo.png"``},``"WaterMarkTemplateId":"88c6ca184c0e47098a5b665e2a126797"``}],``"UserData":"testid-001"``}]`|
-|PipelineId|String|是|MPS queue ID.-   For the MPS queue definition, see the glossary.
+|PipelineId|String|Yes|MPS queue ID.-   For the MPS queue definition, see the glossary.
 -   If asynchronous notification is required, ensure that the MPS queue is bound to an available message subject.
 
 |
