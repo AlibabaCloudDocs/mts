@@ -46,9 +46,9 @@ This article introduces the details of the parameters.
 
 |
 |Container|String|No|If this parameter is set, it overwrites the Container parameter in the specified transcoding template. For more information, see “7. Container.”|
-|Video|String|No|If this parameter is set, it overwrites the Video parameter in the specified transcoding template. For more information, see [Video](reseller.en-US/API Reference/Appendix/Parameter details.md#) .|
-|Audio|String|No|If this parameter is set, it overwrites the Audio parameter in the specified transcoding template. For more information, see [Audio](reseller.en-US/API Reference/Appendix/Parameter details.md#) .|
-|Audiostreammap|String|No|Audio stream sequence number.-   Format: 0:a:\{sequence number\}.
+|Video|String|No|If this parameter is set, it overwrites the Video parameter in the specified transcoding template. For more information, see [Video](intl.en-US/API Reference/Appendix/Parameter details.md#) .|
+|Audio|String|No|If this parameter is set, it overwrites the Audio parameter in the specified transcoding template. For more information, see [Audio](intl.en-US/API Reference/Appendix/Parameter details.md#) .|
+|AudioStreamMap|String|No|Audio stream sequence number.-   Format: 0:a:\{sequence number\}.
 -   The sequence starts with zero.
 -   The sequence number indicates the subscript of the audio streams list.
 -   Example: 0:a:0.
@@ -60,7 +60,7 @@ This article introduces the details of the parameters.
 -   Example of two merged parts: `[{"MergeURL":"http://jvm.oss-cn-hangzhou.aliyuncs.com/tail_comm_01.mp4","Start":"1","Duration":"20"},{"MergeURL":"http://jvm.oss-cn-hangzhou.aliyuncs.com/tail_comm_02.mp4","Start":"5.4","Duration":"10.2"}]`
 
  |
-|MergeConfigUrl|String|No|MergeConfigUrl and MergeList are mutually exclusive.-   MergeConfigUrl supports up to 100 merged parts.
+|MergeConfigUrl|String|No|MergeConfigUrl and MergeList are mutually exclusive.-   MergeConfigUrl supports up to 50 merged parts.
 -   MergeConfigUrl indicates the URL of a merging configuration file.
 -   Example: `http://jvm.oss-cn-hangzhou.aliyuncs.com/mergeConfigfile`
 -   The merging configuration file must be stored in OSS and its access permission must be granted to Media Processing. For more information about the file content, see “27. Merging.”
@@ -577,13 +577,13 @@ Default value: 10 seconds
 -   Default value: false.
 
 |
-|isCheckAudioBitrateFail|String|No|This parameter indicates the processing when the output video bit rate is greater than the media source video bit rate.-   If it is set to “true”, transcoding is not performed;
+|IsCheckAudioBitrateFail|String|No|This parameter indicates the processing when the output video bit rate is greater than the media source video bit rate.-   If it is set to “true”, transcoding is not performed;
 -   if it is set to “false”, checking is not performed.
 -   Default value: false.
 -   This parameter takes precedence over IsCheckVideoBitrate.
 
 |
-|isCheckVideoBitrateFail|String|No|This parameter indicates the processing when the output video bit rate is greater than the media source video bit rate.-   If it is set to “true”, transcoding is not performed;
+|IsCheckVideoBitrateFail|String|No|This parameter indicates the processing when the output video bit rate is greater than the media source video bit rate.-   If it is set to “true”, transcoding is not performed;
 -   if it is set to “false”, checking is not performed.
 -   Default value: false.
 -   This parameter takes precedence over IsCheckVideoBitrate.
@@ -608,7 +608,8 @@ Position of the AdjDarMethod parameter:
 |Parameter|Type|Required|Description|
 |:--------|:---|--------|:----------|
 |QueueName|String|No|MNS queue created in Alibaba Cloud Message Service.-   Media Processing allows you to bind an MNS queue to an MPS queue. After a task is executed in the MPS queue, the results are sent to the bound MNS queue.
--   For more information about how to acquire messages in the MNS queue, see [Queue message operation](../../../../reseller.en-US/Developer Guide/Receive message notifications/Receive notification through queues.md#).
+-   For more information about how to acquire messages in the MNS queue, see [Queue message operation](../../../../../intl.en-US/Developer Guide/Receive message notifications/Receive notification through queues.md#).
+-   Before you configure an MNS queue in the MPS queue, create the MNS queue in [Message Service](https://mns.console.aliyun.com/?spm=a2c4g.11186623.2.9.452f40f7IEM1RZ).
 -   Before you configure an MNS queue in the MPS queue, create the MNS queue in [Message Service](https://partners-intl.aliyun.com/login-required#/mns).
 
 |
@@ -903,7 +904,7 @@ This parameter is required if the Crop parameter is set \(not a blank JOSN\{\}\)
 |Content|String|Yes|Text watermark content, which must be Base64 encoded.For example, if you want to add the text watermark “test text watermark”, set this parameter to 5rWL6K+V5paH5a2X5rC05Y2w.
 
 |
-|FontName|String|No|Default value: “SimSun”.For more information, see [Supported font](reseller.en-US/API Reference/Font name.md#).
+|FontName|String|No|Default value: “SimSun”.For more information, see [Supported font](intl.en-US/API Reference/Font name.md#).
 
 |
 |FontSize|Int|No|Font size.-   Default value: 16.
