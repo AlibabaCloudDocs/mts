@@ -9,7 +9,10 @@ The following variables are used in the resource authorization policies of each 
 ## Description of variables {#section_jtg_r1f_x2b .section}
 
 -   $Uid: Cloud account ID. You can query it by logging on to the**console** \> **Account Management** \> **Security Settings**.
--   $Region: Service region. For more information, see [service region](reseller.en-US/User Guide/Service regions.md#).
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/155436108910075_en-US.png)
+
+-   $Region: Service region. For more information, see [service region](intl.en-US/User Guide/Service regions.md#).
 -   $InputBucket: MPS InputBucket.
 -   $OutputBucket: MPS Output Bucket.
 -   $QueueName: MNS queue name.
@@ -20,17 +23,17 @@ The following variables are used in the resource authorization policies of each 
 
 Log on to the **RAM console** \> **Policies**, and create the following example custom authorization policies for the specified resource instance and grant them to the specified sub-account.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153926176410077_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/155436108910077_en-US.png)
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153926176410078_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/155436108910078_en-US.png)
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153926176410080_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/155436108910080_en-US.png)
 
 **Note:** Copy the authorization policies of each service of the examples in this document, and replace the variables with the corresponding service instance name.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153926176410081_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/155436108910081_en-US.png)
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153926176410082_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/155436108910082_en-US.png)
 
 **Note:** After the authorization policies are created for various service resource objects, you can grant the permissions to corresponding sub-accounts. See the permission granting instructions of MPS.
 
@@ -38,26 +41,21 @@ Log on to the **RAM console** \> **Policies**, and create the following example 
 
 You can directly use the built-in`AliyunMTSFullAccess` authorization policy.
 
-Permission description:
-
-```
-Permission granted to a sub-account to use MTS
-```
+Permission description: Permission granted to a sub-account to use MTS.
 
 Log on to the **RAM console** \> **Users**, and grant the `AliyunMTSFullAccess` permission to the specified sub-account.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153926176410083_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/155436108910083_en-US.png)
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/153926176410084_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11369/155436108910084_en-US.png)
 
 ## OSS authorization policy {#section_zp4_52f_x2b .section}
 
 Permission description:
 
-```
-Permission for all operations on the specified input and output buckets
-Permission to view the bucket list
-```
+Permission for all operations on the specified input and output buckets.
+
+Permission to view the bucket list.
 
 ```
 {
@@ -90,10 +88,9 @@ Permission to view the bucket list
 
 Permission description:
 
-```
-Permission for all operations on the specified query and topic
-Permission to query the query and topic
-```
+Permission for all operations on the specified queues and topics.
+
+Permission to query queues and topics.
 
 ```
 {
@@ -125,10 +122,9 @@ Permission to query the query and topic
 
 Permission description:
 
-```
-Permission for all operations on the specified CDN domain name
+Permission for all operations on the specified CDN domain name.
+
 Permission to query the CDN domain name.
-```
 
 ```
 {
