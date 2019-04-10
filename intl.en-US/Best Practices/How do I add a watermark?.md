@@ -13,15 +13,15 @@ Watermarks refer to the process of adding related information \(such as a corpor
 
 ## Parameter description {#section_rzd_2ql_x2b .section}
 
-When submitting transcoding tasks \(see [Simple transcoding](reseller.en-US/Best Practices/Transcoding/How do I perform simple transcoding?.md#)\), you can specify a watermark template and material to add watermark information for the output video.
+When submitting transcoding tasks \(see [Simple transcoding](intl.en-US/Best Practices/Transcoding/How do I perform simple transcoding?.md#)\), you can specify a watermark template and material to add watermark information for the output video.
 
-You can specify several [WaterMark](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#) objects for each transcoding task. A WaterMark object contains the following parameters:
+You can specify several [WaterMark](../../../../../intl.en-US/API Reference/Appendix/Parameter details.md#) objects for each transcoding task. A WaterMark object contains the following parameters:
 
 -   WaterMarkTemplateId \(watermark template ID\)
 
     A watermark template contains common parameters such as Type, ReferPos, Width, Height, Dx, and Dy.
 
-    You can create a template on the Media Processing console. For more information, see [Watermark transcoding template](../../../../reseller.en-US/User Guide/Settings.md#).
+    You can create a template on the Media Processing console. For more information, see [Watermark transcoding template](../../../../../intl.en-US/User Guide/Settings.md#).
 
     **Note:** The parameters in WaterMark objects have a higher priority than the corresponding parameters in the template. The parameters in WaterMark objects overwrite those parameters in the template.
 
@@ -29,11 +29,11 @@ You can specify several [WaterMark](../../../../reseller.en-US/API Reference/App
 
     When adding image or animated watermarks, you can set Type to Image and specify InputFile, which is the OSS file path of the watermark materials.
 
-    When adding text watermarks, you can set Type to Image and specify the [TextWaterMark](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#) parameter, including text font, size, color, and transparency.
+    When adding text watermarks, you can set Type to Text and specify the [TextWaterMark](../../../../../intl.en-US/API Reference/Appendix/Parameter details.md#) parameter, including text font, size, color, and transparency.
 
 -   ReferPos \(watermark position\)
 
-    The reference position where a watermark is displayed. Dx and Dy are calculated based on ReferPos. See [Watermark template configuration](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#).
+    The reference position where a watermark is displayed. Dx and Dy are calculated based on ReferPos. See [Watermark template configuration](../../../../../intl.en-US/API Reference/Appendix/Parameter details.md#).
 
     Watermark coordinate description:
 
@@ -67,7 +67,7 @@ You can specify several [WaterMark](../../../../reseller.en-US/API Reference/App
 
     **Note:** The file extension of an animated watermark must be mov or apng in lowercase. File extensions of images are not limited.
 
--   [TextWaterMark](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#) \(text watermark\)
+-   [TextWaterMark](../../../../../intl.en-US/API Reference/Appendix/Parameter details.md#) \(text watermark\)
 
     Specifies the detailed parameters of text watermarks.
 
@@ -111,10 +111,10 @@ When transcoding to a `720P(1280x720)` in MP4 format, you can add three watermar
 
 Code examples:
 
--   [Watermarks-Java SDK](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Java SDK/Watermarks.md#)
+-   [Watermarks-Java SDK](../../../../../intl.en-US/SDK Reference/Transcoding SDKs/Java SDK/Watermarks.md#)
 
--   [Watermarks-Python SDK](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Python SDK/Watermarks.md#)
+-   [Watermarks-Python SDK](../../../../../intl.en-US/SDK Reference/Transcoding SDKs/Python SDK/Watermarks.md#)
 
--   [Watermarks-PHP SDK](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/PHP SDK/Watermarks.md#)
+-   [Watermarks-PHP SDK](../../../../../intl.en-US/SDK Reference/Transcoding SDKs/PHP SDK/Watermarks.md#)
 
 
