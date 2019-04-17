@@ -2,27 +2,27 @@
 
 ## Description {#section_vrj_xfg_x2b .section}
 
-Transcoding refers to the process to process an OSS input file according to specified parameters, and output the result to specified OSS file. When submitting a [transcoding task](../../../../reseller.en-US/Developer Guide/Concepts/Task and MPS queue.md#), note the following objects:
+Transcoding is to process an input OSS file according to specified parameters, and output the result to the specified OSS file. When submitting a [transcoding task](../../../../intl.en-US/Developer Guide/Concepts/Task and MPS queue.md#), note the following objects:
 
--   [Input](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#)
+-   [Input](../../../../intl.en-US/API Reference/Appendix/Parameter details.md#) 
 
     Specify an OSS input file.
 
-    **Note:** The Location of OSS must correspond to the region of MPS. For example, the oss-cn-hangzhou of OSScorresponds to the cn-hangzhou of MPS.
+    **Note:** The Location of OSS must correspond to the region of MPS. For example, the oss-cn-hangzhou of OSS corresponds to the cn-hangzhou of MPS.
 
--   [Output](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#)
+-   [Output](../../../../intl.en-US/API Reference/Appendix/Parameter details.md#) 
 
     Several output objects can be specified for each transcoding task, which includes multiple parameters and subobjects. Three important parameters and subobjects are introduced as follows:
 
-    -   [Container](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#)
+    -   [Container](../../../../intl.en-US/API Reference/Appendix/Parameter details.md#)
 
         The output container type \(file format\). The video supports mp4, flv, ts, and m3u8, and the audio supports mp3 and mp4.
 
-    -   [Video](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#)
+    -   [Video](../../../../intl.en-US/API Reference/Appendix/Parameter details.md#)
 
         The output video parameter, for example, the codec format, bitrate, width, height, and frame rate.
 
-    -   [Audio](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#)
+    -   [Audio](../../../../intl.en-US/API Reference/Appendix/Parameter details.md#)
 
         The output audio parameter, for example, the audio codec forma, bitrate, channels, and samplerate.
 
@@ -30,14 +30,14 @@ Transcoding refers to the process to process an OSS input file according to spec
 
         Parameters specified through API have higher priority than parameters set by templates, and overwrite the corrosponding parameters set in the templates.
 
-        MPS provides [Preset static templates](../../../../reseller.en-US/API Reference/Appendix/Preset template details.md#).
+        MPS provides [Preset static templates](../../../../intl.en-US/API Reference/Appendix/Preset template details.md#).
 
-        Also, you can [Custom transcoding template](../../../../reseller.en-US/User Guide/Settings.md#).
+        Also, you can [Custom transcoding template](../../../../intl.en-US/User Guide/Settings.md#).
 
 
 -   PipelineId
 
-    Each region provides an MPS queue. You can log on to the [MPS console](https://partners-intl.aliyun.com/login-required#/mts), click **Library** \> **Settings** \> **MPS queue** to query.
+    Each region provides an MPS queue. You can log on to the [MPS console](https://mts.console.aliyun.com/?spm=5176.2020520001.1001.112.unHR5O#/mts/oss), click **Library** \> **Settings** \> **MPS queue** to query.
 
 
 ## Scenario {#section_c31_ggg_x2b .section}
@@ -63,9 +63,9 @@ The video in any format is transcoded to MP4 video file with the definition `720
 
 ## Example code {#section_x4f_3gg_x2b .section}
 
-[Simple transcoding-Java](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Java SDK/Transcoding.md#)
+[Simple transcoding-Java](../../../../intl.en-US/SDK Reference/Transcoding SDKs/Java SDK/Transcoding.md#)
 
-[Simple transcoding-Python](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Python SDK/Transcoding.md#)
+[Simple transcoding-Python](../../../../intl.en-US/SDK Reference/Transcoding SDKs/Python SDK/Transcoding.md#)
 
-[Simple transcoding-PHP](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/PHP SDK/Transcoding.md#)
+[Simple transcoding-PHP](../../../../intl.en-US/SDK Reference/Transcoding SDKs/PHP SDK/Transcoding.md#)
 
