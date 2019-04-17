@@ -4,8 +4,8 @@ SDK introduction details the installation, application, and example codes for MP
 
 MPS SDK is based on Alibaba Cloud SDK. For more information about Alibaba CLoud SDK, see:
 
--   [Alibaba Cloud SDK](https://developer.aliyun.com/sdk)
+-   [Alibaba Cloud SDK](https://www.alibabacloud.com/support/developer-resources#guid-917483)
 
--   [Alibaba Cloud API](https://developer.aliyun.com/api)
+-   [Alibaba Cloud API](https://www.alibabacloud.com/support/developer-resources#guid-216813)
 
 
