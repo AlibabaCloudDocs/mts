@@ -6,7 +6,7 @@
 
 ## 加密架构 {#section_ssn_2bw_1fb .section}
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11402/156568113111385_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11402/156568231211385_zh-CN.png)
 
 ## 术语介绍 {#section_c54_3bw_1fb .section}
 
@@ -31,15 +31,15 @@
 
 1.  创建HLS加密工作流。
 
-    **说明：** 控制台暂不支持创建HLS加密工作流，请通过API进行创建。查看demo，参见 [创建HLS标准加密工作流](../../../../cn.zh-CN/SDK参考/媒体转码SDK/Java SDK/创建HLS标准加密工作流.md#)。创建好后，不要在控制台对其修改，会使加密配置失效。
+    **说明：** 控制台支持创建HLS加密工作流。如需通过API进行创建，请查看demo，参见 [创建HLS标准加密工作流](../../../../cn.zh-CN/SDK参考/媒体转码SDK/Java SDK/创建HLS标准加密工作流.md#)。创建好后，不要在控制台对其修改，会使加密配置失效。
 
     工作流中关键配置：
 
-    -   开始活动节点：`InputFile:{"Bucket":"bucketdemo", "Location ":"oss-cn-hangzhou", "ObjectPrefix":"HLS-Encryption"}`
+    -   开始活动节点：`InputFile:{"Bucket":"bucketdemo", "Location ":"oss-cn-hangzhou", "ObjectPrefix":"HLS-Encryption"}` 
 
         此配置表示内容创作者上传视频到杭州 oss://bucketdemo/HLS-Encryption 这个路径下会自动触发加密转码。
 
-    -   转码活动节点：`Encryption:{"Type":"hls-aes-128", "KeyUri":"https://decrypt.demo.com"}`
+    -   转码活动节点：`Encryption:{"Type":"hls-aes-128", "KeyUri":"https://decrypt.demo.com"}` 
 
         转码完成后，KeyUri的配置会出现在m3u8文件中，供播放器使用。
 
@@ -53,7 +53,7 @@
     -   通过OSS上传工具上传视频至oss://bucketdemo/HLS-Encryption路径。
     转码完成后，m3u8文件内容示例。
 
-    ```
+    ``` {#codeblock_298_rx6_gob}
     #EXTM3U
          #EXT-X-VERSION:3
          #EXT-X-TARGETDURATION:5
