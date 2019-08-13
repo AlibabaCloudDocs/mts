@@ -6,13 +6,13 @@
 
 ## 加密架构 {#section_ssn_2bw_1fb .section}
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11402/154357753411385_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11402/156568113111385_zh-CN.png)
 
 ## 术语介绍 {#section_c54_3bw_1fb .section}
 
 -   秘钥管理服务（Key Management Service，简称KMS）
 
-    一项安全管理服务，主要负责数据秘钥的生产、加密、解密等工作。开通请 [单击这里](https://common-buy-intl.aliyun.com/?spm=a2796.105433.1204892.1.631e2a7e616pCe&commodityCode=kms_intl&accounttraceid=83ebc5a2-8fce-43b2-bf75-15ff169809d8#/open)。
+    一项安全管理服务，主要负责数据秘钥的生产、加密、解密等工作。开通请 [单击这里](https://common-buy.aliyun.com/?spm=a2c4g.11186623.2.4.25be5ef3sQ2xvL&commodityCode=kms#/open)。
 
 -   数据秘钥（Data Key，简称DK）也称明文密钥
 
@@ -24,14 +24,14 @@
 
 -   访问控制（Resource Access Management 简称RAM）
 
-    是阿里云为客户提供的用户身份管理与资源访问控制服务。开通请 [单击这里](https://buy-intl.aliyun.com/ram?spm=a2796.104927.1204861.1.41ba6559rYlVBZ#/loading)。
+    是阿里云为客户提供的用户身份管理与资源访问控制服务。开通请 [单击这里](https://www.aliyun.com/product/ram?spm=a2c4g.11186623.2.5.25be5ef3sQ2xvL)。
 
 
 ## 操作流程 {#section_mj3_kbw_1fb .section}
 
 1.  创建HLS加密工作流。
 
-    **说明：** 控制台暂不支持创建HLS加密工作流，请通过API进行创建。查看demo，参见 [创建HLS标准加密工作流](../../../../intl.zh-CN/SDK参考/媒体转码SDK/Java SDK/创建HLS标准加密工作流.md#)。创建好后，不要在控制台对其修改，会使加密配置失效。
+    **说明：** 控制台暂不支持创建HLS加密工作流，请通过API进行创建。查看demo，参见 [创建HLS标准加密工作流](../../../../cn.zh-CN/SDK参考/媒体转码SDK/Java SDK/创建HLS标准加密工作流.md#)。创建好后，不要在控制台对其修改，会使加密配置失效。
 
     工作流中关键配置：
 
@@ -65,7 +65,7 @@
     ```
 
 3.  播放。
-    -   获取播放地址，可通过查询媒体接口，参见 [查询媒体-使用媒体ID](../../../../intl.zh-CN/API参考/媒体接口/查询媒体-使用媒体ID.md#) 获取OSS地址，然后把OSS域名，替换为CDN域名, 再拼接上参数MtsHlsUriToken，此参数会作为请求解密密钥的令牌，以下为原理。
+    -   获取播放地址，可通过查询媒体接口，参见 [查询媒体-使用媒体ID](../../../../cn.zh-CN/API参考/媒体接口/查询媒体-使用媒体ID.md#) 获取OSS地址，然后把OSS域名，替换为CDN域名, 再拼接上参数MtsHlsUriToken，此参数会作为请求解密密钥的令牌，以下为原理。
 
         播放时，播放器会访问m3u8文件中EXT-X-KEY标签中的URI以获取解密秘钥，此URI为业务方搭建的解密密钥接口，只允许合法用户访问。 因此，需要播放器在请求解密时，携带一些业务方承认的认证信息。MtsHlsUriToken就是这个作用，业务方颁发一令牌给播放器， 播放器请求解密密钥时，携带此令牌，业务方验证令牌的合法性。
 
@@ -80,6 +80,6 @@
 4.  业务方需要完成以下操作。
     1.  搭建颁发及验证MtsHlsUriToken令牌服务。
     2.  校验解密令牌，推荐一个令牌只允许使用一次。
-    3.  解密密钥：EDK即Ciphertext，此时，要调用KMS服务的解密接口进行解密，参见 [Decrypt](../../../../intl.zh-CN/API 参考/API列表/Decrypt.md#)。 解密后，可缓存，以减少不必要的网络IO。
+    3.  解密密钥：EDK即Ciphertext，此时，要调用KMS服务的解密接口进行解密，参见 [Decrypt](../../../../cn.zh-CN/API 参考/API列表/Decrypt.md#)。 解密后，可缓存，以减少不必要的网络IO。
     4.  解密拿到DK即明文密钥，需要base64decode，然后返回给播放器。
 
