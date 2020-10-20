@@ -92,7 +92,6 @@
 |[UpdateMediaPublishState](/cn.zh-CN/API参考/媒体接口/更新媒体-发布状态.md)|更新媒体发布状态。|
 |[QueryMediaList](/cn.zh-CN/API参考/媒体接口/查询媒体-使用媒体ID.md)|查询媒体列表。|
 |[QueryMediaListByURL](/cn.zh-CN/API参考/媒体接口/查询媒体-使用OSS文件地址.md)|使用OSS文件地址查询媒体。|
-|[ListMedia](/cn.zh-CN/API参考/媒体接口/遍历媒体.md)|遍历所有的媒体。|
 
 ## 媒体类目接口
 
