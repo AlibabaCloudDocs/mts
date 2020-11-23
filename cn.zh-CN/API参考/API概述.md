@@ -37,7 +37,7 @@
 
 |API|描述|
 |:--|:-|
-|[更新管道](/cn.zh-CN/API参考/管道接口/更新管道.md)|更新管道接口。|
+|[UpdatePipeline](/cn.zh-CN/API参考/管道接口/更新管道.md)|更新管道接口。|
 |[QueryPipelineList](/cn.zh-CN/API参考/管道接口/查询管道.md)|查询管道接口。|
 |[SearchPipeline](/cn.zh-CN/API参考/管道接口/搜索管道.md)|通过管道状态搜索管道。|
 
