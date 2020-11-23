@@ -37,7 +37,7 @@
 
 |API|描述|
 |:--|:-|
-|[UpdatePipeline](/cn.zh-CN/API参考/管道接口/更新管道.md)|更新管道接口。|
+|[更新管道](/cn.zh-CN/API参考/管道接口/更新管道.md)|更新管道接口。|
 |[QueryPipelineList](/cn.zh-CN/API参考/管道接口/查询管道.md)|查询管道接口。|
 |[SearchPipeline](/cn.zh-CN/API参考/管道接口/搜索管道.md)|通过管道状态搜索管道。|
 
@@ -125,7 +125,7 @@
 |[提交视频DNA作业](/cn.zh-CN/API参考/视频DNA接口/提交视频DNA作业.md)|查询视频库中是否存在相同或者相近的DNA结果。|
 |[查询视频DNA作业](/cn.zh-CN/API参考/视频DNA接口/查询视频DNA作业.md)|查询视频DNA作业结果。|
 |[视频DNA作业结果反馈](/cn.zh-CN/API参考/视频DNA接口/视频DNA作业结果反馈.md)|反馈视频作业有误结果。|
-|[查询视频DNA导库结果]()|查询导库视频比对结果。|
+|[查询视频DNA导库结果](/cn.zh-CN/API参考/视频DNA接口/查询视频DNA导库结果.md)|查询导库视频比对结果。|
 
 ## 智能标签接口
 
