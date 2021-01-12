@@ -29,7 +29,7 @@ try {
                                           'Title' => "<yourTitle>",
                                           'Content' => "<yourContent>",
                                           'PipelineId' => "",
-                                          'Input' => "http://xxx.mp4",
+                                          'Input' => "oss://xxx.mp4",
                                         ],
                                     ])
                           ->request();
