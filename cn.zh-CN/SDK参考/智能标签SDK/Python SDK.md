@@ -1,6 +1,6 @@
 # Python SDK
 
-阿里云Python SDK推荐的pip安装方式：
+mts的Python SDK版本需要在2.7.6版本及以上。阿里云Python SDK推荐的pip安装方式：
 
 -   Python 2.x
 
@@ -41,7 +41,7 @@ request.set_accept_format('json')
 request.set_Title("<yourTitle>")
 request.set_Content("<yourContent>")
 request.set_PipelineId("")
-request.set_Input("http://xxx.mp4")
+request.set_Input("oss://xxx.mp4")
 
 # 接收请求结果response。
 response = client.do_action_with_exception(request)
