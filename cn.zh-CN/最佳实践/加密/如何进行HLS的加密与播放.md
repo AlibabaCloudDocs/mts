@@ -1,18 +1,18 @@
-# 如何进行HLS的加密与播放 {#concept_hsy_2kg_x2b .concept}
+# 如何进行HLS的加密与播放
 
-## 本文目的 {#section_i23_gkg_x2b .section}
+本文提供了创建HLS标准加密工作流到播放加密视频的一个完整步骤。
 
-示例创建HLS标准加密工作流到播放加密视频的一个完整步骤。
+## 操作步骤
 
-HLS标准加密架构，参见 [HLS的加密与播放](../../../../intl.zh-CN/开发指南/视频加密/HLS标准加密.md#)。
-
-## 操作步骤 {#section_zcj_hkg_x2b .section}
+HLS标准加密架构，参见[HLS的加密与播放](/cn.zh-CN/开发指南/视频加密/HLS标准加密.md)。
 
 1.  创建HLS加密工作流。
 
-    创建HLS加密工作流，DEMO代码，参见 [创建HLS标准加密工作流](../../../../intl.zh-CN/SDK参考/媒体转码SDK/Python SDK/创建HLS标准加密工作流.md#)。
+    控制台方式创建HLS加密工作流，参见[加密](/cn.zh-CN/开发指南/视频加密/加密.md)
 
-    **说明：** 创建HLS标准工作流时，为了测试，参数 HLS\_KEY\_URI 值填 http: //127.0.0.1:8888。播放时，播放器会到这个地址请求密钥，我们会在本地起一个服务，进行分发密钥。
+    接口方式创建HLS加密工作流，DEMO代码，参见 [创建HLS标准加密工作流](/cn.zh-CN/SDK参考/媒体转码SDK/Python SDK/创建HLS标准加密工作流.md)。
+
+    **说明：** 创建HLS标准工作流时，为了测试，参数`HLS_KEY_URI`值填**http: //127.0.0.1:8888**。播放时，播放器会在该地址请求密钥，媒体处理会在本地启动服务，进行分发密钥。
 
 2.  上传及加密视频。
 
@@ -24,9 +24,9 @@ HLS标准加密架构，参见 [HLS的加密与播放](../../../../intl.zh-CN/�
 
     Java示例代码依赖：
 
-    [https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-core](https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-core)
+    [Java SDK Core](https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-core?__cf_chl_jschl_tk__=1f67c9d63e0e4863651354ed09ff7448d68879ee-1612775249-0-AepR9-fxv_mqSVhAm9e6lVdGUg6j57SMJOOpi5SdlPZJPW-upsfdCb356SY8EuNHAoAYxURVStIziQyIb4VqxRfkT6eLplhZjnHM8B4dygAr1V4NjToyjwCouZfS-zBO4JDqueNC3xR6J_MryjAS3053HS8zXOURWVwi-RCbHosW4qRVWtJoACcVkHbSZoBfhCkhaNB2YIH-58L1CQEj2QSVbJhdpCnDnUV3IbEdYiHxyl3TXz1In20ZEqyWF4F0qgpj7ojwo1Lro5JkGLli4d3Nttl7GCJayN5DCpGbdestNy7TpGLwWbG7Hkd3V7jFJUxNT974mwzjiIX3YRgKtDCK7OrLnd5RFpWfixrjbA9WDHck3t24P0WqUfY0xGhWBVgWgkqbKTqHZ0LrhM_HMwsibV6SZ8gQvKM5hyI8fa67)
 
-    [https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-kms](https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-kms)
+    [Java SDK KMS](https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-kms)
 
     ```
     
@@ -181,18 +181,13 @@ HLS标准加密架构，参见 [HLS的加密与播放](../../../../intl.zh-CN/�
     server.serve_forever()
     ```
 
-4.  获取播放地址。
-
-    多种方式可获取。详情参见 [媒体转码输出文件相关问题](https://www.alibabacloud.com/help/zh/faq-detail/50628.htm)。
-
+4.  获取播放地址，请参见[如何获取播放地址](https://help.aliyun.com/document_detail/42239.html?spm=5176.11065259.1996646101.searchclickresult.524e558cl2F5JT)。
 5.  播放视频。
 
-    借助一个在线播放器，测试HLS加密视频的播放。详情参见 [阿里云播放器用户诊断工具](http://player.alicdn.com/detection.html)。
+    借助一个在线播放器，测试HLS加密视频的播放。更多详情，请参见 [阿里云播放器用户诊断工具](http://player.alicdn.com/detection.html)。
 
-    将第 **4**步中获取的播放地址，如图填入对话框中，单击 **视频播放** 即可。
+    将获取的播放地址，如图填入对话框中，单击**视频播放**。
 
     **说明：** 通过浏览器DEBUG，可以看到播放器自动请求了鉴权服务器，获取解密密钥，并进行解密播放。
-
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11375/154357082910097_zh-CN.png)
 
 
