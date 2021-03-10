@@ -1,153 +1,63 @@
-# Workflows
+# 全局设置
 
-Workflows support screenshot taking, transcoding, encapsulation, watermarking, encryption, and editing, allowing you to fast and flexibly construct a cloud-based audio/video handling process on demand. When a workflow starts or completes execution, a workflow execution message can be sent to the specified message queue or message notification.
+您可以通过全局设置功能配置自定义转码模板、水印模板和管道。
 
-Each media workflow is bound to a path of the **Input Media Bucket**. When an audio or video file is uploaded to the path or its sub-directory, the workflow is automatically triggered to perform preset processing operations and save the processing result to the specified path of the **Output Media Bucket**.
+## 自定义转码模板
 
-## Create a workflow
+1.  登录 [媒体处理控制台](https://mps.console.aliyun.com)。
+2.  登录 [媒体处理控制台](https://partners-intl.aliyun.com/login-required#/mps)。
+3.  选择所需的地域。
+4.  选择**全局设置** \> **转码模板** ，并单击 **添加转码模板**。
 
-1.  Log on to the [Media Processing console](https://mts.console.aliyun.com/?spm=5176.2020520001.0.0.6RsosT#/mts/oss).
-2.  Log on to the [Media Processing console](https://partners-intl.aliyun.com/login-required#/mts).
-3.  Select the region.
-4.  Click **Library** \> **Library Settings** \> **Workfows**.
-5.  Click **Create Workflow**.
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532120610055_zh-CN.png)
 
-    ![](images/9998_en-US.png)
+5.  进行**基础设置**，包括 **基础参数** 和 **视频参数**，并单击**下一步**。
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4560421951/p10018.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532120610056_zh-CN.png)
 
-6.  Set the workflow information.
+    **说明：**
 
-    You can select a workflow from**Preset** and edit it as needed to quickly create a workflow. You can also customize a workflow.
+    -   转码支持的输出格式请参见 [格式支持](/cn.zh-CN/API参考/附录/格式支持.md)。
+    -   选中 **禁用视频** 则输出文件将不包含视频信息，适用于抽取视频文件音频信息的场景。视频转码参数说明参见 [视频参数说明](/cn.zh-CN/API参考/附录/参数详情.md)。
+6.  **设置音频参数**，并单击**下一步**。
 
-    1.  Set the workflow name in **Workflow Name**.
-    2.  Select **Customize**in **Preset**.
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532120610057_zh-CN.png)
 
-        ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4560421951/p9999.png)
+    **说明：** 选中 **禁用音频** 则输出文件将不包含音频信息，该功能适用于抽取视频文件视频信息的场景。音频转码参数说明参见 [音频参数说明](/cn.zh-CN/API参考/附录/参数详情.md)。
 
-7.  Set nodes.
+7.  设置**高级参数**。
 
-    1.  Set the **Input** node.
-        1.  At the right side of the **Input** node, click the![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10000.png)icon to set the following information.
-        2.  On the **Input** node, click **Select** at the right side of **Input Path**.
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532120710058_zh-CN.png)
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4560421951/p10001.png)
+8.  单击**提交**，完成转码模板创建。
 
-        3.  In **OSS File Manager**, select the bucket name, and click **OK**.
+    转码模板列表可以查看转码参数配置及进行编辑、删除操作。
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6560421951/p10002.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532120910059_zh-CN.png)
 
-            **Note:** To facilitate searching for fies, we recommend that the storage location of the original video in the Input Media Bucket and the storage location of the Output Media Bucket are consistent. Examples here are all stored in the root directory.
 
-        4.  **Message Type** is optional. You can select MNS Queue or Notification and set the relevant instance.
+## 水印模板
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5560421951/p10003.png)
+1.  选择**全局设置** \> **水印模板** ，并单击 **添加水印模板**。
 
-    2.  Set the **Transcodde** node.
-        1.  Click the icon at the right side of the **Input** node
+    支持在输出视频上覆盖最多20个PNG格式静态图像。
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6560421951/p10005.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532120910060_zh-CN.png)
 
-            to add the **Transcoding** node.
+2.  设置水印模板参数。
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5560421951/p10006.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532120910061_zh-CN.png)
 
-        2.  At the right side of the **Transcode** node, click the ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10000.png) icon.
-        3.  In **Transcode** \> **Basic Settings**, click **Select** at the right side of **Template**.
+    **说明：** 水印模板参数说明参见 [水印模板参数说明](/cn.zh-CN/API参考/附录/参数详情.md)。
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5560421951/p10007.png)
+3.  单击 **创建**，完成水印模板创建。
 
-        4.  Select the **template** and click **OK**.
+    水印模板列表界面可以查看水印模板参数配置及进行编辑、删除操作。
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5560421951/p10008.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532120910062_zh-CN.png)
 
-        5.  In **Transcode** \> **Basic Settings**, click **Select** at the right side of **Output Location**.
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5560421951/p10009.png)
+## 管道
 
-            **Note:**
-
-            **Output Location** is a storage location in OSS and the output file name. To avoid output files from being overwritten when a workflow is run multiple times, you can combine the system’s built-in variable parameters:
-
-            -   \{RunId\} the media workflow run ID,
-
-            -   \{ObjectPrefix\} the original file path not including Bucket information,
-
-            -   \{FileName\} the original file name not including the extension name;
-
-            -   \{ExtName\} the original file extension name.
-
-        6.  In **OSS File Manager**, select the bucket name and click **OK**.
-
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6560421951/p10002.png)
-
-            **Note:** The Input Bucket and the Output Bucket cannot be the same.
-
-        7.  The **Output Location** is a storage location in OSS and the output file name. For more information, see Output Location description for the **Transcode** node. Click**OK**, and the **Transcode** node cofiguration is completed.
-
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6560421951/p10011.png)
-
-    3.  Set the**Screenshot** node.
-        1.  At the right side of the**Input** node or **Transcode** node, click the ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6560421951/p10005.png) icon to add the **Screenshot** node.
-        2.  At the right side of the **Screenshot** node, click the ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10000.png)icon.
-        3.  Select **Sreenshot Type**.
-        4.  Click **Select** at the right side of**Output Location**.
-
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6560421951/p10012.png)
-
-        5.  In **OSS File Manager**, select the bucket name and click**OK**.
-
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6560421951/p10010.png)
-
-        6.  Set the Output Location.
-
-            Output Location is a storage location in OSS and the output file name. To avoid the output files fron being overwritten when a workflow is run for multiple times, you can combine the system’s built-in variable parameters, in which \{SnapshotTime\} indicates the screenshot time, in milliseconds.
-
-        7.  Enable the **Set As Thumbnail** function.
-
-            If this function is enabled, the screenshot taken on this node is automatically set as the thumbnail of the media files set in the library. If multiple screenshots are taken, the first screenshot is set as the thumbnail by default.
-
-    4.  Set the **Publish** node.
-        1.  At the right side of **Publish** node, click the![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10000.png) icon to set the **Publish** node.
-        2.  On the **Publish** page, set the Media Publication Type **Automatic**.
-            -   Media Publication Type is set to **Manual** by default. In this case, each file output by transcoding cannot be directed accessed using an OSS URL in public-read mode or CDN URL.
-            -   If Media Publication Type is set to **Automatic**, a file output by transcoding can be directed accessed using an OSS URL in public-read mode or CDN URL.
-    After setting the nodes, click**Next**to go to the **Content Delivery Network \(CDN\)**configuration page.
-
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10013.png)
-
-8.  Configure the Content Delivery Network \(CDN\).
-
-    The on-demand CDN domains that use the output media bucket as the source of this workflow are listed.
-
-    In case of need, click **+ Add** to quickly add an on-demand CDN domain for**Output Bucket**\(Optional\).
-
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10014.png)
-
-    **Note:** The added domain name must already be filed.
-
-
-Complete the workflow creation.
-
-After the media workflow is created, it is automatically activated and enters the Enabled status. The audio and video files uploaded to the**Input Location** bound to the **Input** node automatically trigger the workflow execution.
-
-Click **Manage Workflow** to return to the Workflows page, the workflow ID list is displayed.
-
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10015.png)
-
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3099535161/p10016.png)
-
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10019.png)
-
-## Edit and delete workflows
-
-To edit, modify, or delete a workflow, set the workflow status as **Disabled**.
-
-After the workflow is stopped, it is not automatically executed.
-
-After editing the workflow, click **Enable** to restore automatic execution of the workflow.
-
-![](images/10017_en-US.png)
-
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10020.png)
+媒体工作流执行时会将转码等操作节点分解为独立的转码作业，放入转码管道处理。管道负责作业的调度执行。 管道状态为 **暂停** 时，使用此管道的所有工作流产生的作业将在管道内排队。![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532121010063_zh-CN.png)
 
