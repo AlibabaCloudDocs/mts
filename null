@@ -1,153 +1,153 @@
-# 媒体工作流
+# Workflows
 
-媒体工作流，支持截图、转码、转封装、水印、加密、剪辑等功能，您可以快速、灵活、按需搭建云端音视频处理流程；在媒体工作流开始执行和完成执行时，支持向指定的消息队列或消息通知发送工作流执行信息。
+Workflows support screenshot taking, transcoding, encapsulation, watermarking, encryption, and editing, allowing you to fast and flexibly construct a cloud-based audio/video handling process on demand. When a workflow starts or completes execution, a workflow execution message can be sent to the specified message queue or message notification.
 
-每个媒体工作流与 **输入媒体Bucket** 的一个路径绑定，当音视频文件上传至该路径或者其下子目录时，该媒体工作流就会被自动触发，执行既定的处理操作，并将处理结果保存至 **输出媒体Bucket** 的指定路径下。
+Each media workflow is bound to a path of the **Input Media Bucket**. When an audio or video file is uploaded to the path or its sub-directory, the workflow is automatically triggered to perform preset processing operations and save the processing result to the specified path of the **Output Media Bucket**.
 
-## 新建媒体工作流
+## Create a workflow
 
-1.  登录 [媒体处理控制台](https://mts.console.aliyun.com/?spm=5176.2020520001.0.0.6RsosT#/mts/oss)。
-2.  登录 [媒体处理控制台](https://partners-intl.aliyun.com/login-required#/mts)。
-3.  选择所需的地域。
-4.  单击 **媒体管理** \> **媒体库设置** \> **工作流**。
-5.  单击 **新建工作流**。
+1.  Log on to the [Media Processing console](https://mts.console.aliyun.com/?spm=5176.2020520001.0.0.6RsosT#/mts/oss).
+2.  Log on to the [Media Processing console](https://partners-intl.aliyun.com/login-required#/mts).
+3.  Select the region.
+4.  Click **Library** \> **Library Settings** \> **Workfows**.
+5.  Click **Create Workflow**.
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/15391667139998_zh-CN.png)
+    ![](images/9998_en-US.png)
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829110018_zh-CN.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4560421951/p10018.png)
 
-6.  设置工作流信息。
+6.  Set the workflow information.
 
-    可以从 **配置方案**中选择一个媒体工作流快速编辑，也可以自行创建工作流。
+    You can select a workflow from**Preset** and edit it as needed to quickly create a workflow. You can also customize a workflow.
 
-    1.  在 **工作流名称** 中设置工作流名称。
-    2.  在 **配置方案** 中选择 **自定义**。
+    1.  Set the workflow name in **Workflow Name**.
+    2.  Select **Customize**in **Preset**.
 
-        ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/15689582919999_zh-CN.png)
+        ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4560421951/p9999.png)
 
-7.  设置节点。
+7.  Set nodes.
 
-    1.  设置 **输入** 节点。
-        1.  单击 **输入** 节点右侧的![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829210000_zh-CN.png)图标进行配置。
-        2.  在 **输入** 页面，单击 **输入路径** 右侧的 **选择**。
+    1.  Set the **Input** node.
+        1.  At the right side of the **Input** node, click the![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10000.png)icon to set the following information.
+        2.  On the **Input** node, click **Select** at the right side of **Input Path**.
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829110001_zh-CN.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4560421951/p10001.png)
 
-        3.  在 **OSS文件管理** 中，选择bucket名称，并单击 **确定**。
+        3.  In **OSS File Manager**, select the bucket name, and click **OK**.
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829210002_zh-CN.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6560421951/p10002.png)
 
-            **说明：** 为了方便以后查找文件，建议您源视频在输入媒体Bucket中的保存路径与输出媒体Bucket中的保存路径一致，本文示例均存储在根目录。
+            **Note:** To facilitate searching for fies, we recommend that the storage location of the original video in the Input Media Bucket and the storage location of the Output Media Bucket are consistent. Examples here are all stored in the root directory.
 
-        4.  **消息类别**：可选，您可以选择消息队列或消息通知，并设定队列或消息的实例。
+        4.  **Message Type** is optional. You can select MNS Queue or Notification and set the relevant instance.
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829110003_zh-CN.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5560421951/p10003.png)
 
-    2.  设置 **转码** 节点。
-        1.  单击 **输入** 节点右侧的
+    2.  Set the **Transcodde** node.
+        1.  Click the icon at the right side of the **Input** node
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829210005_zh-CN.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6560421951/p10005.png)
 
-            图标，添加 **转码** 节点。
+            to add the **Transcoding** node.
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829210006_zh-CN.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5560421951/p10006.png)
 
-        2.  单击 **转码** 节点右侧的![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829210000_zh-CN.png)图标进行配置。
-        3.  在 **转码** \> **基础配置** 中，单击 **转码模板** 右侧的 **选择**。
+        2.  At the right side of the **Transcode** node, click the ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10000.png) icon.
+        3.  In **Transcode** \> **Basic Settings**, click **Select** at the right side of **Template**.
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829210007_zh-CN.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5560421951/p10007.png)
 
-        4.  选择 **转码模板** 并单击 **确定**。
+        4.  Select the **template** and click **OK**.
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829210008_zh-CN.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5560421951/p10008.png)
 
-        5.  在 **转码** \> **基础配置** 中，单击 **输出路径** 右侧的 **选择**。
+        5.  In **Transcode** \> **Basic Settings**, click **Select** at the right side of **Output Location**.
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829210009_zh-CN.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5560421951/p10009.png)
 
-            **说明：**
+            **Note:**
 
-            **输出路径** 是OSS上的一个存储位置及输出文件名。为避免媒体工作流多次执行时覆盖输出文件，您可以组合使用系统内置的UC变量参数：
+            **Output Location** is a storage location in OSS and the output file name. To avoid output files from being overwritten when a workflow is run multiple times, you can combine the system’s built-in variable parameters:
 
-            -   \{RunId\}：媒体工作流执行ID，
+            -   \{RunId\} the media workflow run ID,
 
-            -   \{ObjectPrefix\}：不含Bucket信息的原文件路径，
+            -   \{ObjectPrefix\} the original file path not including Bucket information,
 
-            -   \{FileName\}：不含扩展名的原文件名，
+            -   \{FileName\} the original file name not including the extension name;
 
-            -   \{ExtName\}：原文件扩展名。
+            -   \{ExtName\} the original file extension name.
 
-        6.  在 **OSS文件管理** 中，选择bucket名称，并单击 **确定**。
+        6.  In **OSS File Manager**, select the bucket name and click **OK**.
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829210002_zh-CN.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6560421951/p10002.png)
 
-            **说明：** 输出Bucket不可与输入Bucket为同一个Bucket。
+            **Note:** The Input Bucket and the Output Bucket cannot be the same.
 
-        7.  **输出路径** 是OSS上的一个存储位置及输出文件名，设置参见 **转码** 节点的输出路径说明。单击 **确定**，**转码** 节点设置完成。
+        7.  The **Output Location** is a storage location in OSS and the output file name. For more information, see Output Location description for the **Transcode** node. Click**OK**, and the **Transcode** node cofiguration is completed.
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829210011_zh-CN.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6560421951/p10011.png)
 
-    3.  设置 **截图** 节点。
-        1.  单击 **输入** 节点或 **转码** 节点右侧的![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829210005_zh-CN.png)图标，添加 **截图** 节点。
-        2.  单击 **截图** 节点右侧的![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829210000_zh-CN.png)图标进行配置。
-        3.  选择 **截图方式**。
-        4.  单击 **输出Bucket** 右侧的 **选择**。
+    3.  Set the**Screenshot** node.
+        1.  At the right side of the**Input** node or **Transcode** node, click the ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6560421951/p10005.png) icon to add the **Screenshot** node.
+        2.  At the right side of the **Screenshot** node, click the ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10000.png)icon.
+        3.  Select **Sreenshot Type**.
+        4.  Click **Select** at the right side of**Output Location**.
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829210012_zh-CN.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6560421951/p10012.png)
 
-        5.  在 **OSS文件管理** 中，选择bucket名称，并单击 **确定**。
+        5.  In **OSS File Manager**, select the bucket name and click**OK**.
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829210010_zh-CN.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6560421951/p10010.png)
 
-        6.  设置输出路径。
+        6.  Set the Output Location.
 
-            为指定输出媒体Bucket的一个存储位置及输出截图文件名，为避免媒体工作流多次执行时覆盖输出文件，您可以组合使用系统内置的变量参数，\{SnapshotTime\} 为截图时间点，单位为毫秒。
+            Output Location is a storage location in OSS and the output file name. To avoid the output files fron being overwritten when a workflow is run for multiple times, you can combine the system’s built-in variable parameters, in which \{SnapshotTime\} indicates the screenshot time, in milliseconds.
 
-        7.  开启 **设为封面** 功能。
+        7.  Enable the **Set As Thumbnail** function.
 
-            打开此开关后，此节点截取的图片会自动设置为媒体库中该媒体的封面；当有多张截图时，默认第一张设为封面。
+            If this function is enabled, the screenshot taken on this node is automatically set as the thumbnail of the media files set in the library. If multiple screenshots are taken, the first screenshot is set as the thumbnail by default.
 
-    4.  设置 **发布** 节点。
-        1.  单击 **发布** 节点右侧的![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829210000_zh-CN.png)图标，添加 **发布** 节点。
-        2.  在 **发布** 页面，设置发布类型为 **自动**。
-            -   系统默认为 **手动** 发布类型，即每个转码输出的文件无法直接通过OSS地址以Public Read方式或CDN地址直接访问。
-            -   设置为 **自动** 发布，则转码输出的文件可直接通过OSS地址以Public Read方式或CDN地址直接访问。
-    完成节点设置后，单击 **下一步**进入**配置内容分发网络\(CDN\)**。
+    4.  Set the **Publish** node.
+        1.  At the right side of **Publish** node, click the![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10000.png) icon to set the **Publish** node.
+        2.  On the **Publish** page, set the Media Publication Type **Automatic**.
+            -   Media Publication Type is set to **Manual** by default. In this case, each file output by transcoding cannot be directed accessed using an OSS URL in public-read mode or CDN URL.
+            -   If Media Publication Type is set to **Automatic**, a file output by transcoding can be directed accessed using an OSS URL in public-read mode or CDN URL.
+    After setting the nodes, click**Next**to go to the **Content Delivery Network \(CDN\)**configuration page.
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829210013_zh-CN.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10013.png)
 
-8.  配置内容分发网络\(CDN\)。
+8.  Configure the Content Delivery Network \(CDN\).
 
-    系统会列出以本工作流所使用的输出媒体Bucket为源的点播加速域名。
+    The on-demand CDN domains that use the output media bucket as the source of this workflow are listed.
 
-    如有需要，可单击 **+ 添加** 将 **输出媒体Bucket**绑定点播加速域名（可选）。点播加速域名配置，详情参考 [视音频点播加速]()。
+    In case of need, click **+ Add** to quickly add an on-demand CDN domain for**Output Bucket**\(Optional\).
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829310014_zh-CN.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10014.png)
 
-    **说明：** 该加速域名必须已经过备案。
+    **Note:** The added domain name must already be filed.
 
 
-完成媒体工作流创建。
+Complete the workflow creation.
 
-媒体工作流创建后，将自动激活为启用状态，上传至 **输入** 节点绑定的 **输入路径** 的音视频文件将会自动触发该工作流的执行。
+After the media workflow is created, it is automatically activated and enters the Enabled status. The audio and video files uploaded to the**Input Location** bound to the **Input** node automatically trigger the workflow execution.
 
-单击 **管理工作流** 可回到工作流管理页面，显示媒体工作流列表。
+Click **Manage Workflow** to return to the Workflows page, the workflow ID list is displayed.
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829310015_zh-CN.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10015.png)
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/153916671510016_zh-CN.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3099535161/p10016.png)
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829310019_zh-CN.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10019.png)
 
-## 编辑、删除媒体工作流
+## Edit and delete workflows
 
-如需对媒体工作流进行编辑修改或删除，需先将工作流设置为 **停用** 状态。
+To edit, modify, or delete a workflow, set the workflow status as **Disabled**.
 
-工作流被停用后，其自动执行机制将会停止工作。
+After the workflow is stopped, it is not automatically executed.
 
-完成编辑后，需手动 **启用**媒体工作流，以恢复工作流的自动处理机制。
+After editing the workflow, click **Enable** to restore automatic execution of the workflow.
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/153916671510017_zh-CN.png)
+![](images/10017_en-US.png)
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11360/156895829310020_zh-CN.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7560421951/p10020.png)
 
