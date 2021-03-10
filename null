@@ -1,88 +1,88 @@
-# 全局设置
+# Settings
 
-您可以通过全局设置功能配置自定义转码模板、水印模板和管道。
+You can use settings functions to configure custom transcoding templates, watermark templates, and MPS queues.
 
-## 自定义转码模板
+## Custom transcoding template
 
-1.  登录 [媒体处理控制台](https://mts.console.aliyun.com/?spm=5176.2020520001.0.0.6RsosT#/mts/oss)。
-2.  登录 [媒体处理控制台](https://partners-intl.aliyun.com/login-required#/mts)。
-3.  单击 **全局设置**。
-4.  选择所需的地域。
-5.  单击 **转码模板**，并单击 **新建转码模板**。
+1.  Log on to the [Media Processing console](https://mts.console.aliyun.com/?spm=5176.2020520001.0.0.6RsosT#/mts/oss).
+2.  Log on to the [Media Processing console](https://partners-intl.aliyun.com/login-required#/mts).
+3.  Click **Settings**.
+4.  Select the region.
+5.  Click **Transcoding Templates**, and click **Create** to create a custom transcoding template.
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532120610055_zh-CN.png)
+    ![](images/10055_en-US.png)
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532120610056_zh-CN.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382954010056_en-US.png)
 
-6.  **选择输出格式**。
+6.  Select the **Output Format**.
 
-    配置 **转码模板名称** 及 **文件格式**。
+    Set the **Template Name** and **File Format**.
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532120610057_zh-CN.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382954410057_en-US.png)
 
-    **说明：** 转码输出格式支持参见 [格式支持](/intl.zh-CN/API参考/附录/格式支持.md)。
+    **Note:** For more information about the supported transcoding output formats, see [Supported formats](/intl.en-US/API Reference/Appendix/Supported formats.md).
 
-7.  **配置视频参数**。
+7.  Set the **Video Parameters**.
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532120710058_zh-CN.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382954410058_en-US.png)
 
-    **说明：** 选中 **禁用视频** 则输出文件将不包含视频信息，适用于抽取视频文件音频信息的场景。视频转码参数说明参见 [视频参数说明](/intl.zh-CN/API参考/附录/参数详情.md)。
+    **Note:** If you select **Disable Video**, the output file does not include video information. This option is applicable when audio information is extracted from a video file. For more information about the video transcoding parameters, see [Video parameters](/intl.en-US/API Reference/Appendix/Parameter details.md).
 
-8.  **配置音频参数**。
+8.  Set the **Audio Parameters**.
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532120910059_zh-CN.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382954410059_en-US.png)
 
-    **说明：** 选中 **禁用音频** 则输出文件将不包含音频信息，适用于抽取视频文件视频信息的场景。音频转码参数说明参见 [音频参数说明](/intl.zh-CN/API参考/附录/参数详情.md)。
+    **Note:** If you select **Disable Video**, the output file does not include video information. This option is applicable when audio information is extracted from a video file. For more information about the video transcoding parameters, see [Audio parameters](/intl.en-US/API Reference/Appendix/Parameter details.md).
 
-9.  **配置条件转码**。
+9.  Set the **Conditional**.
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532120910060_zh-CN.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382954510060_en-US.png)
 
-10. 配置封包参数。
+10. Set the Container Parameters.
 
-    封包参数仅当输出格式为 M3U8 时才需要设置， 可以自定义每一个 TS 分片文件的时长。
+    The Container Parameters are set only when the output format is M3U8. You can set the slice duration of each TS file.
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532120910061_zh-CN.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382954510061_en-US.png)
 
-11. 单击 **确定**，完成模板创建。
+11. Click **OK**. The template is created.
 
-    转码模板列表可以查看转码参数配置及进行编辑、删除操作。
+    You can view, edit, and delete transcoding parameter configurations in the transcoding template list.
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532120910062_zh-CN.png)
+    ![](images/10062_en-US.png)
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/155532121010063_zh-CN.png)
-
-
-## 水印模板
-
-1.  单击 **水印模板** \> **新建水印模板**。
-
-    支持在输出视频上覆盖最多20个PNG格式静态图像。
-
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382953210064_zh-CN.png)
-
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382953710065_zh-CN.png)
-
-2.  配置水印模板参数。
-
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382953710066_zh-CN.png)
-
-    **说明：** 水印模板参数说明参见 [水印模板参数说明](/intl.zh-CN/API参考/附录/参数详情.md)。
-
-3.  单击 **确定**，完成模板创建。
-
-    水印模板列表界面可以查看水印模板参数配置及进行编辑、删除操作。
-
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382953210067_zh-CN.png)
-
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382953710068_zh-CN.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382954110063_en-US.png)
 
 
-## 管道
+## Watermark transcoding template
 
-媒体工作流执行时会将转码等操作节点分解为独立的转码作业，放入转码管道处理。管道负责作业的调度执行。 管道状态为 **暂停** 时，使用此管道的所有工作流产生的作业将在管道内排队。
+1.  Click **Watermark Templates** \> **Create** to create a watermark template.
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382953210069_zh-CN.png)
+    A maximum of 20 static images in PNG format can be added to an output video.
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382953710070_zh-CN.png)
+    ![](images/10064_en-US.png)
+
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382954110065_en-US.png)
+
+2.  Set the watermark template parameters.
+
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382954510066_en-US.png)
+
+    **Note:** For more information about the watermark template parameters, see [Watermark template parameters](/intl.en-US/API Reference/Appendix/Parameter details.md).
+
+3.  Click **OK**, and the watermark template is created.
+
+    You can view, edit, and delete parameter configurations in a watermark template in the watermark template list.
+
+    ![](images/10067_en-US.png)
+
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382954110068_en-US.png)
+
+
+## MPS queue
+
+When a workflow is executed, it separates transcoding and other operation nodes into independent transcoding tasks, and puts them in MPS Queues. An MPS queue schedules and executes tasks. If an MPS queue is in the **Pause status**, tasks generated by all workflows using this MPS queue wait in the MPS Queues.
+
+![](images/10069_en-US.png)
+
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11363/154382954110070_en-US.png)
 
