@@ -1,59 +1,65 @@
-# 媒体库设置
+# Library settings
 
-开通媒体处理服务后即可按如下教程开始使用。如您想快速体验，参见 [快速使用媒体库](/intl.zh-CN/快速入门/快速使用媒体库.md)。
+After activating MPS, use it according to the following tutorial. For more information about quick start, see [Library quick start guide](/intl.en-US/Quick Start/Library quick start guide.md).
 
-媒体库使用对象存储服务（OSS）存放您的音视频资源，并通过媒体库为您提供媒体索引功能，可通过为视频设置的标题、标签、分类、描述等信息快速检索音视频资源。
+A library uses OSS to store your audio and video resources. It provides media indexing, allowing you to quickly search for audio and video resources by titles, tags, categories, and descriptions.
 
-开通媒体服务后，需要先初始化媒体库，设置 **输入媒体Bucket** 和 **输出媒体Bucket**。
+After MPS is activated, initialize the library and set the**Input Media Bucket** and **Output Media Bucket**.
 
--   **输入媒体Bucket**：指保存上传的原始视频的Bucket。
+-   **Input Media Bucket**: This bucket stores the original videos you have uploaded.
 
--   **输出媒体Bucket**：指保存媒体库输出的视频的Bucket。
+-   **Output Media Bucke**: This bucket stores videos output by the media library.
 
 
-1.  登录 [媒体处理控制台](https://mts.console.aliyun.com/?spm=5176.2020520001.0.0.6RsosT#/mts/oss)。控制台会检查所依赖服务的开通状态，请按页面引导操作。
-2.  登录 [媒体处理控制台](https://partners-intl.aliyun.com/login-required#/mts)。控制台会检查所依赖服务的开通状态，请按页面引导操作。
-3.  选择所需的地域。
-4.  单击 **媒体管理** \> **媒体库设置** \> **媒体Bucket**，设置 **输入媒体Bucket** 和 **输出媒体Bucket**。
+1.  Log on to the [Media Processing console](https://mts.console.aliyun.com/?spm=5176.2020520001.0.0.6RsosT#/mts/oss).
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391666559980_zh-CN.png)
+    The console checks the activation status of services the product depends on. Follow the operation instructions on this page.
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391666589990_zh-CN.png)
+2.  Log on to the [Media Processing console](https://partners-intl.aliyun.com/login-required#/mts).
 
-    1.  设置 **输入媒体Bucket**。
-        1.  单击 **输入媒体Bucket** 右侧的 **添加**。
+    The console checks the activation status of services the product depends on. Follow the operation instructions on this page.
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391666589981_zh-CN.png)
+3.  Select the region.
+4.  Click **Library** \> **Library Settings** \> **Media Buckets** to set the **Input Media Bucket** and **Output Media Bucket**.
 
-            **说明：** 在当前服务区域的OSS中， 如您已创建OSS Bucket，设置界面中会列出这些Bucket，选择即可。也可以新建Bucket设置为输入媒体Bucket。
+    ![](images/9980_en-US.png)
 
-        2.  单击 **新建**。
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391672169990_en-US.png)
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391666589982_zh-CN.png)
+    1.  Set **Input Media Bucket**.
+        1.  Click **Add** at the right side of **Input Media Bucket**.
 
-        3.  输入 **Bucket名称**，并单击 **确定**。
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391672209981_en-US.png)
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391666599984_zh-CN.png)
+            **Note:** If you have already created OSS buckets in the current OSS service region, these buckets are listed on the settings interface. In this case, select the appropriate bucket. You can also create a new bucket as the Input Media Bucket.
 
-        4.  **输入媒体Bucket** 列表中显示新创建的 **输入媒体Bucket** 名称，选择并单击 **确定**。
-    2.  设置 **输出媒体Bucket**。
-        1.  单击 **输出媒体Bucket** 右侧的 **添加**。
+        2.  Click **Create**.
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391666599985_zh-CN.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391672209982_en-US.png)
 
-        2.  单击 **新建**。
+        3.  Enter the **Bucket Name**, and click**OK**.
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391666599986_zh-CN.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391672209984_en-US.png)
 
-        3.  输入 **Bucket名称**，并单击 **确定**。
+        4.  The **Input Media Bucket** name is shown in the **Input Media Bucket** list, and click **OK**.
+    2.  Set **Output Media Bucket**.
+        1.  Click **Add** at the right side of **Output Media Bucket**.
 
-            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391666599987_zh-CN.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391672209985_en-US.png)
 
-        4.  **输出媒体Bucket** 列表中显示新创建的 **输出媒体Bucket** 名称，选择并单击 **确定**。
+        2.  Click**Create**.
 
-显示 **输入媒体Bucket** 和 **输出媒体Bucket** 已完成添加。
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391672209986_en-US.png)
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391666569989_zh-CN.png)
+        3.  Enter the **Bucket Name**, and click**OK**.
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391666599991_zh-CN.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391672209987_en-US.png)
+
+        4.  The **Output Media Bucket** name is shown in the **Output Media Bucket** list. Select the created bucket name and click **OK**.
+
+As shown in the following figure, the **Input Media Bucket** and**Output Media Bucket** are added.
+
+![](images/9989_en-US.png)
+
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11358/15391672179991_en-US.png)
 
