@@ -1,63 +1,63 @@
-# 子帐号使用控制台说明
+# Sub-account console operating instructions
 
-通过阿里云访问控制服务（RAM）可为子帐号授予相关权限，以达到子帐号在授权范围使用媒体处理控制台的目的。
+You can grant related permissions for sub-accounts through accessing Alibaba Cloud Resource Access Management \(RAM\) to enable the sub-accounts to use the MPS console within the authorized scope.
 
-子帐号的权限主要为媒体处理服务使用授权及OSS、CDN、MNS资源对象的权限，规划好该子帐号拥有这些服务的资源实例后即可按相应的授权模版创建授权策略，并授予给该子帐号即可。
+Permissions of the sub-account mainly include authorization to use MPS and the permissions to OSS, CDN, and MNS resource objects. After planning the resource instances of the sub-account with these services, you can create authorization policies based on corresponding authorization templates and grant the permissions to the sub-account.
 
-各个服务的资源授权策略中使用了如下变量，请替换为您实际的资源实例名称。
+The following variables are used in the resource authorization policies of each service. Replace them with the actual resource instance name.
 
-## 变量说明
+## Description of variables
 
--   $Uid：云账号ID，可通过 **控制台** \> **账号管理** \> **安全设置**查询。
+-   $Uid: Cloud account ID. You can query it by logging on to the**console** \> **Account Management** \> **Security Settings**.
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108410074_zh-CN.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2101595161/p10074.png)
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108610075_zh-CN.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108910075_en-US.png)
 
--   $Region：地域。服务地域详情，参见 [服务地域](/intl.zh-CN/产品简介/服务地域.md)。
--   $InputBucket：MPS媒体输入Bucket。
--   $OutputBucket：MPS媒体输出Bucket。
--   $QueueName：MNS 队列名称。
--   $TopicName：MNS 通知主题名称。
--   $DomainName：CDN 加速域名名称。
+-   $Region: Service region. For more information, see [service region](/intl.en-US/Product Introduction/Service regions.md).
+-   $InputBucket: MPS InputBucket.
+-   $OutputBucket: MPS Output Bucket.
+-   $QueueName: MNS queue name.
+-   $TopicName: MNS notification topic.
+-   $DomainName: CDN domain name.
 
-## 授权策略创建说明
+## Authorization policy creation descriptions
 
-登录 **访问控制管理控制台** \> **授权策略管理** ，为指定资源实例创建如下例举的自定义授权策略并授予指定的子帐号即可。
+Log on to the **RAM console** \> **Policies**, and create the following example custom authorization policies for the specified resource instance and grant them to the specified sub-account.
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108610077_zh-CN.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108910077_en-US.png)
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108610078_zh-CN.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108910078_en-US.png)
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108710080_zh-CN.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108910080_en-US.png)
 
-**说明：** 直接复制本文档示例的各个服务的授权策略至此，并替换变量部分相应服务实例名称。
+**Note:** Copy the authorization policies of each service of the examples in this document, and replace the variables with the corresponding service instance name.
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108710081_zh-CN.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108910081_en-US.png)
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108710082_zh-CN.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108910082_en-US.png)
 
-**说明：** 各服务资源对象授权策略创建完毕后，为相应子帐号授予权限即可，参见媒体处理服务权限授予说明。
+**Note:** After the authorization policies are created for various service resource objects, you can grant the permissions to corresponding sub-accounts. See the permission granting instructions of MPS.
 
-## 媒体处理服务
+## MPS
 
-直接使用系统内置`AliyunMTSFullAccess`授权策略。
+You can directly use the built-in`AliyunMTSFullAccess` authorization policy.
 
-权限描述：授予子帐号媒体转码服务使用权限。
+Permission description: Permission granted to a sub-account to use MTS.
 
-登录 **访问控制管理控制台** \> **用户管理** ，为指定的子帐号授予 `AliyunMTSFullAccess`权限即可。
+Log on to the **RAM console** \> **Users**, and grant the `AliyunMTSFullAccess` permission to the specified sub-account.
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108710083_zh-CN.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108910083_en-US.png)
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108710084_zh-CN.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11369/155436108910084_en-US.png)
 
-## OSS授权策略
+## OSS authorization policy
 
-权限描述：
+Permission description:
 
-对指定的输入、输出Bucket有所有操作权限。
+Permission for all operations on the specified input and output buckets.
 
-有查看Bucket列表权限。
+Permission to view the bucket list.
 
 ```
 {
@@ -86,13 +86,13 @@
 }
 ```
 
-## MNS授权策略
+## MNS authorization policy
 
-权限描述：
+Permission description:
 
-对指定的Queue、Topic有所有权限。
+Permission for all operations on the specified queues and topics.
 
-有查询Queue、Topic的权限。
+Permission to query queues and topics.
 
 ```
 {
@@ -120,13 +120,13 @@
 }
 ```
 
-## CDN授权策略
+## CDN authorization policy
 
-权限描述：
+Permission description:
 
-对指定的CDN加速域名有所有权限。
+Permission for all operations on the specified CDN domain name.
 
-有查询CDN加速域名的权限。
+Permission to query the CDN domain name.
 
 ```
 {
@@ -145,23 +145,6 @@
       "Effect": "Allow"
     }
   ]
-}
-```
-
-## RAM授权策略
-
-权限描述：
-
-使被授权的子用户有权限查看角色的权限策略
-
-```
-{
-	"Statement": [{
-		"Action": ["ram:ListPoliciesForRole"],
-		"Effect": "Allow",
-		"Resource": "*"
-	}],
-	"Version": "1"
 }
 ```
 
