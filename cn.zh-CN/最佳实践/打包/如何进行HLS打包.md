@@ -13,7 +13,7 @@ HLS打包是指将多字幕、多音轨、多码率视频流生成一个Master P
 
         活动是指组成拓扑结构的处理节点，在新建HLS打包工作流时要注意以下几个活动：
 
-        -   [PackageConfig](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)
+        -   [PackageConfig活动](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)
 
             指定HLS打包配置，设置Master Playlist文件输出位置。
 
@@ -23,7 +23,7 @@ HLS打包是指将多字幕、多音轨、多码率视频流生成一个Master P
 
             -   后置节点允许：SubtitleGroup、AudioGroup、Transcode（仅视频\)。
 
-        -   [SubtitleGroup](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)
+        -   [SubtitleGroup活动](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)
 
             指定字幕分组ID。
 
@@ -33,7 +33,7 @@ HLS打包是指将多字幕、多音轨、多码率视频流生成一个Master P
 
             -   后置节点允许：Transcode（仅字幕）。
 
-        -   [AudioGroup](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)
+        -   [AudioGroup活动](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)
 
             指定音频分组ID。
 
@@ -43,7 +43,7 @@ HLS打包是指将多字幕、多音轨、多码率视频流生成一个Master P
 
             -   后置节点允许：Transcode （仅音频）。
 
-        -   [Transcode](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)
+        -   [Transcode活动](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)
 
             用于提取视频流、音频流、字幕流。
 
@@ -53,7 +53,7 @@ HLS打包是指将多字幕、多音轨、多码率视频流生成一个Master P
 
             -   后置节点允许：GenerateMasterPlayList。
 
-        -   [GenerateMasterPlayList](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)
+        -   [GenerateMasterPlayList活动](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)
 
             HLS打包生成活动，指定视频多码率配置，指定音频，字幕分组。
 
@@ -67,7 +67,7 @@ HLS打包是指将多字幕、多音轨、多码率视频流生成一个Master P
 
         依赖关系是拓扑结构中的边，指明活动之间的依赖。
 
-2.  调用[新增媒体](/cn.zh-CN/API参考/媒体接口/新增媒体.md)，需要注意以下几点：
+2.  调用[新增媒体](/cn.zh-CN/API参考/媒体接口/新增媒体.md)接口，需要注意以下几点：
     -   指定媒体工作流ID。
 
     -   若存在字幕提取，可以设置字幕文件地址覆盖Transcode活动中的参数WebVTTSubtitleURL，只支持WebVTT的字幕文件。
@@ -96,7 +96,7 @@ HLS打包是指将多字幕、多音轨、多码率视频流生成一个Master P
     }
     ```
 
-    -   Output设置Master Playlist的存储位置及名称，请参见[PackageConfig活动支持的参数](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)。
+    -   Output设置Master Playlist的存储位置及名称，请参见[PackageConfig活动](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)。
 
     -   Type指定活动类型为PackageConfig。
 
@@ -138,9 +138,9 @@ HLS打包是指将多字幕、多音轨、多码率视频流生成一个Master P
     ```
 
     -   TemplateId：S00000001-100020表示音频输出为m3u8\(ts\)，预置模板内设置的音频码率为80kbps。更多详情，请参见[预置模版详情](/cn.zh-CN/API参考/附录/预置模版详情.md)。
-    -   AudioStreamMap：音频流选择字。更多详情，请参见[Output详情](/cn.zh-CN/API参考/附录/参数详情.mdsection_l1z_h24_y2b)。
-    -   Remove：在输出中移除掉视频流。更多详情，请参见[Video详情](/cn.zh-CN/API参考/附录/参数详情.mdsection_pfd_324_y2b)。
-    -   ExtXMedia：定义Media Playlist，URI指定Media Playlist的名称。更多详情，请参见[ExtXMedia详情](/cn.zh-CN/API参考/附录/参数详情.mdsection_q3p_324_y2b)。
+    -   AudioStreamMap：音频流选择字。更多详情，请参见[Output详情](/cn.zh-CN/API参考/附录/参数详情.md)。
+    -   Remove：在输出中移除掉视频流。更多详情，请参见[Video详情](/cn.zh-CN/API参考/附录/参数详情.md)。
+    -   ExtXMedia：定义Media Playlist，URI指定Media Playlist的名称。更多详情，请参见[ExtXMedia详情](/cn.zh-CN/API参考/附录/参数详情.md)。
     -   Type设置为Transcode，即转码活动。
 
 提取视频。
@@ -167,8 +167,8 @@ HLS打包是指将多字幕、多音轨、多码率视频流生成一个Master P
     -   Fps：25
     -   PixelFormat：YUV420P Max GOP size：1 segment length （4 seconds）
     -   输出格式：m3u8
--   在输出中移除掉音频流，参见 [Audio详情](/cn.zh-CN/API参考/附录/参数详情.md)。
--   [MultiBitrateVideoStream](/cn.zh-CN/API参考/附录/参数详情.md)定义Master Playlist中的多码率视频流，URI指定Media Playlist的名称。
+-   在输出中移除掉音频流，请参见[Audio详情](/cn.zh-CN/API参考/附录/参数详情.md)。
+-   [MultiBitrateVideoStream详情](/cn.zh-CN/API参考/附录/参数详情.md)定义Master Playlist中的多码率视频流，URI指定Media Playlist的名称。
 -   Type设置为Transcode，即转码活动。
 
 字幕分组。
@@ -204,7 +204,7 @@ HLS打包是指将多字幕、多音轨、多码率视频流生成一个Master P
 }
 ```
 
--   [WebVTTSubtitleURL](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)指定字幕地址，字幕地址在调用[AddMedia](/cn.zh-CN/API参考/媒体接口/新增媒体.md)时可以被动态覆盖，见参数OverrideParams。
+-   [Transcode活动](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)中的`WebVTTSubtitleURL`参数是指定字幕地址，字幕地址在调用[AddMedia](/cn.zh-CN/API参考/媒体接口/新增媒体.md)时可以被动态覆盖，见参数OverrideParams。
 -   [ExtXMedia](/cn.zh-CN/API参考/附录/参数详情.md)定义Media Playlist，URI指定Media Playlist的名称。
 -   Type设置为Transcode，即转码活动。
 
@@ -225,12 +225,12 @@ HLS打包是指将多字幕、多音轨、多码率视频流生成一个Master P
 -   MasterPlayList：定义Master Playlist。更多详情，请参见[MasterPlayList详情](/cn.zh-CN/API参考/附录/参数详情.md)。
 -   MultiBitrateVideoStreams：多码率视频流数组。更多详情，请参见[MasterPlayList详情](/cn.zh-CN/API参考/附录/参数详情.md)。
 -   RefActivityName指定提取视频流的活动名称。
--   ExtXStreamInfo：定义多码率视频流的属性，Audio指定音频分组，Subtitles指定字幕分组。更多详情，请参见[ExtXStreamInfo详情](/cn.zh-CN/API参考/附录/参数详情.mdsection_zsq_324_y2b)。
+-   ExtXStreamInfo：定义多码率视频流的属性，Audio指定音频分组，Subtitles指定字幕分组。更多详情，请参见[ExtXStreamInfo详情](/cn.zh-CN/API参考/附录/参数详情.md)。
 -   Type设置为GenerateMasterPlayList，即生成Master Playlist活动。
 
 拓扑示意图：
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0549482161/p10114.png)
+![拓扑](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0549482161/p10114.png)
 
 完整的场景示例用拓扑结构。示例代码如下：
 
