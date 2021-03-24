@@ -1,12 +1,14 @@
-# 创建HLS标准加密工作流 {#concept_lwg_3fx_y2b .concept}
+# 创建HLS标准加密工作流
 
-## 简介 {#section_vjf_mfx_y2b .section}
+本文提供了Java SDK，HLS数据加密完整的代码示例。
 
-示例调用API进行创建HLS标准加密工作流。创建工作流，参见 [新增媒体工作流](../../../../intl.zh-CN/API参考/媒体工作流接口/新增媒体工作流.md#)。
+## 简介
 
-## 示例代码依赖 {#section_q2v_mfx_y2b .section}
+示例调用API进行创建HLS标准加密工作流。创建工作流，请参见[新增媒体工作流](/cn.zh-CN/API参考/媒体工作流接口/新增媒体工作流.md)。
 
--   MPS SDK，参见 [安装](intl.zh-CN/SDK参考/媒体转码SDK/Java SDK/安装.md#)。
+## 示例代码依赖
+
+-   MPS SDK，请参见[安装](/cn.zh-CN/SDK参考/媒体转码SDK/Java SDK/安装.md)。
 -   其他依赖。
 
     ```
@@ -18,7 +20,7 @@
     ```
 
 
-## 示例代码 {#section_yrn_bgx_y2b .section}
+## 示例代码
 
 ```
 package com.aliyun.smallcode;
@@ -33,12 +35,12 @@ public class MediaHls {
     final String REGION_ID = "<region>";
     final String ACCESS_KEY_ID = "<accessKeyId>";
     final String ACCESS_KEY_SECRET = "<accessKeySecret>";
-    final String PIPELINE_ID = "<PipelineId>";
+    final String PIPELINE_ID = "<PipelineId>";//管道ID
     final String TEMPLATE_ID = "S00000001-100020"; //转码模版ID，m3u8模版，按需配置
     final String OSS_LOCATION = "<OssLocation>";
-    final String INPUT_BUCKET = "<InputBucket>"; //输入bucket
-    final String INPUT_PATH = "<InputPath>"; //如 "HLS-Encryption"
-    final String OUTPUT_BUCKET = "<OutputBucket>"; //输出bucket
+    final String INPUT_BUCKET = "<InputBucket>"; //控制台创建的输入bucket名称
+    final String INPUT_PATH = "<InputPath>"; //输入路径
+    final String OUTPUT_BUCKET = "<OutputBucket>"; //控制台创建的输出bucket名称
     final String ENCRYPTION_TYPE = "hls-aes-128";
     final String HLS_KEY_URI = "<解密密钥的URI>"; //如http://decrypt.testdomain.com
     final String ACT_START = "Act-Start";
