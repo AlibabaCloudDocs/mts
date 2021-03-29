@@ -67,7 +67,7 @@ DASH打包是指将多字幕、多音轨、多码率视频流生成一个Master 
 
 2.  调用[新增媒体](/cn.zh-CN/API参考/媒体接口/新增媒体.md)接口，需要注意以下几点：
     -   指定媒体工作流ID。
-    -   若存在字幕提取，可以设置参数OverrideParams，以覆盖字幕Transcode活动中的固定字幕文件地址参数，如`{"subtitleTransNode":{"InputConfig":{"Format":"stl","InputFile":{"URL":"http://subtitleBucket.oss-cn-hangzhou.aliyuncs.com/package/subtitle/CENG.stl"}}}}` 其中 sutitleTransNode为工作流定义中的字幕抽取结点。
+    -   若存在字幕提取，可以设置参数OverrideParams，以覆盖字幕Transcode活动中的固定字幕文件地址参数，如`{"subtitleTransNode":{"InputConfig":{"Format":"stl","InputFile":{"URL":"http://subtitleBucket.oss-cn-hangzhou.aliyuncs.com/package/subtitle/CENG.stl"}}}}`其中sutitleTransNode为工作流定义中的字幕抽取结点。
     -   工作流触发模式设置为：NotInAuto。
 
 ## 场景
@@ -91,7 +91,7 @@ DASH打包是指将多字幕、多音轨、多码率视频流生成一个Master 
     }
     ```
 
-    -   Output设置Master Playlist的存储位置及名称，参见 [PackageConfig活动支持的参数](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)。
+    -   Output设置Master Playlist的存储位置及名称，参见[PackageConfig活动支持的参数](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)。
     -   Type指定活动类型为PackageConfig。
 
 活动定义：
