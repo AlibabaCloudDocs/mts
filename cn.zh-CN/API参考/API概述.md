@@ -93,16 +93,6 @@
 |[QueryMediaList](/cn.zh-CN/API参考/媒体接口/查询媒体-使用媒体ID.md)|查询媒体列表。|
 |[QueryMediaListByURL](/cn.zh-CN/API参考/媒体接口/查询媒体-使用OSS文件地址.md)|使用OSS文件地址查询媒体。|
 
-## 媒体类目接口
-
-|API|描述|
-|:--|:-|
-|[AddCategory]()|新增类目。|
-|[DeleteCategory]()|删除类目。|
-|[UpdateCategoryName]()|更新类目。|
-|[CategoryTree]()|获取类目树。|
-|[ListAllCategory]()|获取类目列表。|
-
 ## 媒体Bucket接口
 
 |API|描述|
