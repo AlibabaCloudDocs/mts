@@ -1,6 +1,8 @@
 # Python SDK
 
-mts的Python SDK版本需要在2.7.6版本及以上。阿里云Python SDK推荐的pip安装方式：
+本文介绍了Python SDK的安装方式和使用智能标签SDK的示例代码。
+
+媒体处理的Python SDK版本需要在2.7.6版本及以上。阿里云Python SDK推荐的pip安装方式：
 
 -   Python 2.x
 
