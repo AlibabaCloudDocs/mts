@@ -27,7 +27,7 @@
 
 |API|描述|
 |:--|:-|
-|[AddTemplate](/cn.zh-CN/API参考/自定义转码模板接口/新增自定义转码模版.md)|创建自定义模板，包含容器信息，视频跟音频流等设置。|
+|[AddTemplate](/cn.zh-CN/API参考/自定义转码模板接口/新增自定义转码模板.md)|创建自定义模板，包含容器信息，视频跟音频流等设置。|
 |[UpdateTemplate](/cn.zh-CN/API参考/自定义转码模板接口/更新自定义转码模版.md)|更新自定义模板设置。|
 |[QueryTemplateList](/cn.zh-CN/API参考/自定义转码模板接口/查询自定义转码模板.md)|查询自定义模板接口。|
 |[SearchTemplate](/cn.zh-CN/API参考/自定义转码模板接口/搜索自定义转码模板.md)|搜索指定状态的自定义模板。|
