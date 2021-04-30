@@ -4,13 +4,13 @@
 
 ## 操作步骤
 
-HLS标准加密架构，参见[HLS的加密与播放](/cn.zh-CN/开发指南/视频加密/HLS标准加密.md)。
+HLS标准加密架构，请参见[HLS的加密与播放](/cn.zh-CN/开发指南/视频加密/HLS标准加密.md)。
 
 1.  创建HLS加密工作流。
 
-    控制台方式创建HLS加密工作流，参见[加密](/cn.zh-CN/开发指南/视频加密/加密.md)
+    控制台方式创建HLS加密工作流，请参见[加密](/cn.zh-CN/开发指南/视频加密/加密.md)。
 
-    接口方式创建HLS加密工作流，DEMO代码，参见 [创建HLS标准加密工作流](/cn.zh-CN/SDK参考/媒体转码SDK/Python SDK/创建HLS标准加密工作流.md)。
+    接口方式创建HLS加密工作流，DEMO代码，请参见[创建HLS标准加密工作流](/cn.zh-CN/SDK参考/媒体转码SDK/Python SDK/创建HLS标准加密工作流.md)。
 
     **说明：** 创建HLS标准工作流时，为了测试，参数`HLS_KEY_URI`值填**http: //127.0.0.1:8888**。播放时，播放器会在该地址请求密钥，媒体处理会在本地启动服务，进行分发密钥。
 
@@ -181,10 +181,10 @@ HLS标准加密架构，参见[HLS的加密与播放](/cn.zh-CN/开发指南/视
     server.serve_forever()
     ```
 
-4.  获取播放地址，请参见[如何获取播放地址](https://help.aliyun.com/document_detail/42239.html?spm=5176.11065259.1996646101.searchclickresult.524e558cl2F5JT)。
+4.  可通过查询媒体接口，获取播放地址。请参见[查询媒体-使用媒体ID](/cn.zh-CN/API参考/媒体接口/查询媒体-使用媒体ID.md)。
 5.  播放视频。
 
-    借助一个在线播放器，测试HLS加密视频的播放。更多详情，请参见 [阿里云播放器用户诊断工具](http://player.alicdn.com/detection.html)。
+    借助一个在线播放器，测试HLS加密视频的播放。更多详情，请参见[阿里云播放器用户诊断工具](http://player.alicdn.com/detection.html)。
 
     将获取的播放地址，如图填入对话框中，单击**视频播放**。
 
