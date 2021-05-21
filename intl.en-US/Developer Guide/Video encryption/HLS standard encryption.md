@@ -1,18 +1,18 @@
-# HLS standard encryption {#concept_mhv_cbw_1fb .concept}
+# HLS standard encryption
 
 Video encryption is a measure to protect the video content. Encrypting the video content can effectively avoid video leaks and leeching problems, thus being widely used in online education, finance and economics and other fields.
 
 **Note:** Alibaba Cloud currently supports encryption in two ways. One is private encryption, and the other is HLS standard encryption. Using HLS standard encryption, users must protect the encryption key. This document introduces HLS standard encryption.
 
-## Complete encryption architecture {#section_ssn_2bw_1fb .section}
+## Complete encryption architecture
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11402/154357754111385_en-US.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11402/154357754111385_en-US.png)
 
-## Terms {#section_c54_3bw_1fb .section}
+## Terms
 
 -   Key Management Service \(KMS\)
 
-    A security management service, mainly responsible for the production, encryption and deceyption of data key and other operations.
+    A security management service, mainly responsible for the production, encryption and deceyption of data key and other operations. Click here to activate [KMS service](https://common-buy-intl.aliyun.com/?spm=a2796.105433.1204892.1.631e2a7e616pCe&commodityCode=kms_intl&accounttraceid=83ebc5a2-8fce-43b2-bf75-15ff169809d8#/open).
 
 -   Data Key \(DK\), also called plaintext key
 
@@ -24,14 +24,14 @@ Video encryption is a measure to protect the video content. Encrypting the video
 
 -   Resource Access Management \(RAM\)
 
-    User identification management and resource access management service provided by Alibaba Cloud.
+    User identification management and resource access management service provided by Alibaba Cloud. Click here to activate [RAM service](https://buy-intl.aliyun.com/ram?spm=a2796.104927.1204861.1.41ba6559rYlVBZ#/loading).
 
 
-## Procedure {#section_mj3_kbw_1fb .section}
+## Procedure
 
 1.  Create HLS encryption workflow.
 
-    **Note:** The console currently does not support creating HLS encryption workflow. You can create HLS encryption workflow by using API. For more information about demo, see [Create HLS standard encryption workflow](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Java SDK/Create HLS standard encryption workflow.md#). After creating, the workflow cannot be modified on the console, or the encryption setting goes invalid.
+    **Note:** The console currently does not support creating HLS encryption workflow. You can create HLS encryption workflow by using API. For more information about demo, see [Create HLS standard encryption workflow](/intl.en-US/SDK Reference/Transcoding SDKs/Java SDK/Create HLS standard encryption workflow.md). After creating, the workflow cannot be modified on the console, or the encryption setting goes invalid.
 
     Key settings in workflow:
 
@@ -65,7 +65,7 @@ Video encryption is a measure to protect the video content. Encrypting the video
     ```
 
 3.  Play.
-    -   Use the QueryMediaList interface to get playback address. For more information, see [QueryMediaList](../../../../reseller.en-US/API Reference/Media APIs/QueryMediaList.md#). Get the OSS address, replace the OSS domain name with CDN domain name, and splice the parameterMtsHlsUriToken, which serves as the token to request the decryption key. The principle is as follows.
+    -   Use the QueryMediaList interface to get playback address. For more information, see [QueryMediaList](/intl.en-US/API Reference/Media APIs/QueryMediaList.md). Get the OSS address, replace the OSS domain name with CDN domain name, and splice the parameter MtsHlsUriToken, which serves as the token to request the decryption key. The principle is as follows.
 
         During play, the player accesses the URI in the EXT-X-KEY tag in the m3u8 file to get decryption key. The URI is a decryption key interface built by the business side. Therefore, while requesting decryption, the player must carry some authentication information recognized by the business side. MtsHlsUriToken plays the role in a similar way. The business side issues a token to the player, which carries the token when requesting the decryption key, and the business side checks the validity of the token.
 
@@ -80,6 +80,6 @@ Video encryption is a measure to protect the video content. Encrypting the video
 4.  The business side need to do the following operations.
     1.  Build, issue and identify MtsHlsUriToken service.
     2.  Identify decryption token. One token is allowed to use only once.
-    3.  Decrypt key: EDK, which is Ciphertext, calls decryption interface of the KMS service for decryption. For more information, see [Decrypt](../../../../reseller.en-US/API Reference/API list/Decrypt.md#). After decryption, the information can be cached to reduce network IO.
+    3.  Decrypt key: EDK, which is Ciphertext, calls decryption interface of the KMS service for decryption. For more information, see [Decrypt](/intl.en-US/API Reference/Key/Decrypt.md). After decryption, the information can be cached to reduce network IO.
     4.  After decryption, you can get DK \(the plaintext key\) which needs base64decodd, and return it to the player.
 
