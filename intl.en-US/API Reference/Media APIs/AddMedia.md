@@ -1,50 +1,34 @@
-# AddMedia {#reference_zgr_lsg_y2b .reference}
+# AddMedia
 
 The AddMedia API adds media.
 
-**Note:** 
+**Note:**
 
 -   After workflows are configured and a media file is uploaded to OSS, OSS automatically notifies Media Processing and Media Processing identifies the active workflow that matches a specific OSS bucket and object. Then the matched workflow is automatically executed. Therefore, in normal cases, files are automatically processed using the AddMedia without manual intervention, but you can manually call this API to process inventory video files in OSS without uploading.
 -   Media information is automatically obtained when the specified active workflow is executed. When no workflow is specified, media information is not obtained.
 
-## Request parameters {#section_iqn_qbt_x2b .section}
+## Request parameters
 
 |Parameters|Type|Required or not|Description|
 |:---------|:---|:--------------|:----------|
 |Action|String|Yes|API of the action, system required parameter. Value: AddMedia|
 |FileURL|String|Yes|Path to a media file,-   which consists of up to 3,200 bytes.
--   The URL format follows the RFC 2396 standard. \(The URL is subject to UTF-8 encoding and URL encoding.\)
-
-|
+-   The URL format follows the RFC 2396 standard. \(The URL is subject to UTF-8 encoding and URL encoding.\) |
 |Title|String|No|Media title,-   which consists of up to 128 bytes.
--   UTF-8 encoding.
-
-|
+-   UTF-8 encoding. |
 |Description|String|No|Description.-   which consists of up to 1,024 bytes.
--   UTF-8 encoding.
-
-|
+-   UTF-8 encoding. |
 |CoverURL|String|No|Cover,-   which consists of up to 3,200 bytes.
--   The URL format follows the RFC 2396 standard \(The URL is subject to UTF-8 encoding and URL encoding\).
-
-|
-|CateId|Long|No|Category ID,which cannot be a negative number.
-
-|
+-   The URL format follows the RFC 2396 standard \(The URL is subject to UTF-8 encoding and URL encoding\). |
+|CateId|Long|No|Category ID,which cannot be a negative number. |
 |Tags|String|No|List of labels.-   Separated by commas \(,\). Up to 16 tags.
 -   Each tag consists of up to 32 bytes.
--   UTF-8 encoding.
-
-|
+-   UTF-8 encoding. |
 |MediaWorkflowId|String|No|Media workflow ID.|
 |MediaWorkflowUserData|String|No|Custom data of a media workflow,-   which consists of up to 1,024 bytes.
--   UTF-8 encoding.
-
-|
-|OverrideParams|Json|No|Override parameters.-   Example 1: HLS package subtitle override\{“WebVTTSubtitleOverrides”,\[\{“RefActivityName”:”subtitleNode”,”WebVTTSubtitleURL”:”http://test.oss-cn-hangzhou.aliyuncs.com/subtitle1.vtt"\}\]\}。
--   Example 2: DASH package subtitle override\{“subtitleTransNodeName”:\{“InputConfig”:\{“Format”:”stl”,”InputFile”:\{“URL”:”http://subtitleBucket.oss-cn-hangzhou.aliyuncs.com/package/subtitle/CENG.stl"\}\}\}\}。
-
-|
+-   UTF-8 encoding. |
+|OverrideParams|Json|No|Override parameters.-   Example 1: HLS package subtitle override\{“WebVTTSubtitleOverrides”,\[\{“RefActivityName”:”subtitleNode”,”WebVTTSubtitleURL”:”http://test.oss-cn-hangzhou.aliyuncs.com/subtitle1.vtt"\}\]\}.
+-   Example 2: DASH package subtitle override\{“subtitleTransNodeName”:\{“InputConfig”:\{“Format”:”stl”,”InputFile”:\{“URL”:”http://subtitleBucket.oss-cn-hangzhou.aliyuncs.com/package/subtitle/CENG.stl"\}\}\}\}. |
 
 -   Matching rules for workflow triggering
 
@@ -82,19 +66,11 @@ The AddMedia API adds media.
     |:---|:---|:----------|
     |RunId|String|Workflow execution ID.|
     |Name|String|Activity name.|
-    |Type|String|Activity type,which can be Report or Start.
-
-|
-    |State|String|Activity status,which can be fail or success.
-
-|
-    |Code|String|Error code.An error code is returned if the activity status is Fail.
-
-|
-    |Message|String|Error message.An error message is returned if the activity status is Fail.
-
-|
-    |MediaWorkflowExecution|[MediaWorkflowExecution](reseller.en-US/API Reference/Data types.md#)|Information of media workflow execution.|
+    |Type|String|Activity type,which can be Report or Start. |
+    |State|String|Activity status,which can be fail or success. |
+    |Code|String|Error code.An error code is returned if the activity status is Fail. |
+    |Message|String|Error message.An error message is returned if the activity status is Fail. |
+    |MediaWorkflowExecution|[MediaWorkflowExecution](/intl.en-US/API Reference/Data types.md)|Information of media workflow execution.|
 
 -   Sample JSON message body:
 
@@ -177,13 +153,13 @@ The AddMedia API adds media.
     ```
 
 
-## Response parameters {#section_ogh_wbt_x2b .section}
+## Response parameters
 
 |Parameter|Type|Description|
 |:--------|:---|:----------|
-|Media|[Media](reseller.en-US/API Reference/Data types.md#)|Media|
+|Media|[Media](/intl.en-US/API Reference/Data types.md)|Media|
 
-## Examples {#section_gpq_zbt_x2b .section}
+## Examples
 
 Request example
 
