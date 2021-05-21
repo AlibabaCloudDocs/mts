@@ -1,8 +1,8 @@
-# How do I set screenshot? {#concept_qqs_mrl_x2b .concept}
+# How do I set screenshot?
 
 Screenshots refer to the process where an image captured at a specified time in a video is saved as an image file.
 
-## Type {#section_fql_nyl_x2b .section}
+## Type
 
 -   Key frame
 
@@ -13,21 +13,21 @@ Screenshots refer to the process where an image captured at a specified time in 
     Compared with a key frame, a normal frame has poorer image quality and takes longer time to capture. However, it can be precisely captured at a specified time.
 
 
-## Parameter description {#section_gf1_pyl_x2b .section}
+## Parameter description
 
 You need to take note of the following parameters when you input a file:
 
-[Input](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#)
+[Input](/intl.en-US/API Reference/Appendix/Parameter details.md)
 
 Specifies the OSS input file of the video that you want to take a screenshot of.
 
 **Note:** The location of OSS must correspond to the region of MPS. For example, oss-cn-hangzhou location of OSS corresponds to cn-hangzhou region of MPS.
 
-You need to take note of the following parameters in [SnapshotConfig](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#):
+You need to take note of the following parameters in [SnapshotConfig](/intl.en-US/API Reference/Appendix/Parameter details.md):
 
--   [OutputFile](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#)
+-   [OutputFile](/intl.en-US/API Reference/Appendix/Parameter details.md)
 
-    Specifies the OSS output file of screenshots. You can either specify a fixed file name of an OSS Object or customize one. For naming rules, see [Screenshot OutputFile](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#).
+    Specifies the OSS output file of screenshots. You can either specify a fixed file name of an OSS Object or customize one. For naming rules, see [Screenshot OutputFile](/intl.en-US/API Reference/Appendix/Parameter details.md).
 
 -   Time
 
@@ -65,13 +65,13 @@ You need to take note of the following parameters in [SnapshotConfig](../../../.
 
 -   TileOutputFile and TileOut
 
-    Specify the OSS output file of image sprites and[TileOut](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#).
+    Specify the OSS output file of image sprites and [TileOut](/intl.en-US/API Reference/Appendix/Parameter details.md).
 
 -   SubOut and Format
     -   If you want to use WebVTT thumbnails, set Format to vtt.
     -   If you want to output the WebVTT thumbnails as image sprites, set Format and SubOut at the same time.
 
-## Scenarios {#section_rnd_czl_x2b .section}
+## Scenarios
 
 -   Single screenshot
 
@@ -92,9 +92,9 @@ You need to take note of the following parameters in [SnapshotConfig](../../../.
     WebVTT is a file format. A thumbnail can be either multiple images or one big image sprite.
 
 
-## Execution method {#section_sqh_dzl_x2b .section}
+## Execution method
 
-See `Task execution and completion` in [Task and MPS Queue](../../../../reseller.en-US/Developer Guide/Concepts/Task and MPS queue.md#).
+See `Task execution and completion` in [Task and MPS Queue](/intl.en-US/Developer Guide/Concepts/Task and MPS queue.md).
 
 -   Synchronization
 
@@ -109,13 +109,13 @@ See `Task execution and completion` in [Task and MPS Queue](../../../../reseller
     Single screenshot, multiple screenshots, image sprites, and WebVTT thumbnails can all be taken asynchronously.
 
 
-## Code example {#section_zcm_1vl_x2b .section}
+## Code example
 
 You have a `720P(1280x720)` video lasting 10 seconds. You can specify the height of screenshots to 360 pixels, the start time to 2 seconds, the interval to 1 second, and the number to 3. Three images are captured at the second, third, and fourth seconds, respectively. The image files are named in succession, such as 00001, 00002, and 00003.
 
-[Screenshots-Java SDK](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Java SDK/Screenshot.md#)
+[Screenshots-Java SDK](/intl.en-US/SDK Reference/Transcoding SDKs/Java SDK/Screenshot.md)
 
-[Screenshots-Python SDK](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Python SDK/Screenshot.md#)
+[Screenshots-Python SDK](/intl.en-US/SDK Reference/Transcoding SDKs/Python SDK/Screenshot.md)
 
-[Screenshots-PHP SDK](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/PHP SDK/Screenshot.md#)
+[Screenshots-PHP SDK](/intl.en-US/SDK Reference/Transcoding SDKs/PHP SDK/Screenshot.md)
 
