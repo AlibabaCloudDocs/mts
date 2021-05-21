@@ -1,4 +1,4 @@
-# Quick start {#concept_rlx_gbc_z2b .concept}
+# Quick start
 
 1.  Create AcsClient instance.
 
@@ -39,7 +39,7 @@ for mps_region_id in mps_region_ids:
     print 'region is:', mps_region_id
     # Create AcsClient instance
     client = AcsClient(access_key_id, access_key_secret, mps_region_id)
-    # Create request， and set parameters
+    # Create request, and set parameters
     request = SearchPipelineRequest.SearchPipelineRequest()
     request.set_accept_format('json')
     # Initiate API request and diaplay returned value
