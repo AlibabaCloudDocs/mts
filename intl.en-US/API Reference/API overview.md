@@ -11,7 +11,7 @@
 
 |API|Description|
 |:--|:----------|
-|[SubmitAnalysisJob](/intl.en-US/API Reference/Preset smart template recommended APIs/SubmitAnalysisJob.md)|Intelligently analyzes the input file to recommend a preset template suitable for the input file。|
+|[SubmitAnalysisJob](/intl.en-US/API Reference/Preset smart template recommended APIs/SubmitAnalysisJob.md)|Intelligently analyzes the input file to recommend a preset template suitable for the input file.|
 |[QueryAnalysisJobList](/intl.en-US/API Reference/Preset smart template recommended APIs/QueryAnalysisJobList.md)|Lists available preset templates.|
 
 ## Transcoding APIs
