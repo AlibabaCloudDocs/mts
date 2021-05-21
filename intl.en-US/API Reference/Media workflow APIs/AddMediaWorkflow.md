@@ -1,10 +1,10 @@
-# AddMediaWorkflow {#reference_k1h_tng_y2b .reference}
+# AddMediaWorkflow
 
 The AddMediaWorkflow API adds a media workflow and defines the topology of the media workflow, and Activity and dependencies.
 
-**Note:** For more information, see [Activity](reseller.en-US/API Reference/Appendix/Workflow activity introduction.md#).
+**Note:** For more information, see [Activity](/intl.en-US/API Reference/Appendix/Workflow activity introduction.md).
 
-## Request parameters {#section_iqn_qbt_x2b .section}
+## Request parameters
 
 |Parameters|Type|Required or not|Description|
 |:---------|:---|:--------------|:----------|
@@ -12,15 +12,9 @@ The AddMediaWorkflow API adds a media workflow and defines the topology of the m
 |Name|String|Yes|Media workflow name,-   and cannot be a null string.
 -   The name must be unique,
 -   which consists of up to 64 bytes.
--   It must be UTF-8 encoded.
-
-|
-|Topology|String|Yes|Topology of the media workflow.JSON object. The topology includes the activity list and activity dependencies, as shown in the following topology example.
-
-|
-|TriggerMode|String|No|Trigger mode.Range: OssAutoTrigger、NotInAuto
-
-|
+-   It must be UTF-8 encoded. |
+|Topology|String|Yes|Topology of the media workflow.JSON object. The topology includes the activity list and activity dependencies, as shown in the following topology example. |
+|TriggerMode|String|No|Trigger mode.Range: OssAutoTrigger NotInAuto |
 
 Topology example
 
@@ -71,13 +65,13 @@ Topology example
 }
 ```
 
-## Response parameters {#section_ogh_wbt_x2b .section}
+## Response parameters
 
 |Parameter|Type|Description|
 |:--------|:---|:----------|
-|MediaWorkflow|[MediaWorkflow](https://help.aliyun.com/document_detail/29251.html?spm=a2c4g.11186623.6.676.oyhBPl#MediaWorkflow)|Media workflow.|
+|MediaWorkflow|[MediaWorkflow](/intl.en-US/API Reference/Data types.md)|Media workflow.|
 
-## Examples {#section_gpq_zbt_x2b .section}
+## Examples
 
 Request example
 
