@@ -27,7 +27,7 @@
 
 |API|描述|
 |:--|:-|
-|[AddTemplate]()|创建自定义模板，包含容器信息，视频跟音频流等设置。|
+| | |
 |[UpdateTemplate](/intl.zh-CN/API参考/自定义转码模板接口/更新自定义转码模版.md)|更新自定义模板设置。|
 |[QueryTemplateList](/intl.zh-CN/API参考/自定义转码模板接口/查询自定义转码模板.md)|查询自定义模板接口。|
 |[SearchTemplate](/intl.zh-CN/API参考/自定义转码模板接口/搜索自定义转码模板.md)|搜索指定状态的自定义模板。|
@@ -100,11 +100,4 @@
 |[BindInputBucket](/intl.zh-CN/API参考/媒体Bucket接口/绑定输入媒体Bucket.md)|媒体库绑定输入Bucket。|
 |[BindOutputBucket](/intl.zh-CN/API参考/媒体Bucket接口/绑定输出媒体Bucket.md)|媒体库绑定输出Bucket。|
 |[ListAllMediaBucket](/intl.zh-CN/API参考/媒体Bucket接口/查询媒体Bucket.md)|列出媒体库所有媒体Bucket。|
-
-## 智能生产接口
-
-|API|描述|
-|---|--|
-|[t1896506.md\#]()|提交智能生产作业接口。|
-|[查询智能生产作业]()|查询智能生产作业接口。|
 
