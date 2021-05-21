@@ -1,4 +1,4 @@
-# Add media {#concept_vj3_qhx_y2b .concept}
+# Add media
 
 Add media file to Media Files, and the user can specify workflow ID to trigger the workflow, which then processes the video file:
 
@@ -13,7 +13,7 @@ package com.aliyun.mts;
     import com.aliyuncs.profile.DefaultProfile;
     import org.apache.commons.lang.exception.ExceptionUtils;
     public class AddMedia {
-        //Step 1 .set region：cn-hangzhou、cn-shenzhen、cn-shanghai、cn-beijing
+        //Step 1 .set region:cn-hangzhou/cn-shenzhen/cn-shanghai/cn-beijing
         private static final String REGION = "cn-shenzhen";
         private static final String OSS_REGION = "oss-cn-shenzhen";
         private static final String mtsEndpoint = "mts." + REGION + ".aliyuncs.com";
