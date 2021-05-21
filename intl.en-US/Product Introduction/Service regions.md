@@ -11,7 +11,7 @@ MPS is available in China North 2 \(Beijing\), China East 1 \(Hangzhou\), China 
 |Hong Kong|mts.cn-hongkong.aliyuncs.com|-|
 |US West 1 \(Silicon Valley\)|mts.us-west-1.aliyuncs.com|-|
 |Asia-Pacific Southeast 1 \(Singapore\)|mts.ap-southeast-1.aliyuncs.com|-|
-|Asia-Pacific Northeast 1（Tokyo）|mts.ap-northeast-1.aliyuncs.com|-|
+|Asia-Pacific Northeast 1\(Tokyo\)|mts.ap-northeast-1.aliyuncs.com|-|
 |Central Europe 1 \(Frankfurt\)|mts.eu-central-1.aliyuncs.com|-|
 |Europe West 1 \(London\)|mts.eu-west-1.aliyuncs.com|-|
 |Asia-Pacific South 1 \(Mumbai\)|mts.ap-south-1.aliyuncs.com|-|
