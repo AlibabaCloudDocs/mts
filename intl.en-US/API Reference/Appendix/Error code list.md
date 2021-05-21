@@ -1,8 +1,8 @@
-# Error code list {#reference_ozd_dn3_y2b .reference}
+# Error code list
 
 This article lists general errors, task errors, MPS queue errors, and message sending errors.
 
-## General errors {#section_hsy_hn3_y2b .section}
+## General errors
 
 |Error code|Description|Detailed information|
 |:---------|:----------|:-------------------|
@@ -26,14 +26,14 @@ This article lists general errors, task errors, MPS queue errors, and message se
 |InvalidParameter.JsonFormatInvalid|The parameter is not a valid JSON string.|The parameter \\”%s\\” does not conform to the JSON specification.|
 |InvalidParameter.JsonObjectFormatInvalid|The parameter is not a valid JSON object.|The parameter \\”%s\\” does not conform to the JSON Object specification.|
 |InvalidParameter.JsonArrayFormatInvalid|The parameter is not a valid JSON array string.|The parameter \\”%s\\” does not conform to the JSON Array specification.|
-|InvalidParameter.UUIDFormatInvalid|The ID is invalid or is not in UUID format.|The parameter \\”%s\\” is invalid.A uuid must:1\)be comprised of chracters\[a-f\]，numbers\[0-9\];2\)be 32 characters long.|
+|InvalidParameter.UUIDFormatInvalid|The ID is invalid or is not in UUID format.|The parameter \\”%s\\” is invalid.A uuid must:1\)be comprised of chracters\[a-f\],numbers\[0-9\];2\)be 32 characters long.|
 |InvalidParameter.Format|The parameter format is incorrect.|The format of parameter \\”%s\\” is invalid.|
 |InvalidParameter.NumberFormatInvalid|The number format is incorrect.|The number format of parameter \\”%s\\” is invalid.|
 |InvalidParameter.BucketNameInvalid|The specified bucket name does not meet the OSS bucket specifications.|The bucket name \\”%s\\” is invalid. A bucket name must: 1\) be comprised of lower-case characters, numbers, underscore\(\_\) or dash\(-\); 2\) start with lower case or numbers; 3\) be between 3-255 characters long.|
 |InvalidParameter.LocationInvalid|The specified location does not meet the OSS location specifications.|The location \\”%s\\” is invalid. A location name shoud be one of five:oss-cn-hangzhou,oss-cn-qingdao,oss-cn-beijing,oss-cn-hongkong,oss-cn-shenzhen.And now MTS only support oss-cn-hangzhou.|
 |InvalidParameter.ObjectKeyInvalid|The specified object name does not meet the OSS object specifications.|The object key \\”%s\\” is invalid. An object name should be between 1 - 1023 bytes long when encoded as UTF-8 and cannot contain LF or CR or unsupported chars in XML1.0.|
 
-## Task errors {#section_zng_ln3_y2b .section}
+## Task errors
 
 |Error code|Description|Detailed information|
 |:---------|:----------|:-------------------|
@@ -43,7 +43,7 @@ This article lists general errors, task errors, MPS queue errors, and message se
 |InvalidParameter.TemplateNotSupported|The operated template is not supported. For example, the preset template specified when you submit a task is not in the list of recommend preset templates when the intelligent analysis is successful.|The template operated \\”%s\\” is not supported.|
 |InvalidParameter.TemplateNotFound|The template does not exist.|The Template operated \\”%s\\” cannot be found.|
 
-## MPS queue errors {#section_j3h_ln3_y2b .section}
+## MPS queue errors
 
 |Error code|Description|Detailed information|
 |:---------|:----------|:-------------------|
@@ -52,7 +52,7 @@ This article lists general errors, task errors, MPS queue errors, and message se
 |NotSupportedJob.ContainerFormatNotSupported|The Boost MPS queue does not support custom templates not in M3U8 format.|In user defined template \\”%s”,container format \\”%s” is not m3u8, cannot be supported by boost pipeline.|
 |NotSupportedJob.DurationIsLessThanHalfAnHour|The Boost MPS queue does not support tasks shorter than 30 minutes.|Duration is \\”%s\\” less than half an hour,cannot be supported by boost pipeline.|
 
-## Message sending errors {#section_lyh_ln3_y2b .section}
+## Message sending errors
 
 |Error code|Description|Detailed information|
 |:---------|:----------|:-------------------|
