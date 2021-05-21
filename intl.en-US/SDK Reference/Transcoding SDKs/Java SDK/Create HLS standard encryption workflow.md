@@ -1,12 +1,12 @@
-# Create HLS standard encryption workflow {#concept_lwg_3fx_y2b .concept}
+# Create HLS standard encryption workflow
 
-## Overview {#section_vjf_mfx_y2b .section}
+## Overview
 
-This document is an example of calling API to create HLS standard encryption workflow. For more information about creating workflow, see [AddMediaWorkflow](../../../../reseller.en-US/API Reference/Media workflow APIs/AddMediaWorkflow.md#).
+This document is an example of calling API to create HLS standard encryption workflow. For more information about creating workflow, see [AddMediaWorkflow](/intl.en-US/API Reference/Media workflow APIs/AddMediaWorkflow.md).
 
-## Code dependency example {#section_q2v_mfx_y2b .section}
+## Code dependency example
 
--   For more information about MPS SDK, see [Installation](reseller.en-US/SDK Reference/Transcoding SDKs/Java SDK/Installation.md#).
+-   For more information about MPS SDK, see [Installation](/intl.en-US/SDK Reference/Transcoding SDKs/Java SDK/Installation.md).
 -   Other dependency.
 
     ```
@@ -18,7 +18,7 @@ This document is an example of calling API to create HLS standard encryption wor
     ```
 
 
-## Code example {#section_yrn_bgx_y2b .section}
+## Code example
 
 ```
 package com.aliyun.smallcode;
@@ -34,13 +34,13 @@ public class MediaHls {
     final String ACCESS_KEY_ID = "<accessKeyId>";
     final String ACCESS_KEY_SECRET = "<accessKeySecret>";
     final String PIPELINE_ID = "<PipelineId>";
-    final String TEMPLATE_ID = "S00000001-100020"; //Transcoding template ID，m3u8 template, set as needed
+    final String TEMPLATE_ID = "S00000001-100020"; //Transcoding template ID,m3u8 template, set as needed
     final String OSS_LOCATION = "<OssLocation>";
     final String INPUT_BUCKET = "<InputBucket>"; //Enter bucket
-    final String INPUT_PATH = "<InputPath>"; //如 "HLS-Encryption"
+    final String INPUT_PATH = "<InputPath>"; //"HLS-Encryption"
     final String OUTPUT_BUCKET = "<OutputBucket>"; //output bucket
     final String ENCRYPTION_TYPE = "hls-aes-128";
-    final String HLS_KEY_URI = "<Decryption key URI>"; //如http://decrypt.testdomain.com
+    final String HLS_KEY_URI = "<Decryption key URI>"; //http://decrypt.testdomain.com
     final String ACT_START = "Act-Start";
     final String ACT_ENCRYPTION = "Act-HLS-Encryption";
     final String ACT_REPORT = "Act-Report";
