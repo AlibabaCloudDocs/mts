@@ -1,10 +1,10 @@
-# 如何进行API转码 {#concept_bsj_kgg_x2b .concept}
+# 如何进行API转码
 
-## 背景 {#section_fzj_ygg_x2b .section}
+## 背景
 
 工作流无法满足用户场景时，需用户自己判断业务逻辑，使用API提交转码任务。例如：并不是所有的视频都需要转码，不同视频需要设置不同的转码配置。
 
-## 优势 {#section_xsh_zgg_x2b .section}
+## 优势
 
 -   自定义业务逻辑，灵活提交转码作业。
 
@@ -15,7 +15,7 @@
 -   支持URL播放。
 
 
-## 使用限制 {#section_i3q_4hg_x2b .section}
+## 使用限制
 
 -   一个转码作业生成一个输出文件，允许批量提交作业。
 
@@ -24,22 +24,22 @@
 -   API转码支持URL播放，不支持媒体ID播放。需用户自己关联多个格式的多个清晰度输出，实现多清晰度自动切换、多格式支持等逻辑。
 
 
-## 准备 {#section_fqb_rhg_x2b .section}
+## 准备
 
 -   自定义转码模板（按需），进入[媒体处理控制台](https://mts.console.aliyun.com/?spm=a2c4g.11186623.2.4.6f9251fbBWEbgK#/vod/settings/transcode) 设置。
 
 -   自定义水印模板（按需），进入[媒体处理控制台](https://mts.console.aliyun.com/?spm=a2c4g.11186623.2.5.6f9251fbBWEbgK#/vod/settings/transcode) 设置。
 
 
-## 操作步骤 {#section_ggb_thg_x2b .section}
+## 操作步骤
 
-1.  输入文件 [上传到OSS](intl.zh-CN/最佳实践/如何上传视频.md#)（多种上传方案：OSS控制台上传，使用OSS相关上传工具上传，上传SDK）。
-2.  [设置管道消息队列通知](../../../../intl.zh-CN/用户指南/转码消息通知.md#)。
-3.  [提交转码任务](../../../../intl.zh-CN/用户指南/提交转码作业.md#)。
+1.  输入文件上传到OSS。（多种上传方案：OSS控制台上传，使用OSS相关上传工具上传，上传SDK）。
+2.  [设置管道消息队列通知](/intl.zh-CN/用户指南/转码消息通知.md)。
+3.  [提交转码任务]()。
 4.  在获取到消息后，调用“查询转码作业”接口查询作业执行结果，获取输出文件URL。
 5.  通过URL播放视频。
 
-## 搭建一个给视频添加水印的应用服务 {#section_evd_5hg_x2b .section}
+## 搭建一个给视频添加水印的应用服务
 
 [JAVA源代码下载](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/59368/cn_zh/1505138223690/mts-demo-java.tgz?spm=a2c4g.11186623.2.10.6f9251fbBWEbgK&file=mts-demo-java.tgz)
 
