@@ -1,88 +1,58 @@
-# Workflow activity introduction {#reference_i5h_gqn_y2b .reference}
+# Workflow activity introduction
 
 Workflow activity types are listed as follows: Start, Transcode, Snapshot, Analysis, Cover, Summary, Censor, Report, UploadVerify, GenerateMasterPlayList, AudioGroup, SubtitleGroup and PackageConfig. This document introduces the parameters supported by the following activity types:
 
-## Start activity {#section_hbf_3qn_y2b .section}
+## Start activity
 
 You can set the trigger conditions and overall configurations of the Media workflow. This activity acquires media information. If the acquisition fails, directly jump to perform Report activity.
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
-|InputFile|String|Yes|Input position. For more information, see [Matching rule for workflow file](reseller.en-US/API Reference/Appendix/Matching rule for workflow file triggering.md#).Example: \{“Bucket”: “example-001”,”Location”: “oss-cn-hangzhou”, “ObjectPrefix”: “test/“\}.
-
-|
-|PipelineId|String|Yes|ID of the MPS queue, which is global.In the workflow scenario, the message configuration for the MPS queue is invalid, but the message configuration of the QueueName/TopicName is valid.
-
-|
+|InputFile|String|Yes|Input position. For more information, see [Matching rule for workflow file](/intl.en-US/API Reference/Appendix/Matching rule for workflow file triggering.md).Example: \{“Bucket”: “example-001”,”Location”: “oss-cn-hangzhou”, “ObjectPrefix”: “test/“\}. |
+|PipelineId|String|Yes|ID of the MPS queue, which is global.In the workflow scenario, the message configuration for the MPS queue is invalid, but the message configuration of the QueueName/TopicName is valid. |
 |MessageType|String|No|Message Type.-   Range: Queue and Topic.
--   Default value: Queue.
-
-|
+-   Default value: Queue. |
 |QueueName|String|No|Name of the Message Service queue, which is global.|
 |TopicName|String|No|Topic name, which is global.|
-|RoleName|String|No|Authorization role name, which is global.Default value: AliyunMTSDefaultRole
+|RoleName|String|No|Authorization role name, which is global.Default value: AliyunMTSDefaultRole |
 
-|
-
-## Transcode activity {#section_jt3_lqn_y2b .section}
+## Transcode activity
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
-|Outputs|String|No|Optional while extracting subtitles.-   For more information, see [Output](reseller.en-US/API Reference/Appendix/Parameter details.md#).
--   Example: \[\{“OutputObject”:”transcode%2F%7BObjectPrefix%7D%2F%7BFileName%7D. %7BExtName%7D”,”TemplateId”: “S00000001-000070”\}\]。
-
-|
-|OutputBucket|String|No|Output bucket.Output bucket. During HLS package, it is overwritten by the Bucket in PackageConfig.
-
-|
-|OutputLocation|String|No|Output region.During HLS package, it is overwritten by the Location in PackageConfig.
-
-|
-|MultiBitrateVideoStream|String|No|During HLS package, this parameter is required while extracting video streams.-   For more information about this parameter, see [MultiBitrateVideoStream](reseller.en-US/API Reference/Appendix/Parameter details.md#).
--   Example: \{“URI”: “c/d/video1.m3u8”\}.
-
-|
-|ExtXMedia|String|No|During HLS package, this parameter is requried while extracting audio streams or subtitle streams.-   For more information about this parameter, see [ExtXMedia](reseller.en-US/API Reference/Appendix/Parameter details.md#).
--   Example: \{“Name”: “english”,”Language”: “en-US”,”URI”:”c/d/audio-1.m3u8”\}.
-
-|
+|Outputs|String|No|Optional while extracting subtitles.-   For more information, see [Output](/intl.en-US/API Reference/Appendix/Parameter details.md).
+-   Example: \[\{“OutputObject”:”transcode%2F%7BObjectPrefix%7D%2F%7BFileName%7D. %7BExtName%7D”,”TemplateId”: “S00000001-000070”\}\]. |
+|OutputBucket|String|No|Output bucket.Output bucket. During HLS package, it is overwritten by the Bucket in PackageConfig. |
+|OutputLocation|String|No|Output region.During HLS package, it is overwritten by the Location in PackageConfig. |
+|MultiBitrateVideoStream|String|No|During HLS package, this parameter is required while extracting video streams.-   For more information about this parameter, see [MultiBitrateVideoStream](/intl.en-US/API Reference/Appendix/Parameter details.md).
+-   Example: \{“URI”: “c/d/video1.m3u8”\}. |
+|ExtXMedia|String|No|During HLS package, this parameter is requried while extracting audio streams or subtitle streams.-   For more information about this parameter, see [ExtXMedia](/intl.en-US/API Reference/Appendix/Parameter details.md).
+-   Example: \{“Name”: “english”,”Language”: “en-US”,”URI”:”c/d/audio-1.m3u8”\}. |
 |WebVTTSubtitleURL|String|No|HLS package exclusive parameter, subtitle address,-   which currently only supports WebVTT subtitle file, must comply with URL standard, and can overwrite subtitle address while calling AddMedia.
--   Example: http://test.oss-cn-hangzhou.aliyuncs.com/subtitles-en.vtt.
+-   Example: http://test.oss-cn-hangzhou.aliyuncs.com/subtitles-en.vtt. |
+|Representation|String|No|During DASH package, it is required to be set when extract audio stream, video stream, or subtitle stream.-   For more information, see [Representation](/intl.en-US/API Reference/Appendix/Parameter details.md).
+-   Example: \{\\”Id\\”:\\”480p\\”, \\”URI\\”:\\”videoSD/xx.mpd\\”\}. |
+|InputConfig|String|No|Dash package exclusive parameter, and is required to be set when extract sutitle streams.-   For more information, see I[nputConfig](/intl.en-US/API Reference/Appendix/Parameter details.md).
+-   Example: ”\{\\”Format\\”:\\”vtt\\”,\\”InputFile\\”:\{\\”URL\\”:\\”http://subtitlebucket.oss-cn-hangzhou.aliyuncs.com/subtitle/subtitle-en.vtt\\"\}\}" |
 
-|
-|Representation|String|No|During DASH package, it is required to be set when extract audio stream, video stream, or subtitle stream.-   For more information, see [Representation](reseller.en-US/API Reference/Appendix/Parameter details.md#).
--   Example: \{\\”Id\\”:\\”480p\\”, \\”URI\\”:\\”videoSD/xx.mpd\\”\}.
-
-|
-|InputConfig|String|No|Dash package exclusive parameter, and is required to be set when extract sutitle streams.-   For more information, see I[nputConfig](reseller.en-US/API Reference/Appendix/Parameter details.md#).
--   Example: ”\{\\”Format\\”:\\”vtt\\”,\\”InputFile\\”:\{\\”URL\\”:\\”http://subtitlebucket.oss-cn-hangzhou.aliyuncs.com/subtitle/subtitle-en.vtt\\"\}\}"
-
-|
-
-## Screenshot activity {#section_i5k_lqn_y2b .section}
+## Screenshot activity
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
-|SnapshotConfig|String|Yes| -   For more information, see [SnapshotConfig](reseller.en-US/API Reference/Appendix/Parameter details.md#).
--   Example: \{“OutputFile”: \{“Bucket”: “example-001”, “Location”: “oss-cn-hangzhou”, “Object”:”snapshot%2F%7BObjectPrefix%7D%2F%7BFileName%7D. %7BExtName%7D%2F1.jpg”\},”Time”: “5”\}。
-
- |
+|SnapshotConfig|String|Yes|-   For more information, see [SnapshotConfig](/intl.en-US/API Reference/Appendix/Parameter details.md).
+-   Example: \{“OutputFile”: \{“Bucket”: “example-001”, “Location”: “oss-cn-hangzhou”, “Object”:”snapshot%2F%7BObjectPrefix%7D%2F%7BFileName%7D. %7BExtName%7D%2F1.jpg”\},”Time”: “5”\}. |
 |MediaCover|String|No|Whether the screenshot is set as the media cover,-   only for a single screenshot.
 -   Range: true, false.
--   Default value: false.
+-   Default value: false. |
 
-|
-
-## Analysis activity {#section_y5m_lqn_y2b .section}
+## Analysis activity
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
 |KeepOnlyHighestDefinition|String|No|Whether to keep only the highest definition analysis results.-   Range: True, False.
--   Default value: False.
+-   Default value: False. |
 
-|
-
-## Report activity {#section_zs4_lqn_y2b .section}
+## Report activity
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
@@ -94,11 +64,9 @@ You can set the trigger conditions and overall configurations of the Media workf
 
 Default value: Manual.
 
-**Note:** When the type is TranscodeCompletedAuto, the message will not be sent if the status of the transcoding activity is Skipping.
+**Note:** When the type is TranscodeCompletedAuto, the message will not be sent if the status of the transcoding activity is Skipping. |
 
-|
-
-## PackageConfig activity {#section_r4r_lqn_y2b .section}
+## PackageConfig activity
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
@@ -112,52 +80,38 @@ Default value: Manual.
 -   \{RunId\}: the ID of the workflow execution,
 -   \{MediaId\}: the MediaID processed by the workflow.
 
-All these placeholders can be dynamically replaced.
-
-|
+All these placeholders can be dynamically replaced. |
 |Protocol|String|Yes|Value: hls, dash|
 
-## SubtitleGroup activity {#section_j2v_lqn_y2b .section}
+## SubtitleGroup activity
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
 |GroupId|String|No|Group ID.-   HLS package exclusive parameters, required.
--   The length cannot exceed 32 characters.
+-   The length cannot exceed 32 characters. |
+|AdaptationSet|String|No|-   DASH packages exclusive parameters, required. For more information, see [AdaptationSet](/intl.en-US/API Reference/Appendix/Parameter details.md)
+-   Example: ”\{\\”Lang\\”:\\”english\\”, \\”Group\\”:\\”SubtitleENGroup\\”\}” |
 
-|
-|AdaptationSet|String|No| -   DASH packages exclusive parameters, required. For more information, see [AdaptationSet](reseller.en-US/API Reference/Appendix/Parameter details.md#)
--   Example: ”\{\\”Lang\\”:\\”english\\”, \\”Group\\”:\\”SubtitleENGroup\\”\}”
-
- |
-
-## AudioGroup activity {#section_mnw_lqn_y2b .section}
+## AudioGroup activity
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
 |GroupId|String|No|Group ID.-   Hls package exclusive parameters, required.
--   The length cannot exceed 32 characters;
+-   The length cannot exceed 32 characters; |
+|AdaptationSet|String|No|-   DASH package exclusive parameters, required. For more information, see [AdaptationSet](/intl.en-US/API Reference/Appendix/Parameter details.md).
+-   Example: ”\{\\”Lang\\”:\\”english\\”, \\”Group\\”:\\”AudioGroupEnglish\\”\}”, one language one subtitle group. |
 
-|
-|AdaptationSet|String|No| -   DASH package exclusive parameters, required. For more information, see [AdaptationSet](reseller.en-US/API Reference/Appendix/Parameter details.md#).
--   Example: ”\{\\”Lang\\”:\\”english\\”, \\”Group\\”:\\”AudioGroupEnglish\\”\}”, one language one subtitle group.
-
- |
-
-## VideoGroup activity {#section_brx_lqn_y2b .section}
+## VideoGroup activity
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
-|AdaptationSet|String|No| -   DASH package exclusive parameters, required. For more information, see [AdaptationSet](reseller.en-US/API Reference/Appendix/Parameter details.md#).
--   Example: ”AdaptationSet”: “\{\\”Group\\”:\\”VideoGroup\\”\}”
+|AdaptationSet|String|No|-   DASH package exclusive parameters, required. For more information, see [AdaptationSet](/intl.en-US/API Reference/Appendix/Parameter details.md).
+-   Example: ”AdaptationSet”: “\{\\”Group\\”:\\”VideoGroup\\”\}” |
 
- |
-
-## GenerateMasterPlayList activity {#section_eys_xvn_y2b .section}
+## GenerateMasterPlayList activity
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
-|MasterPlayList|String|No| -   HLS exclusive parameters, required. Multi-bitstream list. For more information, see [MasterPlayList](reseller.en-US/API Reference/Appendix/Parameter details.md#) .
--   Example: \{“MultiBitrateVideoStreams”: \[\{“RefActivityName”: “video-1”,”ExtXStreamInf”: \{“BandWidth”: “111110”,”Audio”: “auds”,”Subtitles”: “subs” \}\}\]\}.
-
- |
+|MasterPlayList|String|No|-   HLS exclusive parameters, required. Multi-bitstream list. For more information, see [MasterPlayList](/intl.en-US/API Reference/Appendix/Parameter details.md) .
+-   Example: \{“MultiBitrateVideoStreams”: \[\{“RefActivityName”: “video-1”,”ExtXStreamInf”: \{“BandWidth”: “111110”,”Audio”: “auds”,”Subtitles”: “subs” \}\}\]\}. |
 
