@@ -1,10 +1,10 @@
-# How do I perform HLS package? {#concept_dmc_3lg_x2b .concept}
+# How do I perform HLS package?
 
-## Description {#section_inx_tpk_x2b .section}
+## Description
 
 HLS package refers to the process in which multi-subtitle, multi-track and multi-bitstream are integrated into a Master Playlist file. The process includes creating HLS package workflow and calling AddMedia interface to specify video and the ID of the HLS package workflow for video processing.
 
-1.  When you use [AddMediaWorkflow](../../../../reseller.en-US/API Reference/Media workflow APIs/AddMediaWorkflow.md#) interface to add workflow, pay attention to the following objects:
+1.  When you use [AddMediaWorkflow](/intl.en-US/API Reference/Media workflow APIs/AddMediaWorkflow.md) interface to add workflow, pay attention to the following objects:
     -   Topology
 
         The business process that can be defined by users using directed acyclic graphs \(DAGs\).
@@ -13,7 +13,7 @@ HLS package refers to the process in which multi-subtitle, multi-track and multi
 
         Activity refers to the processing nodes which constitute the topology. While creating HLS package workflow, pay attention to the following activities:
 
-        -   [PackageConfig](../../../../reseller.en-US/API Reference/Appendix/Workflow activity introduction.md#)
+        -   [PackageConfig](/intl.en-US/API Reference/Appendix/Workflow activity introduction.md)
 
             Specify HLS package configuration, and configure the output location for the Master Playlist file
 
@@ -23,7 +23,7 @@ HLS package refers to the process in which multi-subtitle, multi-track and multi
 
             -   The back node allows: SubtitleGroup, AudioGroup, and Transcode \(only video\).
 
-        -   [SubtitleGroup](../../../../reseller.en-US/API Reference/Appendix/Workflow activity introduction.md#)
+        -   [SubtitleGroup](/intl.en-US/API Reference/Appendix/Workflow activity introduction.md)
 
             Specify the subtitle group ID
 
@@ -33,7 +33,7 @@ HLS package refers to the process in which multi-subtitle, multi-track and multi
 
             -   The back node allows: Transcode \(for subtitles only\).
 
-        -   [AudioGroup](../../../../reseller.en-US/API Reference/Appendix/Workflow activity introduction.md#)
+        -   [AudioGroup](/intl.en-US/API Reference/Appendix/Workflow activity introduction.md)
 
             Specify the audio group ID
 
@@ -43,7 +43,7 @@ HLS package refers to the process in which multi-subtitle, multi-track and multi
 
             -   The back node allows: Transcode \(only audio\).
 
-        -   [Transcode](../../../../reseller.en-US/API Reference/Appendix/Workflow activity introduction.md#)
+        -   [Transcode](/intl.en-US/API Reference/Appendix/Workflow activity introduction.md)
 
             Transcode nodes are used to extract video, audio, or subtitle streams.
 
@@ -53,7 +53,7 @@ HLS package refers to the process in which multi-subtitle, multi-track and multi
 
             -   The back node allows: GenerateMasterPlayList.
 
-        -   [GenerateMasterPlayList](../../../../reseller.en-US/API Reference/Appendix/Workflow activity introduction.md#)
+        -   [GenerateMasterPlayList](/intl.en-US/API Reference/Appendix/Workflow activity introduction.md)
 
             HLS package generation activity specifies multi-ratestream configuration, audio group and subtitle group
 
@@ -67,7 +67,7 @@ HLS package refers to the process in which multi-subtitle, multi-track and multi
 
         The edges in the topology, which indicates the dependency between activities.
 
-2.  To add media to MPS, call the [AddMedia](../../../../reseller.en-US/API Reference/Media APIs/AddMedia.md#)operation.
+2.  To add media to MPS, call the [AddMedia](/intl.en-US/API Reference/Media APIs/AddMedia.md)operation.
     -   Specify Media workflow ID.
 
     -   If subtitle extraction exists, you can configure in the way that the subtitle file address overwrites the WebVTTSubtitleURL parameter in the Transcode activity, and only subtitle files of WebVTT are supported.
@@ -75,7 +75,7 @@ HLS package refers to the process in which multi-subtitle, multi-track and multi
     -   Set the Workflow triggering mode as NotInAuto.
 
 
-## Scenarios {#section_m3g_tqk_x2b .section}
+## Scenarios
 
 The mxf format of the source file, also supports such formats as mp4, flv and m3u8\(ts\), extracts three audio tracks, two video streams and two groups of WebVTT subtitles from the source file, and then combine and package into a Master Playlist:
 
@@ -99,7 +99,7 @@ Configure HLS package output location and name of Master Playlist.
 }
 ```
 
-    -   Output indicates the output location and the name of the Master Playlist file. For more information, see [Parameters supported for the PackageConfig activity](../../../../reseller.en-US/API Reference/Appendix/Workflow activity introduction.md#).
+    -   Output indicates the output location and the name of the Master Playlist file. For more information, see [Parameters supported for the PackageConfig activity](/intl.en-US/API Reference/Appendix/Workflow activity introduction.md).
 
     -   Set Type to PackageConfig.
 
@@ -133,9 +133,9 @@ Extract audio streams
 
     -   Codec: AAC
 
-    -   SampleRate：48000 Hz
+    -   SampleRate:48000 Hz
 
-    -   Format：Stereo
+    -   Format:Stereo
 
 -   The activity is defined as follows:
 
@@ -149,13 +149,13 @@ Extract audio streams
 }
 ```
 
-    -   [Preset static templates](../../../../reseller.en-US/API Reference/Appendix/Preset template details.md#) ID: S00000001-100020 indicates that the audio output is m3u8\(ts\), and the audio bitrate configured in the preset templates is 80kbps.
+    -   [Preset static templates](/intl.en-US/API Reference/Appendix/Preset template details.md) ID: S00000001-100020 indicates that the audio output is m3u8\(ts\), and the audio bitrate configured in the preset templates is 80kbps.
 
-    -   AudioStreamMap: The sequence number of the audio stream. For more information, see [Output](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#).
+    -   AudioStreamMap: The sequence number of the audio stream. For more information, see [Output](/intl.en-US/API Reference/Appendix/Parameter details.md).
 
-    -   Remove the video streams from the output. For more information, see [Video](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#).
+    -   Remove the video streams from the output. For more information, see [Video](/intl.en-US/API Reference/Appendix/Parameter details.md).
 
-    -   [ExtXMedia](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#) defines Media Playlist, and URI specifies the name of Media Playlist.
+    -   [ExtXMedia](/intl.en-US/API Reference/Appendix/Parameter details.md) defines Media Playlist, and URI specifies the name of Media Playlist.
 
     -   Type is configured as Transcode, which is transcode activity.
 
@@ -180,23 +180,23 @@ Video extraction
 
     -   Custom transcoding template ID: 1fe5393bdb7b2b883f0a0fc91e81344a, you can log on to the MPS console, and configure the video transcoding parameter in **Settings** \> **Transcoding Templates**:
 
-        -   Codec：H. 264
+        -   Codec:H. 264
 
-        -   Resolution：384x216
+        -   Resolution:384x216
 
-        -   Profile：Main
+        -   Profile:Main
 
-        -   Bitrate：240 Kbps
+        -   Bitrate:240 Kbps
 
-        -   Fps：25
+        -   Fps:25
 
-        -   PixelFormat：YUV420P Max GOP size：1 segment length \(4 seconds\)
+        -   PixelFormat:YUV420P Max GOP size:1 segment length \(4 seconds\)
 
         -   Output format: m-3u8
 
-    -   Remove audio streams from the output. For more information [Audio](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#).
+    -   Remove audio streams from the output. For more information [Audio](/intl.en-US/API Reference/Appendix/Parameter details.md).
 
-    -   [MultiBitrateVideoStream](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#) defines the multi-bitrate video streams in Master Playlist, and URI specifies the name of Media Playlist.
+    -   [MultiBitrateVideoStream](/intl.en-US/API Reference/Appendix/Parameter details.md) defines the multi-bitrate video streams in Master Playlist, and URI specifies the name of Media Playlist.
 
     -   Set Type to Transcode, which indicates transcoding activities.
 
@@ -208,6 +208,9 @@ Subtitle group
 -   The activity is defined as follows:
 
     ```
+    
+    
+    
     
     {
     "Parameters" : {
@@ -230,6 +233,9 @@ Subtitle extraction
 
     ```
     
+    
+    
+    
     {
     "Name" : "subtitle-extract-1",
     "Parameters" : {
@@ -240,9 +246,9 @@ Subtitle extraction
     }
     ```
 
-    -   [WebVTTSubtitleURL](../../../../reseller.en-US/API Reference/Appendix/Workflow activity introduction.md#) specified the subtitle address. The subtitle address is overwritten dynamically while calling [AddMedia](../../../../reseller.en-US/API Reference/Media APIs/AddMedia.md#). For more information about this parameter, see OverrideParams.
+    -   [WebVTTSubtitleURL](/intl.en-US/API Reference/Appendix/Workflow activity introduction.md) specified the subtitle address. The subtitle address is overwritten dynamically while calling [AddMedia](/intl.en-US/API Reference/Media APIs/AddMedia.md). For more information about this parameter, see OverrideParams.
 
-    -   [ExtXMedia](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#) defines Media Playlist, and URI specifies the name of Media Playlist.
+    -   [ExtXMedia](/intl.en-US/API Reference/Appendix/Parameter details.md) defines Media Playlist, and URI specifies the name of Media Playlist.
 
     -   Type is configured as Transcode, which is transcode activity.
 
@@ -263,20 +269,16 @@ Output a Master Playlist file
 }
 ```
 
-    -   [MasterPlayList](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#) defines Master Playlist.
+    -   [MasterPlayList](/intl.en-US/API Reference/Appendix/Parameter details.md) defines Master Playlist.
 
-    -   [MultiBitrateVideoStreams](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#) refers to multi-bitrate video streams group.
+    -   [MultiBitrateVideoStreams](/intl.en-US/API Reference/Appendix/Parameter details.md) refers to multi-bitrate video streams group.
 
     -   RefActivityName specifies the activity name of video streams.
 
-    -   [ExtXStreamInfo](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#) defines the attributes of the multi-bitrate video streams, Audio specifies the audio group, and Subtitles specifies the subtitle group.
+    -   [ExtXStreamInfo](/intl.en-US/API Reference/Appendix/Parameter details.md) defines the attributes of the multi-bitrate video streams, Audio specifies the audio group, and Subtitles specifies the subtitle group.
 
     -   Type is set as GenerateMasterPlayList, that is generating Master Playlist activity.
 
-
-Topology:
-
-![](images/10114_en-US.png)
 
 Complete scenario example shown in topology:
 
@@ -403,22 +405,22 @@ Complete scenario example shown in topology:
 }
 ```
 
-## Code example {#section_q2q_4sk_x2b .section}
+## Code example
 
 1.  Create HLS package workflow
 
-    [Create workflow-Java](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Java SDK/Add media workflow.md#)
+    [Create workflow-Java](/intl.en-US/SDK Reference/Transcoding SDKs/Java SDK/Add media workflow.md)
 
-    [Create a workflow - Python](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Python SDK/Add media workflow.md#)
+    [Create a workflow - Python](/intl.en-US/SDK Reference/Transcoding SDKs/Python SDK/Add media workflow.md)
 
-    [Create workflow-PHP](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/PHP SDK/Add media workflow.md#)
+    [Create workflow-PHP](/intl.en-US/SDK Reference/Transcoding SDKs/PHP SDK/Add media workflow.md)
 
 2.  Add media
 
-    [Add media-Java](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Java SDK/Add media.md#)
+    [Add media-Java](/intl.en-US/SDK Reference/Transcoding SDKs/Java SDK/Add media.md)
 
-    [Add media to MPS library - Python](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Python SDK/Add media.md#)
+    [Add media to MPS library - Python](/intl.en-US/SDK Reference/Transcoding SDKs/Python SDK/Add media.md)
 
-    [Add media to MPS library - PHP](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/PHP SDK/Add media.md#)
+    [Add media to MPS library - PHP](/intl.en-US/SDK Reference/Transcoding SDKs/PHP SDK/Add media.md)
 
 
