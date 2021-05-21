@@ -1,8 +1,8 @@
-# Data types {#reference_add_crh_y2b .reference}
+# Data types
 
 You can view the following data types.
 
-## AliyunProperties {#section_xhb_rsh_y2b .section}
+## AliyunProperties
 
 Attribute type
 
@@ -11,7 +11,7 @@ Attribute type
 |Format|AliyunFormatInfo|Format information.|
 |Streams|AliyunStreamsInfo|Streaming information.|
 
-## AliyunFormatInfo {#section_fdv_tsh_y2b .section}
+## AliyunFormatInfo
 
 Format information type
 
@@ -26,7 +26,7 @@ Format information type
 |Size|String|File size|
 |Bitrate|String|Total bit rate|
 
-## AliyunStreamsInfo {#section_twx_tsh_y2b .section}
+## AliyunStreamsInfo
 
 Stream information type
 
@@ -36,7 +36,7 @@ Stream information type
 |AudioStreamList|AliyunAudioStream\[\]|Audio stream list|
 |SubtitleStreamList|AliyunSubtitleStream\[\]|Subtitle stream list|
 
-## AliyunVideoStream {#section_abz_tsh_y2b .section}
+## AliyunVideoStream
 
 Video stream information type
 
@@ -63,12 +63,10 @@ Video stream information type
 |Duration|String|Time length|
 |Bitrate|String|Bit rate|
 |NumFrames|String|Total number of frames|
-|Lang|String|Language.For more information, see [FFmpeg language definition](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
-
-|
+|Lang|String|Language.For more information, see [FFmpeg language definition](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). |
 |Rotate|String|Video rotation angle|
 
-## AliyunAudioStream {#section_etz_tsh_y2b .section}
+## AliyunAudioStream
 
 Audio stream information type
 
@@ -89,22 +87,18 @@ Audio stream information type
 |Duration|String|Time length|
 |Bitrate|String|Bit rate|
 |NumFrames|String|Total number of frames|
-|Lang|String|Language.For more information, see [FFmpeg language definition](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
+|Lang|String|Language.For more information, see [FFmpeg language definition](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). |
 
-|
-
-## AliyunSubtitleStream {#section_wl1_5sh_y2b .section}
+## AliyunSubtitleStream
 
 Subtitle stream information type
 
 |Name|Type|Description|
 |:---|:---|:----------|
 |Index|String|Subtitle stream number, used to identify the position of the subtitle stream in the whole media streams|
-|Lang|String|Language.For more information, see [FFmpeg language definition](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
+|Lang|String|Language.For more information, see [FFmpeg language definition](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). |
 
-|
-
-## AliyunTemplate {#section_icb_5sh_y2b .section}
+## AliyunTemplate
 
 Transcoding template type
 
@@ -119,154 +113,104 @@ Transcoding template type
 |MuxConfig|AliyunMuxConfig|Transcoding encapsulation configurations|
 |State|String|Template status, which has the following options: Normal and Deleted.|
 
-## AliyunContainer {#section_vzp_pth_y2b .section}
+## AliyunContainer
 
 Container type
 
 |Name|Type|Description|
 |:---|:---|:----------|
-|Format|String|Container format.Supported formats are FLV, MP4, TS, M3U8, GIF, MP3, OGG, and FLAC.
+|Format|String|Container format.Supported formats are FLV, MP4, TS, M3U8, GIF, MP3, OGG, and FLAC. |
 
-|
-
-## AliyunAudioCodec {#section_pxv_qth_y2b .section}
+## AliyunAudioCodec
 
 Audio codec configuration type
 
 |Name|Type|Description|
 |:---|:---|:----------|
 |Codec|String|Audio codec format.-   Supported formats are AAC, MP3, Vorbis, and FLAC.
--   Default value: aac
-
-|
-|Profile|String|Audio encoding preset.If Codec is set to aac, Profile has the following options: aac\_low, aac\_he, aac\_he\_v2, aac\_ld, and aac\_eld
-
-|
+-   Default value: aac |
+|Profile|String|Audio encoding preset.If Codec is set to aac, Profile has the following options: aac\_low, aac\_he, aac\_he\_v2, aac\_ld, and aac\_eld |
 |Samplerate|String|Sampling rate,-   which has the following options: 22050, 32000, 44100, 48000, and 96000.
 -   Unit: Hz.
--   Default Value: 44100.
-
-|
-|Bitrate|String|Audio bit rate of the output file.-   Value range: \[8，1000\]
+-   Default Value: 44100. |
+|Bitrate|String|Audio bit rate of the output file.-   Value range: \[8,1000\]
 -   Unit: Kbps
--   Default Value: 128
-
-|
+-   Default Value: 128 |
 |Channels|String|Number of audio channels,-   which has the following options: 1, 2. 3, 4, 5, 6, 7, and 8.
--   Default Value: 2
+-   Default Value: 2 |
 
-|
-
-## AliyunVideoCodec {#section_tnw_qth_y2b .section}
+## AliyunVideoCodec
 
 Video codec configuration type
 
 |Name|Type|Description|
 |:---|:---|:----------|
 |Codec|String|Codec format,-   which has the following options: H.264, and H. 265.
--   Default Value: H. 264
-
-|
+-   Default Value: H. 264 |
 |Profile|String|Encoding level,which has the following options: baseline, main, and high.
 
 -   baseline: applicable to mobile devices.
 -   main: applicable to SD devices.
 -   high: applicable to HD devices.
--   Default Value: high
-
-|
-|Bitrate|String|Average video bit rate.-   Default Value: \[10，50000\]
--   Unit: Kbps
-
-|
-|Crf|String|Bit rate, which is a quality control factor.-   Value range: \[0，51\]
+-   Default Value: high |
+|Bitrate|String|Average video bit rate.-   Default Value: \[10,50000\]
+-   Unit: Kbps |
+|Crf|String|Bit rate, which is a quality control factor.-   Value range: \[0,51\]
 -   Default Value: 26
--   If CRF is set, the setting of Bitrate becomes invalid.
-
-|
+-   If CRF is set, the setting of Bitrate becomes invalid. |
 |Width|String|Width.-   Value range: \[128,4026\]
 -   Unit: Px
--   Default value: Original video width.
-
-|
+-   Default value: Original video width. |
 |Height|String|Height.-   Value range: \[128,4026\]
 -   Unit: Px
--   Default value: Original video height
-
-|
+-   Default value: Original video height |
 |Fps|String|Frame rate.-   Value range: \(0, 60\]
 -   If the frame rate of the input file is greater than 60, 60 is used.
--   Default value: frame rate of the input file.
-
-|
+-   Default value: frame rate of the input file. |
 |Gop|String|Maximum number of frames between two key frames.-   Value range: \[1, 1080000\]
--   Default value: 250
-
-|
+-   Default value: 250 |
 |Preset|String|Video algorithm preset,-   which has the following options: veryfast, fast, medium, slow, and slower.
--   Default value: medium
-
-|
-|ScanMode|String|Scan mode,which has the following options: interlaced and progressive.
-
-|
+-   Default value: medium |
+|ScanMode|String|Scan mode,which has the following options: interlaced and progressive. |
 |Bufsize|String|Size of the buffer area.-   Value range: \[1000,128000\]
 -   Unit: Kb
--   Default value: 6000
-
- |
-|Maxrate|String|Peak video bit rate.-   Default value: \[10，50000\]
--   Unit: Kbps
-
-|
+-   Default value: 6000 |
+|Maxrate|String|Peak video bit rate.-   Default value: \[10,50000\]
+-   Unit: Kbps |
 |BitrateBnd|AliyunBitrateBnd|Range of the average video bit rate.|
-|PixFmt|String|Video color format.The value options are standard color formats, such as yuv420p and yuvj420p.
+|PixFmt|String|Video color format.The value options are standard color formats, such as yuv420p and yuvj420p. |
 
-|
-
-## AliyunTransConfig {#section_ddx_qth_y2b .section}
+## AliyunTransConfig
 
 General transcoding configuration type
 
 |Name|Type|Description|
 |:---|:---|:----------|
 |TransMode|String|Transcoding mode,-   which has the following options: onepass, twopass, and CBR.
--   Default value: onepass
+-   Default value: onepass |
 
-|
-
-## AliyunBitrateBnd {#section_npx_qth_y2b .section}
+## AliyunBitrateBnd
 
 Range of the average bit rate
 
 |Name|Type|Description|
 |:---|:---|:----------|
-|Max|String|Maximum total bit rate.-   Value range: \[10，50000\]
--   Unit: Kbps
-
-|
+|Max|String|Maximum total bit rate.-   Value range: \[10,50000\]
+-   Unit: Kbps |
 |Min|String|Minimum total bit rate.-   Value range: \[10, 50000\]
--   Unit: Kbps
+-   Unit: Kbps |
 
-|
-
-## AliyunOSSFile {#section_wtr_rwh_y2b .section}
+## AliyunOSSFile
 
 OSS file type
 
 |Name|Type|Description|
 |:---|:---|:----------|
-|Bucket|String|OSS bucket,which can contain 3 to 63 bytes.
+|Bucket|String|OSS bucket,which can contain 3 to 63 bytes. |
+|Location|String|OSS service region,up to 64 bytes. |
+|Object|String|OSS object,up to 1024 bytes. |
 
-|
-|Location|String|OSS service region,up to 64 bytes.
-
-|
-|Object|String|OSS object,up to 1024 bytes.
-
-|
-
-## Aliyunjob {#section_fh4_5wh_y2b .section}
+## Aliyunjob
 
 Task
 
@@ -279,38 +223,28 @@ Task
 -   Transcoding indicates that the task is being transcoded,
 -   Transcodesuccess said transcoding success,
 -   TranscodeFail indicates that the transcoding fails,
--   and TranscodeCancelled indicates that transcoding is canceled.
-
-|
+-   and TranscodeCancelled indicates that transcoding is canceled. |
 |Code|String|Error code of transcoding failure.|
 |Message|String|Message of transcoding failure.|
-|Percent|String|Transcoding progress.Value range: \[0, 100\].
-
-|
+|Percent|String|Transcoding progress.Value range: \[0, 100\]. |
 |UserData|String|Custom data.|
 |PipelineId|String|MPS queue ID.|
 |CreationTime|String|Time of adding the task.|
 |MNSMessageResult|AliyunMNSMessageResult|Message result sent by Message Service to notify the user of task completion.|
 
-## AliyunJobInput {#section_rcg_vwh_y2b .section}
+## AliyunJobInput
 
 Transcoding task input type
 
 |Name|Type|Description|
 |:---|:---|:----------|
-|Bucket|String|OSS bucket of the input task,which can contain 3 to 63 bytes.
-
-|
-|Location|String|OSS service region,up to 64 bytes.
-
-|
-|Object|String|OSS object of the of the input task,up to 1024 bytes.
-
-|
+|Bucket|String|OSS bucket of the input task,which can contain 3 to 63 bytes. |
+|Location|String|OSS service region,up to 64 bytes. |
+|Object|String|OSS object of the of the input task,up to 1024 bytes. |
 |Audio|AliyunInputAudio|Configurations of the audio in the source transcoding media.|
 |Container|AliyunInputContainer|Configurations of the transcoding source media container.|
 
-## AliyunInputContainer {#section_v1z_wwh_y2b .section}
+## AliyunInputContainer
 
 Source media container configuration type.
 
@@ -318,11 +252,9 @@ Source media container configuration type.
 
 |Name|Type|Description|
 |:---|:---|:----------|
-|Format|String|Source media audio format,-   which has the following options: alaw, f32be, f32le, f64be, f64le, mulaw, s16be, s16le,s24be, s24le, s32be, s32le, s8, u16be, u16le, u24be, u24le, u32be, u32le, and u8.
+|Format|String|Source media audio format,-   which has the following options: alaw, f32be, f32le, f64be, f64le, mulaw, s16be, s16le,s24be, s24le, s32be, s32le, s8, u16be, u16le, u24be, u24le, u32be, u32le, and u8. |
 
-|
-
-## AliyunInputAudio {#section_iwz_wwh_y2b .section}
+## AliyunInputAudio
 
 Source media audio configuration type.
 
@@ -330,15 +262,11 @@ Source media audio configuration type.
 
 |Name|Type|Description|
 |:---|:---|:----------|
-|Channels|String|Number of source media audio channels.Value range: \[1,8\]
+|Channels|String|Number of source media audio channels.Value range: \[1,8\] |
+|Samplerate|String|Source media audio sampling rate.-   Value range: \[0,320000\].
+-   Unit: Hz. |
 
-|
-|Samplerate|String|Source media audio sampling rate.-   Value range: \[0，320000\].
--   Unit: Hz.
-
-|
-
-## AliyunOutput {#section_rl1_xwh_y2b .section}
+## AliyunOutput
 
 Task output type
 
@@ -348,33 +276,19 @@ Task output type
 |TemplateId|String|Template ID.|
 |WaterMarkList|AliyunWaterMark\[ \]|Watermark list.|
 |Clip|AliyunClip|Video clip|
-|Rotate|String|Video rotation angle.Value range: \[0,360\)
-
-|
+|Rotate|String|Video rotation angle.Value range: \[0,360\) |
 |Properties|AliyunProperties|Media properties.|
 |Priority|String|Task priority in the MPS queue.-   Value range: \[1, 10\]
 -   Highest priority: 10
--   Default value: 6
-
-|
-|Container|AliyunContainer|Container.If this parameter is set, the parameter setting replaces the AliyunContainer setting of the template specified by the TemplateId.
-
-|
-|Video|AliyunVideoCodec|Video configuration.If this parameter is set, the parameter setting replaces the AliyunVideoCodec setting of the template specified by the TemplateId.
-
-|
-|Audio|AliyunAudioCodec|Audio configuration.If this parameter is set, the parameter setting replaces the AliyunAudioCodec setting of the template specified by the TemplateId.
-
-|
-|TransConfig|AliyunTransConfig|General transcoding configuration.If this parameter is set, the parameter setting replaces the AliyunTransConfig setting of the template specified by the TemplateId.
-
-|
-|MuxConfig|AliyunMuxConfig|Transcoding encapsulation configurations.If this parameter is set, the parameter setting replaces the AliyunMuxConfig setting of the template specified by the TemplateId.
-
-|
+-   Default value: 6 |
+|Container|AliyunContainer|Container.If this parameter is set, the parameter setting replaces the AliyunContainer setting of the template specified by the TemplateId. |
+|Video|AliyunVideoCodec|Video configuration.If this parameter is set, the parameter setting replaces the AliyunVideoCodec setting of the template specified by the TemplateId. |
+|Audio|AliyunAudioCodec|Audio configuration.If this parameter is set, the parameter setting replaces the AliyunAudioCodec setting of the template specified by the TemplateId. |
+|TransConfig|AliyunTransConfig|General transcoding configuration.If this parameter is set, the parameter setting replaces the AliyunTransConfig setting of the template specified by the TemplateId. |
+|MuxConfig|AliyunMuxConfig|Transcoding encapsulation configurations.If this parameter is set, the parameter setting replaces the AliyunMuxConfig setting of the template specified by the TemplateId. |
 |UserData|String|Custom data.|
 
-## AliyunClip {#section_wcb_xwh_y2b .section}
+## AliyunClip
 
 Editing type
 
@@ -382,7 +296,7 @@ Editing type
 |:---|:---|:----------|
 |TimeSpan|AliyunTimeSpan|Edited time period.|
 
-## AliyunTimeSpan {#section_crb_xwh_y2b .section}
+## AliyunTimeSpan
 
 Edited time period type
 
@@ -391,11 +305,9 @@ Edited time period type
 |Seek|String|Start time.|
 |Duration|String|Duration.|
 |End|String|Truncation time at the end.-   For example, 5.23 indicates that the 5.23 seconds at the end will be cut.
--   If this parameter is set, the Duration parameter becomes invalid.
+-   If this parameter is set, the Duration parameter becomes invalid. |
 
-|
-
-## AliyunMuxConfig {#section_clc_xwh_y2b .section}
+## AliyunMuxConfig
 
 Encapsulation configuration type
 
@@ -403,33 +315,27 @@ Encapsulation configuration type
 |:---|:---|:----------|
 |Segment|AliyunSegment|Slice configurations.|
 
-## AliyunSegment {#section_sdd_xwh_y2b .section}
+## AliyunSegment
 
 Slice configuration type
 
 |Name|Type|Description|
 |:---|:---|:----------|
 |Duration|String|Slice length.-   Value range: \[1,60\]
--   Unit: seconds
+-   Unit: seconds |
 
-|
-
-## AliyunJobResult {#section_qxd_xwh_y2b .section}
+## AliyunJobResult
 
 Task result submission type
 
 |Name|Type|Description|
 |:---|:---|:----------|
-|Success|String|Whether the task is successfully submitted.The following options are available: true or false.
-
-|
+|Success|String|Whether the task is successfully submitted.The following options are available: true or false. |
 |Code|String|Error code displayed when the task fails to be created.|
 |Message|String|Error message displayed when the task fails to be created.|
-|Job|AliyunJob|Task.If the task fails to be submitted, the task ID is not generated.
+|Job|AliyunJob|Task.If the task fails to be submitted, the task ID is not generated. |
 
-|
-
-## AliyunWaterMark {#section_hp2_xwh_y2b .section}
+## AliyunWaterMark
 
 Task output type
 
@@ -438,7 +344,7 @@ Task output type
 |InputFile|AliyunOSSFile|Watermark input file.|
 |WaterMarkTemplateId|String|Watermark template ID.|
 
-## AliyunWaterMarkTemplate {#section_zff_xwh_y2b .section}
+## AliyunWaterMarkTemplate
 
 Watermark template type
 
@@ -447,34 +353,20 @@ Watermark template type
 |Id|String|Watermark template ID.|
 |Name|String|Watermark template name.|
 |Width|Number|Width.-   Value range: \[8,4096\]
--   Unit: Px
-
-|
+-   Unit: Px |
 |Height|Number|Height.-   Value range: \[8,4096\]
--   Unit: Px
-
-|
+-   Unit: Px |
 |DX|Number|Horizontal offset.-   Value range: \[-4096,4096\]
--   Unit: Px
-
-|
+-   Unit: Px |
 |Dy|Number|Vertical offset.-   Value range: \[-4096,4096\]
--   Unit: Px
-
-|
-|ReferPos|String|Watermark position,-   which has the following options: TopRight, TopLeft, BottomRight, and BottomLeft.
-
-|
+-   Unit: Px |
+|ReferPos|String|Watermark position,-   which has the following options: TopRight, TopLeft, BottomRight, and BottomLeft. |
 |Type|String|Watermark type,which has the following options: Image and Text.
 
-**Note:** Currently, only the Image type is supported.
+**Note:** Currently, only the Image type is supported. |
+|State|String|Watermark template status,which has the following options: Normal and Deleted. |
 
-|
-|State|String|Watermark template status,which has the following options: Normal and Deleted.
-
-|
-
-## AliyunPipeline {#section_ovf_xwh_y2b .section}
+## AliyunPipeline
 
 MPS queue type
 
@@ -483,18 +375,14 @@ MPS queue type
 |Id|String|MPS queue ID.|
 |Name|String|MPS queue name.|
 |Speed|String|MPS queue type,-   which has the following options: Boost, Standard, NarrowBandHDV2, AIVideoCover, AIVideoRecogni, AIVideoSummary, AIVideoPorn, AIAudioKWS, and AIAudioASR.
--   Default value: Standard
-
-|
+-   Default value: Standard |
 |State|String|MPS queue status,which has the following options: Active and Paused.
 
 -   Active: Tasks in the MPS queue will be scheduled, transcoded, and run by Media Transcoding.
--   Paused: The MPS queue is paused, and tasks in the MPS queue will not be scheduled, transcoded, and run by Media Transcoding. The status of all tasks in the MPS queue is Submitted. Ongoing transcoding tasks are not paused.
-
-|
+-   Paused: The MPS queue is paused, and tasks in the MPS queue will not be scheduled, transcoded, and run by Media Transcoding. The status of all tasks in the MPS queue is Submitted. Ongoing transcoding tasks are not paused. |
 |NotifyConfig|String|Message Service notification configurations.|
 
-## AliyunMediaInfoJob {#section_vjg_xwh_y2b .section}
+## AliyunMediaInfoJob
 
 Media information analysis task type
 
@@ -502,16 +390,14 @@ Media information analysis task type
 |:---|:---|:----------|
 |Id|String|Metadata analysis task ID.|
 |Input|AliyunOSSFile|Task input.|
-|State|String|Job status,which has the following options: Analyzing, Success, and Fail.
-
-|
+|State|String|Job status,which has the following options: Analyzing, Success, and Fail. |
 |Code|String|Error code displayed when the metadata analysis fails.|
 |Message|String|Error message displayed when the metadata analysis fails.|
 |Properties|AliyunProperties|Properties.|
 |UserData|String|Custom data.|
 |CreationTime|String|Time of adding the task.|
 
-## AliyunAnalysisJob {#section_hwg_xwh_y2b .section}
+## AliyunAnalysisJob
 
 Template analysis task type
 
@@ -521,25 +407,19 @@ Template analysis task type
 |Input|AliyunOSSFile|Task input.|
 |AnalysisConfig|AliyunAnalysisConfig|Task configurations.|
 |TemplateList|AliyunTemplate\[ \]|List of preset task output templates.|
-|State|String|Task status,which has the following options: Submitted, Analyzing, Success, and Fail
-
-|
+|State|String|Task status,which has the following options: Submitted, Analyzing, Success, and Fail |
 |Code|String|Error code displayed when the analysis fails.|
 |Message|String|Error message displayed when the analysis fails.|
-|Percent|String|Transcoding progress.Value range: \[0, 100\].
-
-|
+|Percent|String|Transcoding progress.Value range: \[0, 100\]. |
 |Priority|String|Task priority in the MPS queue.-   Value range: \[1, 10\]
 -   Highest priority: 10
--   Default value: 10.
-
-|
+-   Default value: 10. |
 |UserData|String|Custom data.|
 |PipelineId|String|MPS queue ID.|
 |CreationTime|String|Time of adding the task.|
 |MNSMessageResult|AliyunMNSMessageResult|Result sent by Message Service to notify the user of task completion.|
 
-## AliyunSnapshotJob {#section_njh_xwh_y2b .section}
+## AliyunSnapshotJob
 
 Screenshot task type
 
@@ -549,15 +429,13 @@ Screenshot task type
 |Input|AliyunOSSFile|Task input.|
 |SnapshotConfig|AliyunSnapshotConfig|Screenshot configuration.|
 |Count|String|Number of screenshots.|
-|State|String|Screenshot status,which has the following options: Analyzing, Success, and Fail.
-
-|
+|State|String|Screenshot status,which has the following options: Analyzing, Success, and Fail. |
 |Code|String|Error code displayed when the analysis fails.|
 |Message|String|Error message displayed when the analysis fails.|
 |UserData|String|Custom data.|
 |MNSMessageResult|AliyunMNSMessageResult|Result sent by Message Service to notify the user of task completion.|
 
-## AliyunSnapshotConfig {#section_m5h_xwh_y2b .section}
+## AliyunSnapshotConfig
 
 Screenshot configurations
 
@@ -565,32 +443,20 @@ Screenshot configurations
 |:---|:---|:----------|
 |OutputFile|String|Screenshot output OSS configurations.|
 |TileOutputFile|String|Output OSS configurations of tile task.|
-|Time|String|Screenshots start time.Unit: milliseconds.
-
-|
+|Time|String|Screenshots start time.Unit: milliseconds. |
 |Interval|String|Time interval of screenshots.-   If this parameter is set, screenshots are taken at intervals. The value must be greater than 0.
 -   Unit: seconds
--   Default value: 10.
-
-|
-|Num|String|Number of screenshots.If this parameter is set, screenshots are taken at intervals.
-
-|
-|Width|String|Width of the screenshot output image.Value range: \[8,4096\]
-
-|
-|Height|String|Width of the screenshot output image.Value range: \[8,4096\]
-
-|
+-   Default value: 10. |
+|Num|String|Number of screenshots.If this parameter is set, screenshots are taken at intervals. |
+|Width|String|Width of the screenshot output image.Value range: \[8,4096\] |
+|Height|String|Width of the screenshot output image.Value range: \[8,4096\] |
 |FrameType|String|Type of screenshots, which has the following options:-   normal: indicates normal frame,
 -   intra: indicates I frames.
 
-Default value: intra
-
-|
+Default value: intra |
 |TileOut|String|Tile configuration.|
 
-## AliyunFailReason {#section_rg3_xwh_y2b .section}
+## AliyunFailReason
 
 Failure cause type
 
@@ -599,7 +465,7 @@ Failure cause type
 |Code|String|Error code displayed upon failure.|
 |Message|String|Error message displayed upon failure.|
 
-## AliyunMNSMessageResult {#section_er3_xwh_y2b .section}
+## AliyunMNSMessageResult
 
 Type of Message Service notifications of user's task completion result
 
@@ -609,35 +475,25 @@ Type of Message Service notifications of user's task completion result
 |ErrorMessage|String|Error message displayed upon failure.|
 |MessageId|String|ID of the success message.|
 
-## Activity {#section_vbj_xwh_y2b .section}
+## Activity
 
 Media workflow activity
 
 |Name|Type|Description|
 |:---|:---|:----------|
-|Name|String|Media workflow activity name,**Note:** which is unique in the same workflow.
-
-|
-|Type|String|Media workflow activity type,which has the following options: Start, Snapshot, Transcode, Analysis, and Report.
-
-|
+|Name|String|Media workflow activity name,**Note:** which is unique in the same workflow. |
+|Type|String|Media workflow activity type,which has the following options: Start, Snapshot, Transcode, Analysis, and Report. |
 |JobId|String|Task ID \(for example, analysis task ID, transcoding task ID, and screenshot task ID\) that is generated when the activity is run.|
 |State|String|Status,which has the following options: Running, Success, Fail, and Skipped.
 
 -   Skipped indicates that the activity is skipped.
--   For example, HD or SD transcoding activity is run after the analysis activity. The system determines to run which activity based on the actual conditions. If the resolution of the original video is low, the HD transcoding activity may be skipped.
-
-|
+-   For example, HD or SD transcoding activity is run after the analysis activity. The system determines to run which activity based on the actual conditions. If the resolution of the original video is low, the HD transcoding activity may be skipped. |
 |StartTime|String|Start time of running the activity|
 |EndTime|String|End time of running the activity|
-|Code|String|Error code.An error code is returned if the activity status is Fail.
+|Code|String|Error code.An error code is returned if the activity status is Fail. |
+|Message|String|Error message.An error message is returned if the activity status is Fail. |
 
-|
-|Message|String|Error message.An error message is returned if the activity status is Fail.
-
-|
-
-## MediaWorkflow {#section_tdk_xwh_y2b .section}
+## MediaWorkflow
 
 Media workflow
 
@@ -646,12 +502,10 @@ Media workflow
 |MediaWorkflowId|String|Media workflow ID.|
 |Name|String|Media workflow name.|
 |Topology|String|Topology of the media workflow.|
-|State|String|Status,which has the following options: Inactive, Active, and Deleted.
-
-|
+|State|String|Status,which has the following options: Inactive, Active, and Deleted. |
 |CreationTime|String|Creation time.|
 
-## InputFile {#section_lwk_xwh_y2b .section}
+## InputFile
 
 Input file
 
@@ -661,7 +515,7 @@ Input file
 |Location|String|OSS Location|
 |Object|String|OSS Object|
 
-## MediaWorkflowExecutionInput {#section_d4l_xwh_y2b .section}
+## MediaWorkflowExecutionInput
 
 Input of a media workflow execution instance
 
@@ -670,7 +524,7 @@ Input of a media workflow execution instance
 |InputFile|InputFile|Input file of the media workflow.|
 |UserData|String|Custom data.|
 
-## MediaWorkflowExecution {#section_p2m_xwh_y2b .section}
+## MediaWorkflowExecution
 
 Media workflow execution instance
 
@@ -680,17 +534,13 @@ Media workflow execution instance
 |Input|MediaWorkflowExecutionInput|Input of the media workflow.|
 |MediaWorkflowId|String|Media workflow ID.|
 |Name|String|Media workflow name.|
-|MediaId|String|Media ID.All information generated by the media workflow belongs to this media ID.
-
-|
+|MediaId|String|Media ID.All information generated by the media workflow belongs to this media ID. |
 |ActivityList|Activity|List of media workflow activities.|
 |State|String|Status,-   which has the following options: Running, Completed, and Fail.
--   Completed only indicates that the execution of workflow completes. Whether each activity \(such as Transcode or Screenshot\) is successful depends on the specific status value of each activity.
-
-|
+-   Completed only indicates that the execution of workflow completes. Whether each activity \(such as Transcode or Screenshot\) is successful depends on the specific status value of each activity. |
 |CreationTime|String|Creation time.|
 
-## MediaInfo {#section_jwm_xwh_y2b .section}
+## MediaInfo
 
 Attribute type
 
@@ -699,7 +549,7 @@ Attribute type
 |Format|FormatInfo|Format information.|
 |Streams|StreamsInfo|Streaming information.|
 
-## Formatinfo {#section_mln_xwh_y2b .section}
+## Formatinfo
 
 Container and general information type
 
@@ -714,31 +564,23 @@ Container and general information type
 |Size|String|File size.|
 |Bitrate|String|Total bit rate.|
 
-## StreamsInfo {#section_jb4_xwh_y2b .section}
+## StreamsInfo
 
 Stream information type
 
 |Name|Type|Description|
 |:---|:---|:----------|
-|VideoStreamList|VideoStream\[\]|Video stream list,containing up to four video streams.
+|VideoStreamList|VideoStream\[\]|Video stream list,containing up to four video streams. |
+|AudioStreamList|AudioStream\[\]|Audio stream list,containing up to four audio streams. |
+|SubtitleStreamList|SubtitleStream\[\]|Subtitle stream list,containing up to four subtitle streams. |
 
-|
-|AudioStreamList|AudioStream\[\]|Audio stream list,containing up to four audio streams.
-
-|
-|SubtitleStreamList|SubtitleStream\[\]|Subtitle stream list,containing up to four subtitle streams.
-
-|
-
-## VideoStream {#section_ir4_xwh_y2b .section}
+## VideoStream
 
 Video stream information type
 
 |Name|Type|Description|
 |:---|:---|:----------|
-|Index|String|Video stream number,used to identify the position of the video stream in the whole media streams.
-
-|
+|Index|String|Video stream number,used to identify the position of the video stream in the whole media streams. |
 |CodecName|String|Brief name of the encoding format.|
 |CodecLongName|String|Long name of the encoding format.|
 |Profile|String|Encoding preset.|
@@ -761,7 +603,7 @@ Video stream information type
 |Lang|String|Language.|
 |NetworkCost|NetworkCost|Network bandwidth consumption.|
 
-## NetworkCost {#section_d2p_xwh_y2b .section}
+## NetworkCost
 
 Video network bandwidth consumption type
 
@@ -771,15 +613,13 @@ Video network bandwidth consumption type
 |CostBandwidth|String|Maximum bandwidth consumption.|
 |AvgBitrate|String|Average bit rate.|
 
-## AudioStream {#section_zsp_xwh_y2b .section}
+## AudioStream
 
 Audio stream information type
 
 |Name|Type|Description|
 |:---|:---|:----------|
-|Index|String|Audio stream number,used to identify the position of the audio stream in the whole media streams.
-
-|
+|Index|String|Audio stream number,used to identify the position of the audio stream in the whole media streams. |
 |CodecName|String|Brief name of the encoding format.|
 |CodecLongName|String|Long name of the encoding format.|
 |CodecTimeBase|String|Encoding time base.|
@@ -796,18 +636,16 @@ Audio stream information type
 |NumFrames|String|Total number of frames.|
 |Lang|String|Language.|
 
-## SubtitleStream {#section_k2q_xwh_y2b .section}
+## SubtitleStream
 
 Subtitle stream information type
 
 |Name|Type|Description|
 |:---|:---|:----------|
-|Index|String|Subtitle stream number,used to identify the position of the subtitle stream in the whole media streams.
-
-|
+|Index|String|Subtitle stream number,used to identify the position of the subtitle stream in the whole media streams. |
 |Lang|String|Language.|
 
-## Media {#section_aqq_xwh_y2b .section}
+## Media
 
 Media
 
@@ -822,22 +660,18 @@ Media
 |Tags|String\[\]|Tag list.|
 |RiskFactor|String|Risk factors.-   Value range: \[0,1\].
 -   A higher value of risk factor indicates a higher possibility of involvement in pornography and violence.
--   The recognition accuracy reaches 80%.
-
-|
+-   The recognition accuracy reaches 80%. |
 |CoverURL|String|Cover URL.|
 |PublishState|String|Media publishing status, indicating whether to publish the media.The options are as follows:
 
 -   Initiated \(initial state\),
 -   UnPublish \(not published, and the OSS playback file permission is Private\),
 -   Published \(published, and the OSS playback file permission is Default\),
--   and Deleted \(deleted\).
-
-|
+-   and Deleted \(deleted\). |
 |RunIdList|String\[\]|Media task stream list.|
 |CreationTime|String|Creation time.|
 |Duration|String|Time length.|
-|Format|String|Format .|
+|Format|String|Format.|
 |Size|String|Size.|
 |Bitrate|String|Bit rate.|
 |Fps|String|Frame rate.|
@@ -847,33 +681,27 @@ Media
 |SnapshotList|Snapshot\[\]|Screenshot list|
 |MediaInfo|MediaInfo|Media information.|
 
-## Category {#section_acr_xwh_y2b .section}
+## Category
 
 Category
 
 |Name|Type|Description|
 |:---|:---|:----------|
 |CateId|String|Category ID.|
-|ParentId|String|Parent node ID.The value of the top-level node is -1.
-
-|
+|ParentId|String|Parent node ID.The value of the top-level node is -1. |
 |CateName|String|Category name.|
-|Level|String|Level.The top-level node value is 0.
+|Level|String|Level.The top-level node value is 0. |
 
-|
-
-## File {#section_tnr_xwh_y2b .section}
+## File
 
 File
 
 |Name|Type|Description|
 |:---|:---|:----------|
 |URL|String|File URL.|
-|State|String|File status,which has the following options: Normal and Deleted.
+|State|String|File status,which has the following options: Normal and Deleted. |
 
-|
-
-## Play {#section_c1s_xwh_y2b .section}
+## Play
 
 Playback information
 
@@ -891,7 +719,7 @@ Playback information
 |Height|String|Height.|
 |File|File|Playback file.|
 
-## Snapshot {#section_mms_xwh_y2b .section}
+## Snapshot
 
 Screenshot information
 
@@ -901,14 +729,10 @@ Screenshot information
 |MediaWorkflowName|String|Workflow that generates the screenshot file|
 |ActivityName|String|The name of the workflow activity that generated the screenshot file.|
 |File|File|Screenshot files.|
-|Type|String|Snapshot type,which has the following options: Single and Sequence.
+|Type|String|Snapshot type,which has the following options: Single and Sequence. |
+|Count|Number|Number of screenshots.This parameter is valid only when Type is set to Sequence. |
 
-|
-|Count|Number|Number of screenshots.This parameter is valid only when Type is set to Sequence.
-
-|
-
-## MediaBucket {#section_dys_xwh_y2b .section}
+## MediaBucket
 
 Media bucket
 
