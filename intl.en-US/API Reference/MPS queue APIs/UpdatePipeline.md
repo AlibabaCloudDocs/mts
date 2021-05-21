@@ -1,32 +1,28 @@
-# UpdatePipeline {#reference_i2n_jnt_x2b .reference}
+# UpdatePipeline
 
 The UpdatePipeline API updates an MPS queue. You can modify the name and notification settings and change the status of an MPS queue.
 
-## Request parameters {#section_iqn_qbt_x2b .section}
+## Request parameters
 
 |Parameters|Type|Required or not|Description|
 |:---------|:---|:--------------|:----------|
 |Action|String|Yes|API of the action, system required parameter. Value: UpdatePipeline|
 |PipelineId|String|Yes|MPS queue ID.|
-|Name|String|Yes|MPS queue name.Up to 128 characters.
-
-|
+|Name|String|Yes|MPS queue name.Up to 128 characters. |
 |State|String|Yes|MPS queue status, which can be Active and Paused.-   Active: tasks in the MPS queue will be scheduled, transcoded, and executed by Media Processing.
--   Paused: The MPS queue is paused, and tasks in the MPS queue will not be scheduled, transcoded, and executed by Media Processing. The status of all tasks in the MPS queue is Submitted. Ongoing transcoding tasks are not paused.
-
-|
+-   Paused: The MPS queue is paused, and tasks in the MPS queue will not be scheduled, transcoded, and executed by Media Processing. The status of all tasks in the MPS queue is Submitted. Ongoing transcoding tasks are not paused. |
 |NotifyConfig|String|No|Message Service configuration.Example: `{"Topic":"mts-topic-1"}`
 
 .|
 |Role|String|No|Roles|
 
-## Response parameters {#section_ogh_wbt_x2b .section}
+## Response parameters
 
 |Parameter|Type|Description|
 |:--------|:---|:----------|
 |Pipeline|String|MPS queue|
 
-## Examples {#section_gpq_zbt_x2b .section}
+## Examples
 
 Request example
 
@@ -66,7 +62,7 @@ JSON
             "Speed":"Standard",
             "NotifyConfig":{
                 "Topic":"mts-topic-1"
-            }，
+            },
             "Role":"AliyunMTSDefaultRole"
         }
     }
