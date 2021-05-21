@@ -1,10 +1,10 @@
-# Create HLS standard encryption workflow {#concept_vq5_vj2_z2b .concept}
+# Create HLS standard encryption workflow
 
-## Overview {#section_msz_yj2_z2b .section}
+## Overview
 
-The article is an example of calling API to create HLS standard encryption workflow. For more infotmation about creating workflow, see [AddMediaWorkflow](https://help.aliyun.com/document_detail/44437.html). For more information about MPS SDK, see [Installation](https://help.aliyun.com/document_detail/55742.html).
+The article is an example of calling API to create HLS standard encryption workflow. For more information about creating workflow, see [AddMediaWorkflow](/intl.en-US/API Reference/Media workflow APIs/AddMediaWorkflow.md). For more information about MPS SDK, see [Installation](/intl.en-US/SDK Reference/Transcoding SDKs/PHP SDK/Installation.md).
 
-## Code example {#section_yhj_1k2_z2b .section}
+## Code example
 
 ```
 <? php
@@ -17,13 +17,13 @@ class HLSEncryptionWorkflowDemo {
     private $accessKeyId = '<accessKeyId>';
     private $accessKeySecret = '<accessKeySecret>';
     private $pipelineId = "<PipelineId>";
-    private $templateId = "S00000001-100020"; #transcoding template ID，m3u8 template, set as needed
+    private $templateId = "S00000001-100020"; #transcoding template ID,m3u8 template, set as needed
     private $ossLocation = "<OssLocation>";
     private $inputBucket = "<InputBucket>";
     private $inputPath = "<InputPath>"; #Example: "HLS-Encryption"
     private $outputBucket = "<OutputBucket>";
     private $encryptionType = "hls-aes-128";
-    private $hlsKeyUri = "<decryption key URI>"; #如http://decrypt.testdomain.com
+    private $hlsKeyUri = "<decryption key URI>"; #Example: http://decrypt.testdomain.com
     private $actStart = "Act-Start";
     private $actEncryption = "Act-HLS-Encryption";
     private $actReport = "Act-Report";
