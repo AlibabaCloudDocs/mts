@@ -1,8 +1,8 @@
-# Preset template details {#reference_e5n_hwn_y2b .reference}
+# Preset template details
 
 This document introduces preset narrowband HDTM templates, preset static templates, preset smart templates and template ID rules.
 
-## Preset narrowband HDTM templates {#section_zwg_myn_y2b .section}
+## Preset narrowband HDTM templates
 
 **Note:** Preset narrowband HDTM templates are a type of transcoding templates unique to Alibaba Cloud Media Processing. While maintaining the same video definition as common transcoding templates, they provide a lower bit rate to reduce your costs.
 
@@ -31,7 +31,7 @@ This document introduces preset narrowband HDTM templates, preset static templat
 |S00000002-200030|MP4-SD-NarrowBandHDV1|MP4-SD-Narrowband HDTM|MP4|≤800|848|
 |S00000002-200020|MP4-LD-NarrowBandHDV1|MP4-LD-Narrowband HDTM2.0|MP4|≤400|640|
 
-## Preset static templates {#section_obw_hzn_y2b .section}
+## Preset static templates
 
 Compared with a preset smart template, a preset static template does not have to be analyzed before being called. Preset static templates include video transcoding templates, audio MP3 transcoding templates, and conversion and encapsulation templates.
 
@@ -118,7 +118,7 @@ Compared with a preset smart template, a preset static template does not have to
     |S00000001-400040|MP4-SDToHD|MP4-SDToHD|MP4|≤6000|128|≤1280|Applicable to Web and mobile devices \(iOS and Android\)|
 
 
-## Preset smart templates {#section_jwg_yb4_y2b .section}
+## Preset smart templates
 
 **Note:** Before you use a preset smart template when submitting a transcoding task, the preset smart template must be analyzed by Media Processing. An OSS file must proactively call the SubmitAnalysisJob API and poll the QueryAnalysisJobList API to obtain a list of preset smart templates available for the OSS file.
 
@@ -126,20 +126,20 @@ Opened preset smart templates for bit rate control are as follows \(the output r
 
 |Template ID|Template name|Chinese name|Container format|Bit rate range|Resolution|
 |:----------|:------------|:-----------|:---------------|:-------------|:---------|
-|S00000000-000050|FLV-FHD|FLV-FHD|FLV|2M~4M|\[720p，1080p\]|
+|S00000000-000050|FLV-FHD|FLV-FHD|FLV|2M~4M|\[720p,1080p\]|
 |S00000000-000040|FLV-HD|FLV-HD|FLV|1M~2M|≥576p|
 |S00000000-000030|FLV-SD|FLV-SD|FLV|500k~1M|≥480p|
 |S00000000-000020|FLV-LD|FLV-LD|FLV|<500 Kbit/s|≥270p|
-|S00000000-100050|M3U8-FHD|M3U8-FHD|M3U8|2M~4M|\[720p，1080p\]|
+|S00000000-100050|M3U8-FHD|M3U8-FHD|M3U8|2M~4M|\[720p,1080p\]|
 |S00000000-100040|M3U8-HD|M3U8-HD|M3U8|1M~2M|≥576p|
 |S00000000-100030|M3U8-SD|M3U8-SD|M3U8|500k~1M|≥480p|
 |S00000000-100020|M3U8-LD|M3U8-LD|M3U8|<500 Kbit/s|≥270p|
-|S00000000-200050|MP4-FHD|MP4-FHD|MP4|2M~4M|\[720p，1080p\]|
+|S00000000-200050|MP4-FHD|MP4-FHD|MP4|2M~4M|\[720p,1080p\]|
 |S00000000-200040|MP4-HD|MP4-HD|MP4|1M~2M|≥576p|
 |S00000000-200030|MP4-SD|MP4-SD|MP4|500k~1M|≥480p|
 |S00000000-200020|MP4-LD|MP4-LD|MP4|<500 Kbit/s|≥270p|
 
-## Template ID rules: {#section_wj2_mc4_y2b .section}
+## Template ID rules:
 
 |Serial number of the character in the ID|Definition|
 |:---------------------------------------|:---------|
