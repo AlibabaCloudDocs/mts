@@ -1,4 +1,4 @@
-# Transcoding message notifications {#concept_jzv_wzx_w2b .concept}
+# Transcoding message notifications
 
 MPS fully supports message queue and message notification functions of MNS. The following takes the message notification service as an example. The operation of usig the message queue to receive messages is performed in a similar way. Enable the transcoding message notification function before use.
 
@@ -10,28 +10,34 @@ MPS fully supports message queue and message notification functions of MNS. The 
         1.  Click **Topics**.
         2.  Select the region.
         3.  Click **Create Topic**.
+
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11355/15434760679977_en-US.png)
+
         4.  Enter the **Topic Name** on the **Create Topic** page.
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11355/15434760699970_en-US.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11355/15434760699970_en-US.png)
 
     2.  Create a subscription.
         1.  Click **Subscribe**.
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11355/15434760699971_en-US.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11355/15434760699971_en-US.png)
 
-        2.  On the **Subscribe**page, enter the **Subscription Name**and the **Endpoint**.
+        2.  On the **Subscribe** page, enter the **Subscription Name** and the **Endpoint**.
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11355/15434760699976_en-US.png)
+            ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11355/15434760709976_en-US.png)
 
 2.  Set the binding relationship between the MPS queue and notification.
-    1.  Log on to the [Media Processing console](https://partners-intl.aliyun.com/login-required#/mts).
+    1.  Log on to the [Media Processing console](https://mts.console.aliyun.com/?spm=5176.2020520001.0.0.6RsosT#/mts/oss).
     2.  Click **Settings.**.
     3.  Select the region.
     4.  Click **MPS Queues**.
     5.  Click **Message Notification**.
+
+        ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11355/15434760679978_en-US.png)
+
     6.  Select the **Message Type** and **Message Name**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11355/15434760699974_en-US.png)
+        ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11355/15434760709974_en-US.png)
 
         The relationship between the MPS queue and notification is binded successfully.
 
