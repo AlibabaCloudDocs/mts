@@ -1,8 +1,8 @@
-# Terminology {#concept_gh2_vhp_w2b .concept}
+# Terminology
 
 This article introduces terminology related to MPS.
 
-## Core concepts {#section_wws_zhp_w2b .section}
+## Core concepts
 
 Region
 
@@ -46,11 +46,11 @@ A custom template \(Template for short\) is a set of custom transcoding paramete
 
 Preset template
 
-A preset template is an intelligent transcoding template inherent in MPS. The template can be used to dynamically adjust the transcoding settings based on the features of an input file, to provide users with the optimal output file under specific bandwidth conditions. For a list of preset templates supported by MPS, see [Preset templates](../../../../reseller.en-US/API Reference/Appendix/Preset template details.md#).
+A preset template is an intelligent transcoding template inherent in MPS. The template can be used to dynamically adjust the transcoding settings based on the features of an input file, to provide users with the optimal output file under specific bandwidth conditions. For a list of preset templates supported by MPS, see [Preset templates](/intl.en-US/API Reference/Appendix/Preset template details.md).
 
 Analysis task
 
-Analysis task Because of the differences between input files \(resolution, bit rate and other\), not all preset templates are suitable for all input files. Therefore, before using a preset template, you must call the `SubmitAnalysisJob`\(`SubmitAnalysisJob`\) interface to submit an analysis task. The result of an analysis task is a list of preset templates that can be used on a given input file. You can call the`QueryAnalysisJobList`interface \(`QueryAnalysisJobList`）to obtain this list. Only the preset templates in the list returned by the analysis task have parameters suitable to the output of the submitted transcoding task. If you specify a preset template not in this list, the submitted transcoding task will fail.
+Analysis task Because of the differences between input files \(resolution, bit rate and other\), not all preset templates are suitable for all input files. Therefore, before using a preset template, you must call the `SubmitAnalysisJob`\(`SubmitAnalysisJob`\) interface to submit an analysis task. The result of an analysis task is a list of preset templates that can be used on a given input file. You can call the `QueryAnalysisJobList` interface \(`QueryAnalysisJobList`\) to obtain this list. Only the preset templates in the list returned by the analysis task have parameters suitable to the output of the submitted transcoding task. If you specify a preset template not in this list, the submitted transcoding task will fail.
 
 Watermark
 
@@ -68,7 +68,7 @@ MediaInfoJob
 
 A MediaInfoJob retrieves media information.
 
-## Transcoding process {#section_s2y_yvp_w2b .section}
+## Transcoding process
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/11339/15392586779828_en-US.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11339/15392586779828_en-US.png)
 
