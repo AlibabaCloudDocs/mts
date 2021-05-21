@@ -1,10 +1,10 @@
-# How do I perform DASH package? {#concept_jdp_m1m_x2b .concept}
+# How do I perform DASH package?
 
-## Description {#section_oxm_bjm_x2b .section}
+## Description
 
 Dynamic Adaptive Streaming Over HTTP \(DASH\) packaging allows you to package one or more video streams at different bit rates, subtitles in different languages, and audio tracks into a Master Playlist file. The process includes creating a DASH packaging workflow and calling the AddMedia operation by specifying the media and the workflow ID.
 
-1.  To create a new workflow, call the [AddMediaWorkflow](../../../../reseller.en-US/API Reference/Media workflow APIs/AddMediaWorkflow.md#)operation.
+1.  To create a new workflow, call the [AddMediaWorkflow](/intl.en-US/API Reference/Media workflow APIs/AddMediaWorkflow.md) operation.
     -   Topology
 
         The business process that can be defined by users using directed acyclic graphs \(DAGs\).
@@ -13,7 +13,7 @@ Dynamic Adaptive Streaming Over HTTP \(DASH\) packaging allows you to package on
 
         The type of processing nodes that constitute the topology. When you create a DASH packaging workflow, pay attention to the following activity types.
 
-        -   [PackageConfig](../../../../reseller.en-US/API Reference/Appendix/Workflow activity introduction.md#)
+        -   [PackageConfig](/intl.en-US/API Reference/Appendix/Workflow activity introduction.md)
 
             PackageConfig nodes are used to specify a location for the output Master Playlist file.
 
@@ -23,7 +23,7 @@ Dynamic Adaptive Streaming Over HTTP \(DASH\) packaging allows you to package on
 
             -   PackageConfig nodes can precede SubtitleGroup, AudioGroup, or VideoGroup nodes.
 
-        -   [SubtitleGroup](../../../../reseller.en-US/API Reference/Appendix/Workflow activity introduction.md#)
+        -   [SubtitleGroup](/intl.en-US/API Reference/Appendix/Workflow activity introduction.md)
 
             SubtitleGroup nodes are used to specify the ID and language of each subtitle group.
 
@@ -33,7 +33,7 @@ Dynamic Adaptive Streaming Over HTTP \(DASH\) packaging allows you to package on
 
             -   SubtitleGroup nodes can precede Transcode nodes \(for subtitles only\).
 
-        -   [AudioGroup](../../../../reseller.en-US/API Reference/Appendix/Workflow activity introduction.md#)
+        -   [AudioGroup](/intl.en-US/API Reference/Appendix/Workflow activity introduction.md)
 
             AudioGroup nodes are used to specify the ID and language of each audio group.
 
@@ -43,7 +43,7 @@ Dynamic Adaptive Streaming Over HTTP \(DASH\) packaging allows you to package on
 
             -   AudioGroup nodes can precede Transcode nodes \(for audio only\).
 
-        -   [VideoGroup](../../../../reseller.en-US/API Reference/Appendix/Workflow activity introduction.md#)
+        -   [VideoGroup](/intl.en-US/API Reference/Appendix/Workflow activity introduction.md)
 
             VideoGroup nodes are used to specify the ID of each video group.
 
@@ -53,7 +53,7 @@ Dynamic Adaptive Streaming Over HTTP \(DASH\) packaging allows you to package on
 
             -   VideoGroup nodes can precede Transcode nodes \(for video only\).
 
-        -   [Transcode](../../../../reseller.en-US/API Reference/Appendix/Workflow activity introduction.md#)
+        -   [Transcode](/intl.en-US/API Reference/Appendix/Workflow activity introduction.md)
 
             Transcode nodes are used to extract video, audio, or subtitle streams.
 
@@ -63,7 +63,7 @@ Dynamic Adaptive Streaming Over HTTP \(DASH\) packaging allows you to package on
 
             -   Transcode nodes can precede GenerateMasterPlayList nodes.
 
-        -   [GenerateMasterPlayList](../../../../reseller.en-US/API Reference/Appendix/Workflow activity introduction.md#)
+        -   [GenerateMasterPlayList](/intl.en-US/API Reference/Appendix/Workflow activity introduction.md)
 
             GenerateMasterPlayList nodes are used to generate a Master Playlist file.
 
@@ -77,7 +77,7 @@ Dynamic Adaptive Streaming Over HTTP \(DASH\) packaging allows you to package on
 
         The edges in the topology, which indicates the dependency between activities.
 
-2.  To add media to MPS, call the [AddMedia](../../../../reseller.en-US/API Reference/Media APIs/AddMedia.md#) operation.
+2.  To add media to MPS, call the [AddMedia](/intl.en-US/API Reference/Media APIs/AddMedia.md) operation.
 
     -   You must specify the ID of the media workflow.
 
@@ -86,7 +86,7 @@ Dynamic Adaptive Streaming Over HTTP \(DASH\) packaging allows you to package on
     -   Set TriggerMode to NotInAuto.
 
 
-## Scenario {#section_bws_cjm_x2b .section}
+## Scenario
 
 Assume that you need to extract two video streams which contain three audio streams and two WebVTT subtitle streams from an mxf source file, and package them into a Master Playlist file. The source file also supports mp4, flv and m3u8 \(ts\) formats.
 
@@ -102,6 +102,9 @@ Configure the output location and the name of the Master Playlist file.
 
     ```
     
+    
+    
+    
     {
     "Parameters" : {
     "Output" : "{\"Bucket\": \"processedmediafile\",\"Location\": \"oss-cn-hangzhou\",\"MasterPlayListName\": \"{MediaId}/{RunId}/dash/master.mpd\"}"
@@ -110,7 +113,7 @@ Configure the output location and the name of the Master Playlist file.
     }
     ```
 
-    -   Output indicates the output location and the name of the Master Playlist file. For more information, see [Parameters supported for the PackageConfig activity](../../../../reseller.en-US/API Reference/Appendix/Workflow activity introduction.md#).
+    -   Output indicates the output location and the name of the Master Playlist file. For more information, see [Parameters supported for the PackageConfig activity](/intl.en-US/API Reference/Appendix/Workflow activity introduction.md).
     -   Set Type to PackageConfig.
 
 Group audio streams
@@ -118,6 +121,9 @@ Group audio streams
 -   The activity is defined as follows:
 
     ```
+    
+    
+    
     
     "audio-cn-group" : {
     "Name" : "audio-cn-group",
@@ -141,6 +147,9 @@ Extract audio streams
 
     ```
     
+    
+    
+    
     "audioCNTransNode" : {
     "Name" : "audioCNTransNode",
     "Parameters" : {
@@ -152,9 +161,9 @@ Extract audio streams
     ```
 
     -   URI: The location for the output audio streams.
-    -   AudioStreamMap: The sequence number of the audio stream. For more information, see [Output](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#).
+    -   AudioStreamMap: The sequence number of the audio stream. For more information, see [Output](/intl.en-US/API Reference/Appendix/Parameter details.md).
 
-    -   Remove the video streams from the output. For more information, see [Video](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#).
+    -   Remove the video streams from the output. For more information, see [Video](/intl.en-US/API Reference/Appendix/Parameter details.md).
 
     -   Set Type to Transcode, which indicates transcoding activities.
 
@@ -180,6 +189,9 @@ Extract video streams
 
     ```
     
+    
+    
+    
     "videoTransSD" : {
     "Name" : "videoTransSD",
     "Parameters" : {
@@ -192,7 +204,7 @@ Extract video streams
 
     -   In this example, the ID of the user-defined transcoding template is d861b90f6c0aed8f81095e5c5b857cba. You can call the corresponding API operation to create a transcoding template, and the container format is mpd.
 
-    -   Remove audio streams from the output. For more information, see [Audio](../../../../reseller.en-US/API Reference/Appendix/Parameter details.md#).
+    -   Remove audio streams from the output. For more information, see [Audio](/intl.en-US/API Reference/Appendix/Parameter details.md).
 
     -   URI: The name and location of the output video streams.
 
@@ -206,6 +218,9 @@ Group subtitle streams
 -   The activity is defined as follows:
 
     ```
+    
+    
+    
     
     "subtitle-cn-group" : {
     "Name" : "subtitle-cn-group",
@@ -228,6 +243,9 @@ Extract subtitle streams
 
     ```
     
+    
+    
+    
     "subtitleCNNode" : {
     "Name" : "subtitleCNNode",
     "Parameters" : {
@@ -238,7 +256,7 @@ Extract subtitle streams
     }
     ```
 
-    -   InputConfig specifies the URL of the subtitle. The URL can be overridden by configuring the OverrideParams parameter when you call the [AddMedia](../../../../reseller.en-US/API Reference/Media APIs/AddMedia.md#) operation.
+    -   InputConfig specifies the URL of the subtitle. The URL can be overridden by configuring the OverrideParams parameter when you call the [AddMedia](/intl.en-US/API Reference/Media APIs/AddMedia.md) operation.
 
     -   URI: The location for the output subtitle streams.
 
@@ -253,6 +271,9 @@ Output a Master Playlist file
 
     ```
     
+    
+    
+    
     {
     "Parameters" : {
     },
@@ -260,11 +281,8 @@ Output a Master Playlist file
     }
     ```
 
-    -   Set Type to GenerateMasterPlayList, which indicates generating a Master Playlist file.
+    Set Type to GenerateMasterPlayList, which indicates generating a Master Playlist file.
 
-The topology is as follows:
-
-![](images/10186_en-US.png)
 
 The sample scenario shown in topology:
 
@@ -413,22 +431,22 @@ The sample scenario shown in topology:
 }
 ```
 
-## Sample code {#section_rlg_clm_x2b .section}
+## Sample code
 
 1.  Create an HLS packaging workflow
 
-    [Create a workflow - Java](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Java SDK/Add media workflow.md#)
+    [Create a workflow - Java](/intl.en-US/SDK Reference/Transcoding SDKs/Java SDK/Add media workflow.md)
 
-    [Create a workflow - Python](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Python SDK/Add media workflow.md#)
+    [Create a workflow - Python](/intl.en-US/SDK Reference/Transcoding SDKs/Python SDK/Add media workflow.md)
 
-    [Create a workflow - PHP](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/PHP SDK/Add media workflow.md#)
+    [Create a workflow - PHP](/intl.en-US/SDK Reference/Transcoding SDKs/PHP SDK/Add media workflow.md)
 
 2.  Add media to MPS library
 
-    [Add media to MPS library - Java](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Java SDK/Add media.md#)
+    [Add media to MPS library - Java](/intl.en-US/SDK Reference/Transcoding SDKs/Java SDK/Add media.md)
 
-    [Add media to MPS library - Python](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Python SDK/Add media.md#)
+    [Add media to MPS library - Python](/intl.en-US/SDK Reference/Transcoding SDKs/Python SDK/Add media.md)
 
-    [Add media to MPS library - PHP](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/PHP SDK/Add media.md#)
+    [Add media to MPS library - PHP](/intl.en-US/SDK Reference/Transcoding SDKs/PHP SDK/Add media.md)
 
 
