@@ -1,4 +1,4 @@
-# Transcoding {#concept_q4v_4bc_z2b .concept}
+# Transcoding
 
 1.  Create AcsClient instance.
 
@@ -100,7 +100,7 @@ oss_input_object = 'input.mp4'
 oss_output_object = 'output.mp4'
 Create AcsClient instance
 client = AcsClient(access_key_id, access_key_secret, mps_region_id);
-Create request，and set parameters
+Create request,and set parameters
 request = SubmitJobsRequest.SubmitJobsRequest()
 request.set_accept_format('json')
 # Input
