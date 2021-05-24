@@ -56,7 +56,7 @@ After MPS is activated, initialize the library and set **Input Media Bucket** an
 
     ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11351/15391582099919_en-US.png)
 
-    You can select a workflow from**Preset** and edit it as needed to quickly create a workflow. You can also customize a workflow.
+    You can select a workflow from **Preset** and edit it as needed to quickly create a workflow. You can also customize a workflow.
 
     ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11351/15391582149920_en-US.png)
 
