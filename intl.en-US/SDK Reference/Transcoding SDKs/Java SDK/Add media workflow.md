@@ -1,4 +1,4 @@
-# Add media workflow {#concept_o1j_3xx_y2b .concept}
+# Add media workflow
 
 The user can assemble activities provided by MPS, such as transcode activity and screenshot activity into a topology. The topology is as follows:
 
@@ -105,7 +105,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 public class AddMediaWorkflow {
-    //Step 1 .set region：cn-hangzhou、cn-shenzhen、cn-shanghai、cn-beijing
+    //Step 1 .set region:cn-hangzhou\cn-shenzhen\cn-shanghai\cn-beijing
     private static final String REGION = "cn-shenzhen";
     private static final String OSS_REGION = "oss-cn-shenzhen";
     private static final String mtsEndpoint = "mts." + REGION + ".aliyuncs.com";
