@@ -151,7 +151,7 @@ After MPS is activated, initialize the library and set **Input Media Bucket** an
 
         ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11351/15391582169949_en-US.png)
 
-        After the file is uploaded, you can click**Upload More**.
+        After the file is uploaded, you can click **Upload More**.
 
         ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/11351/15391582169952_en-US.png)
 
