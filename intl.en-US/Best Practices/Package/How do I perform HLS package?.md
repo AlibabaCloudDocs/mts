@@ -67,7 +67,7 @@ HLS package refers to the process in which multi-subtitle, multi-track and multi
 
         The edges in the topology, which indicates the dependency between activities.
 
-2.  To add media to MPS, call the [AddMedia](/intl.en-US/API Reference/Media APIs/AddMedia.md)operation.
+2.  To add media to MPS, call the [AddMedia](/intl.en-US/API Reference/Media APIs/AddMedia.md) operation.
     -   Specify Media workflow ID.
 
     -   If subtitle extraction exists, you can configure in the way that the subtitle file address overwrites the WebVTTSubtitleURL parameter in the Transcode activity, and only subtitle files of WebVTT are supported.
