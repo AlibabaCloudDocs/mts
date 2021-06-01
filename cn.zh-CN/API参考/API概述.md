@@ -45,7 +45,7 @@
 
 |API|描述|
 |:--|:-|
-|[AddWaterMarkTemplate](/cn.zh-CN/API参考/水印模板接口/新增水印模版.md)|创建水印模板。|
+|[AddWaterMarkTemplate](/cn.zh-CN/API参考/水印模板接口/创建水印模版.md)|创建水印模板。|
 |[UpdateWaterMarkTemplate](/cn.zh-CN/API参考/水印模板接口/更新水印模版.md)|更新指定水印模板的名称、配置。|
 |[QueryWaterMarkTemplateList](/cn.zh-CN/API参考/水印模板接口/查询水印模板.md)|查询水印模板接口。|
 |[SearchWaterMarkTemplate](/cn.zh-CN/API参考/水印模板接口/搜索水印模板.md)|搜索指定状态的水印模板。|
