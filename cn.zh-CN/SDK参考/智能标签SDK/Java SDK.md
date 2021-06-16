@@ -2,7 +2,7 @@
 
 本文介绍了Java SDK的安装方式和使用智能标签SDK的示例代码。
 
-媒体处理的Java SDK版本需要在2.7.6版本及以上。如果使用maven管理Java依赖包，您可以在工程pom.xml文件中添加下面依赖。
+媒体处理的Java SDK版本需要在2.7.6版本及以上。如果使用Maven管理Java依赖包，您可以在工程pom.xml文件中添加下面依赖。
 
 ```
 <dependency>
