@@ -1,16 +1,16 @@
-# How do I perform HLS encryption and play? {#concept_hsy_2kg_x2b .concept}
+# How do I perform HLS encryption and play?
 
-## Purpose {#section_i23_gkg_x2b .section}
+## Purpose
 
 This document describes the complete procedure of creating HLS standard encryption workflow to play the encrypted video.
 
-For more information about the architecture of HLS standard encryption, see [HLS standard encryption](../../../../reseller.en-US/Developer Guide/Video encryption/HLS standard encryption.md#).
+For more information about the architecture of HLS standard encryption, see [HLS standard encryption](/intl.en-US/Developer Guide/Video encryption/HLS standard encryption.md).
 
-## Procedure {#section_zcj_hkg_x2b .section}
+## Procedure
 
 1.  Create HLS encryption workflow.
 
-    For more information about creating HLS encryption workflow and DEMO code, see [Create HLS standard encryption workflow](../../../../reseller.en-US/SDK Reference/Transcoding SDKs/Python SDK/Create HLS standard encryption workflow.md#).
+    For more information about creating HLS encryption workflow and DEMO code, see [Create HLS standard encryption workflow](/intl.en-US/SDK Reference/Transcoding SDKs/Python SDK/Create HLS standard encryption workflow.md).
 
     **Note:** When creating HLS standard workfow, enter http: //127.0.0.1:8888 in the value of the HLS\_KEY\_URI parameter for a test. During playing, the player request the key to this address, and we create a service to distribute key.
 
@@ -189,10 +189,8 @@ For more information about the architecture of HLS standard encryption, see [HLS
 
     By using an online player, test the playback of HLS encryption video. For more information, see [Alibaba Cloud player user diagnositc tool](http://player.alicdn.com/detection.html).
 
-    Enter the playback address obtained from step **4** to the dialogue box as shown in the following figure, and click **Play**.
+    Enter the playback address obtained from step **4** to the dialogue , and click **Play**.
 
     **Note:** By using browser DEBUG, the player automatically request authentication server, obtain decryption key and do the playback operation after decryption.
-
-    ![](images/10097_en-US.png)
 
 
