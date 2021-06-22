@@ -107,7 +107,7 @@ DASH打包是指将多字幕、多音轨、多码率视频流生成一个Master 
 }
 ```
 
--   Group：指定音频分组Id为AudioGroupChinese。
+-   Group：指定音频分组ID为AudioGroupChinese。
 -   Type：类型为AudioGroup活动。
 
 提取音轨。
