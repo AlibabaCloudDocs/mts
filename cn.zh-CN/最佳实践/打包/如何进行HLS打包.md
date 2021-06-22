@@ -21,7 +21,7 @@ HLS打包是指将多字幕、多音轨、多码率视频流生成一个Master P
 
             -   前置节点允许：Start。
 
-            -   后置节点允许：SubtitleGroup、AudioGroup、Transcode（仅视频\)。
+            -   后置节点允许：SubtitleGroup、AudioGroup、Transcode（仅视频）。
 
         -   [SubtitleGroup活动](/cn.zh-CN/API参考/附录/媒体工作流活动介绍.md)
 
@@ -114,7 +114,7 @@ HLS打包是指将多字幕、多音轨、多码率视频流生成一个Master P
 }
 ```
 
--   GroupId：指定音频分组Id为audios。
+-   GroupId：指定音频分组ID为audios。
 -   Type：类型为AudioGroup活动。
 
 提取音轨。
