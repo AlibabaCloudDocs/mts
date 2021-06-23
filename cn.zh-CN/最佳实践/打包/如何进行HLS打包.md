@@ -185,7 +185,7 @@ HLS打包是指将多字幕、多音轨、多码率视频流生成一个Master P
 }
 ```
 
--   GroupId：指定音频分组Id为subtitles。
+-   GroupId：指定音频分组ID为subtitles。
 -   Type：类型为SubtitleGroup活动。
 
 提取字幕。
