@@ -1,6 +1,6 @@
 # 提交清空或删除DNA库
 
-调用SubmitFpDBDeleteJob提交清空或删除DNA库。
+调用SubmitFpDBDeleteJob接口提交清空或删除DNA库。
 
 ## 调试
 
@@ -11,17 +11,21 @@
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
 |Action|String|是|SubmitFpDBDeleteJob|操作接口名，系统规定参数，取值：**SubmitFpDBDeleteJob**。 |
-|FpDBId|String|是|88c6ca184c0e47098a5b665e2a126797|DNA库ID。 |
-|PipelineId|String|否|fb712a6890464059b1b2ea7c8647be16|管道ID，用于绑定消息通知。 |
+|PipelineId|String|否|fb712a6890464059b1b2ea7c8647\*\*\*\*|管道ID，用于绑定消息通知。 |
+|FpDBId|String|是|88c6ca184c0e47098a5b665e2a12\*\*\*\*|DNA库ID。 |
 |UserData|String|否|UserData|用户自定义数据，最大长度128个字节。 |
-|DelType|String|否|Purge|操作类型，支持类型：Purge（清空DNA库），Delete（删除DNA库），默认为清空DNA库操作。 |
+|DelType|String|否|Purge|操作类型，支持类型：
+
+ -   **Purge**：清空DNA库。
+-   **Delete**：删除DNA库。
+-   默认值：**Purge**。 |
 
 ## 返回数据
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|JobId|String|88c6ca184c0e47098a5b665e2a126797|清空删除DNA库作业ID。 |
-|RequestId|String|25818875-5F78-4A13-BEF6-D7393642CA58|请求ID。 |
+|RequestId|String|25818875-5F78-4A13-BEF6-D7393642\*\*\*\*|请求ID。 |
+|JobId|String|88c6ca184c0e47098a5b665e2a12\*\*\*\*|清空删除DNA库作业ID。 |
 
 ## 示例
 
@@ -29,7 +33,11 @@
 
 ```
 http(s)://[Endpoint]/?Action=SubmitFpDBDeleteJob
-&<公共请求参数>
+&PipelineId=fb712a6890464059b1b2ea7c8647****
+&FpDBId=88c6ca184c0e47098a5b665e2a12****
+&UserData=UserData
+&DelType=Purge
+&公共请求参数
 ```
 
 正常返回示例
@@ -37,16 +45,24 @@ http(s)://[Endpoint]/?Action=SubmitFpDBDeleteJob
 `XML`格式
 
 ```
-<RequestId>25818875-5F78-4A13-BEF6-D7393642CA58</RequestId>
-<JobId>88c6ca184c0e47098a5b665e2a126797</JobId>
+HTTP/1.1 200 OK
+Content-Type:application/xml
+
+<SubmitFpDBDeleteJobResponse>
+    <RequestId>25818875-5F78-4A13-BEF6-D7393642****</RequestId>
+    <JobId>88c6ca184c0e47098a5b665e2a12****</JobId>
+</SubmitFpDBDeleteJobResponse>
 ```
 
 `JSON`格式
 
 ```
+HTTP/1.1 200 OK
+Content-Type:application/json
+
 {
-    "RequestId": "25818875-5F78-4A13-BEF6-D7393642CA58",
-    "JobId": "88c6ca184c0e47098a5b665e2a126797"
+  "RequestId" : "25818875-5F78-4A13-BEF6-D7393642****",
+  "JobId" : "88c6ca184c0e47098a5b665e2a12****"
 }
 ```
 
